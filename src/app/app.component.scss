@@ -25,37 +25,142 @@ nav {
     @apply text-white py-2 px-5 bg-blue-700 rounded-full text-lg font-semibold
   }
 
+  .sectiontitle {
+    @apply text-lg font-semibold text-white px-5 py-2;
+    position: relative;
+    width: 100%;
+    // padding: 4px;
+    min-height: 100px;
+    // background-color: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+
+    .backline {
+      position: absolute;
+      background-color: white;
+      width: 70%;
+      height: 1px;
+      border-radius: 999px;
+      z-index: 0;
+      margin-top: 4px;
+      margin-bottom: 4px;
+      top: 60%;
+    }
+
+    .backline:nth-child(1) {
+      // background-color: white;
+      width: 60%;
+
+      top: 68%;
+    }
+
+    h2 {
+      // line-height: 1.5px;
+      // background-color: royalblue;
+      width: fit-content;
+      padding: inherit;
+      position: relative;
+      z-index: 1;
+      color: white
+    }
+  }
+
 }
 
 .overlay {
-  @apply absolute top-0 left-0 w-full h-screen z-10 flex flex-col justify-start items-center text-white text-2xl font-semibold box-border;
+  @apply absolute top-0 left-0 w-full h-screen z-10 flex flex-col justify-start items-center text-white text-lg font-semibold box-border;
   //bg-gradient-to-b from-blue-700/40 to-black/60
 
-  .homelogo {
-    @apply w-[100px] h-[100px] bg-gradient-to-b bg-white rounded-full overflow-hidden mt-4;
-    // background-image: url('../assets/l-studioafrikatransparent.png')
+
+  .backdropblur {
+    @apply w-[90%] h-fit flex flex-col text-center p-2 justify-start items-center shadow-white/10 mb-[20px] shadow-md mt-[20px] rounded-md gap-10 backdrop-blur py-4;
+
+    .homelogo {
+      @apply w-[100px] h-[100px] bg-gradient-to-b bg-white rounded-full overflow-hidden mt-4;
+      // background-image: url('../assets/l-studioafrikatransparent.png')
+    }
+
+    p {
+      @apply text-lg italic font-light;
+
+      strong {
+        @apply not-italic text-lg font-bold
+      }
+    }
+
+    h3 {
+      @apply italic text-base;
+
+
+    }
+
+    // min-height: 200px
   }
 
+  h2 {
+    @apply w-3/4 text-center mt-4
+  }
+
+
+
   button {
-    @apply bg-gradient-to-r from-blue-700 to-blue-500 py-2 px-4 rounded-full
+    @apply bg-gradient-to-r from-blue-700 to-blue-500 py-1 px-4 rounded-full font-medium
   }
 
 }
 
 .home {
-  @apply mt-[56px] h-screen relative;
+  @apply mt-[56px] min-h-screen h-fit relative;
   background-image: url('../assets/unsplash/arnold-francisca-f77Bh3inUpE-unsplash.jpg');
   background-size: cover;
   overflow: hidden;
   position: relative;
 }
 
+.aboutus {
+  @apply min-h-screen h-fit relative flex flex-col justify-start items-center;
+  background-image: url('../assets/unsplash/oskar-yildiz-cOkpTiJMGzA-unsplash.jpg');
+
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+
+  .aboutuscontainer {
+    @apply w-4/5 min-h-[200px] p-4 my-2 bg-black/80 text-white shadow-white rounded-md backdrop-blur-sm;
+
+    h2 {
+      @apply text-lg font-semibold text-white underline underline-offset-8 text-center my-4
+    }
+
+
+
+  }
+
+  .btn {
+    @apply text-center mt-3 bg-blue-600 py-2 px-4 rounded-full text-white
+  }
+
+}
+
 .services {
+  @apply relative h-fit bg-blue-700;
 
+  .svgtop {
+    @apply absolute top-0 left-0 h-[300px] w-full
+  }
 
+  .svgbottom {
+    @apply absolute bottom-0 left-0
+  }
+
+  // background-image: url('../assets/unsplash/oskar-yildiz-cOkpTiJMGzA-unsplash.jpg');
+  background-size: cover;
+  overflow: hidden;
 
   .servicescard {
-    @apply w-4/5 min-h-[250px] bg-white my-3 flex flex-col justify-start items-center p-[16px] box-border;
+    @apply w-4/5 min-h-[250px] bg-black/80 backdrop-blur-sm shadow-black shadow-sm my-3 flex flex-col justify-start items-center p-[16px] box-border;
     border-radius: 10px;
     box-shadow: 1px 3px 3px 2px rgba(0, 0, 0, 0.628)
   }
@@ -82,7 +187,7 @@ nav {
 
   .title {
 
-    @apply text-blue-600 font-semibold text-lg my-2
+    @apply text-white font-semibold text-lg my-2
   }
 
   .paragraph {
@@ -96,7 +201,9 @@ nav {
 .portfolio {
   @apply p-4;
   min-height: 100vh;
-
+  background-image: url('../assets/unsplash/kari-shea-1SAnrIxw5OY-unsplash.jpg');
+  background-size: cover;
+  overflow: hidden;
 
 
   .portfolioparagraph {
@@ -105,10 +212,12 @@ nav {
   }
 
   .cardprojects {
-    @apply min-w-[250px] rounded-md min-h-[300px] w-full grid grid-rows-4 gap-4;
+    @apply min-w-[250px] rounded-md min-h-[300px] w-full grid grid-rows-4 gap-4 relative overflow-hidden;
+
+
 
     .project {
-      @apply w-4/5 min-h-[100px] h-fit py-2 bg-white cursor-pointer flex flex-col items-center justify-center rounded-md shadow-md ml-auto mr-auto;
+      @apply w-4/5 min-h-[100px] h-[150px] py-2 bg-white cursor-pointer flex flex-col items-center justify-center rounded-md shadow-md ml-auto mr-auto;
       box-shadow: 1px 3px 3px 2px rgba(0, 0, 0, 0.628);
 
 
@@ -118,11 +227,18 @@ nav {
       }
 
       img {
-        @apply w-[100px] h-[100px] bg-white rounded-full
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        overflow: hidden;
+        width: 100%;
+        z-index: 0;
+        height: 250px;
       }
 
       .projecttitle {
-        @apply ml-auto mr-auto font-semibold text-2xl my-2 text-[#303e9f] py-1 rounded-full px-5 box-border
+        @apply ml-auto mr-auto font-semibold text-2xl my-2 text-[#303e9f] py-1 rounded-full px-5 box-border z-10
       }
     }
   }
@@ -170,3 +286,46 @@ nav {
     }
   }
 }
+
+@media screen and (min-width: 480px) {}
+
+@media screen and (min-width: 648px) {}
+
+@media screen and (min-width: 768px) {
+
+  .sectionContainer {
+    .sectiontitle {
+      @apply w-full flex justify-center items-center;
+
+      h2 {
+        @apply text-center
+      }
+
+      .backline {
+        @apply w-[30%]
+      }
+
+      .backline:nth-child(1) {
+        @apply w-[25%]
+      }
+    }
+  }
+
+  .services {
+    @apply flex-row justify-center flex-wrap gap-2;
+
+    .servicescard {
+      @apply max-w-[220px]
+    }
+  }
+
+  .aboutus {
+    @apply h-fit;
+
+    .aboutuscontainer {
+      @apply max-w-[500px]
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {}
