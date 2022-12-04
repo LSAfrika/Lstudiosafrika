@@ -5,7 +5,7 @@
 }
 
 nav {
-  @apply w-full h-[56px] bg-gradient-to-r from-blue-800 to-blue-600 text-white font-semibold text-lg fixed top-0 z-20 py-2 pl-2;
+  @apply w-full h-[56px] bg-gradient-to-r flex justify-start items-center from-blue-800 to-blue-600 text-white font-semibold text-lg fixed top-0 z-20 py-2 pl-2;
 
   .logo {
     @apply flex justify-center items-center gap-2 w-fit my-auto
@@ -13,6 +13,16 @@ nav {
 
   img {
     @apply w-[35px] h-[35px] overflow-hidden bg-cover rounded-full
+  }
+
+  ul{
+    @apply ml-auto flex justify-start items-center mr-[16px] gap-4 font-medium;
+    li{ 
+      @apply px-2 py-1;
+      &:hover{
+        @apply bg-white text-blue-700 rounded-md cursor-pointer
+      }
+    }
   }
 
 }
@@ -38,6 +48,7 @@ nav {
     height: fit-content;
 
     .backline {
+      @apply h-[4px] shadow-black/40 shadow-sm;
       position: absolute;
       background-color: white;
       width: 70%;
@@ -67,10 +78,24 @@ nav {
     }
   }
 
+  .sectiontitle:nth-child(1){
+    // @apply text-blue-700;
+
+    h2{
+      // @apply ;
+
+    }
+    .backline{
+      @apply  h-[4px] shadow-black/40 shadow-sm
+      
+    }
+
+  }
+
 }
 
 .overlay {
-  @apply absolute top-0 left-0 w-full h-screen z-10 flex flex-col justify-start items-center text-white text-lg font-semibold box-border;
+  @apply absolute top-0 left-0 w-full h-screen min-h-[300px] z-10 flex flex-col justify-start items-center text-white text-lg font-semibold box-border;
   //bg-gradient-to-b from-blue-700/40 to-black/60
 
 
@@ -112,7 +137,7 @@ nav {
 }
 
 .home {
-  @apply mt-[56px] min-h-screen h-fit relative;
+  @apply mt-[56px]  h-fit relative min-h-screen;
   background-image: url('../assets/unsplash/arnold-francisca-f77Bh3inUpE-unsplash.jpg');
   background-size: cover;
   overflow: hidden;
@@ -201,13 +226,21 @@ nav {
 .portfolio {
   @apply p-4;
   min-height: 100vh;
-  background-image: url('../assets/unsplash/kari-shea-1SAnrIxw5OY-unsplash.jpg');
+  // background-image: url('../assets/unsplash/kari-shea-1SAnrIxw5OY-unsplash.jpg');
   background-size: cover;
   overflow: hidden;
 
+  .sectiontitle{
+    h2{
+      @apply text-blue-700
+    }
+    .backline{
+      @apply bg-blue-700
+    }
+  }
 
   .portfolioparagraph {
-    @apply text-blue-700 font-medium text-lg rounded-md my-2 p-2 py-3;
+    @apply text-white font-semibold text-lg rounded-md my-2 p-2 py-3 bg-black/30 backdrop-blur w-[70%];
 
   }
 
@@ -217,13 +250,30 @@ nav {
 
 
     .project {
-      @apply w-4/5 min-h-[100px] h-[150px] py-2 bg-white cursor-pointer flex flex-col items-center justify-center rounded-md shadow-md ml-auto mr-auto;
+      @apply w-[200px] min-h-[100px] h-[200px] py-2 overflow-hidden bg-white cursor-pointer relative flex flex-col items-center justify-center rounded-md shadow-md ml-auto mr-auto;
       box-shadow: 1px 3px 3px 2px rgba(0, 0, 0, 0.628);
 
+.hue{
 
+  @apply bg-gradient-to-b from-transparent via-black/80  to-black;
+  position: absolute;
+        top: 0;
+        left: 0;
+        // background-color: black;
+        overflow: hidden;
+        width: 100%;
+        z-index: 1;
+        height: 250px;
+
+        &:hover {
+          @apply scale-105
+        }
+  
+
+}
 
       &:hover {
-        @apply scale-105
+        @apply scale-105 rounded-md
       }
 
       img {
@@ -238,15 +288,29 @@ nav {
       }
 
       .projecttitle {
-        @apply ml-auto mr-auto font-semibold text-2xl my-2 text-[#303e9f] py-1 rounded-full px-5 box-border z-10
+        @apply ml-auto mr-auto font-semibold text-2xl my-2 mb-4 mt-auto text-white  py-1 rounded-full px-5 box-border z-10;
+        // text-[#303e9f]
       }
+    }
+
+    .project:nth-child(1){
+      @apply mt-4
     }
   }
 }
 
 .contactus {
-
-  min-height: 100vh;
+@apply bg-gradient-to-b from-blue-700 to-blue-600;
+  min-height: fit-content;
+  padding-bottom: 40px;
+  .sectiontitle{
+    h2{
+      @apply text-white
+    }
+    .backline{
+      @apply bg-white h-[2px]
+    }
+  }
 
   .form-container {
     @apply block max-w-md p-6 bg-white rounded-lg shadow-lg w-2/3 min-h-[350px];

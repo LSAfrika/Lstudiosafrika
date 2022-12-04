@@ -1,12 +1,21 @@
-<!-- <div class="flex flex-col items-center justify-start w-full h-screen bg-red-500"> -->
-<!-- <nav>
+
+<nav>
   <div class="logo">
     <img src="../assets/l-studio afrika Logo.png" alt="">
     <div>LSAfrika</div>
 
   </div>
-</nav> -->
-<!-- <section class="home sectionContainer">
+
+  <ul>
+    
+    <a href="#home">Home</a>
+    <a href="#about">About us</a>
+    <a href="#services">services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contacts">Contact us</a>
+  </ul>
+</nav>
+<section #home class="home sectionContainer">
   <div class="overlay">
 
     <div class="backdropblur">
@@ -28,8 +37,8 @@
     </div>
   </div>
 
-</section> -->
-<!-- <section class="aboutus sectionContainer">
+</section>
+ <section #about class="aboutus sectionContainer">
 
   <div class="sectiontitle">
     <div class="backline"></div>
@@ -69,10 +78,10 @@
 
   <button class="btn">Get a quote</button>
 
-</section> -->
+</section> 
 
 
-<!-- <section class="services sectionContainer">
+ <section #services class="services sectionContainer">
 
   <div class="sectiontitle">
     <div class="backline"></div>
@@ -117,19 +126,24 @@
     </div>
 
   </div>
-</section> -->
-<section class="sectionContainer portfolio ">
+</section> 
+<section #portfolio class="sectionContainer portfolio ">
 
-  <h1>Our Portfolio</h1>
+  <div class="sectiontitle">
+    <div class="backline"></div>
+    <div class="backline"></div>
+    <h2>PORFOLIO PROJECTS</h2>
+  </div>
 
   <p class="portfolioparagraph">
     here are our sample fullstack projects fully built with Angular and express
   </p>
 
   <div class="cardprojects">
-    <div class="project">
-      <img src="../assets/unsplash/daniel-korpai-r73OFSry5AI-unsplash.jpg" alt="chat">
-      <div class="projecttitle">ng chat</div>
+    <div *ngFor="let project of projects" class="project">
+      <img src="{{project.bgimage}}" alt="chat">
+      <div class="projecttitle">{{project.title}}</div>
+      <div class="hue"></div>
     </div>
     <!-- <div class="project">
       <img src="../assets/todo.png" alt="chat">
@@ -145,8 +159,13 @@
 
 
 </section>
-<section class="contactus sectionContainer">
-
+<section #contacts class="contactus sectionContainer">
+  
+  <div class="sectiontitle">
+    <div class="backline"></div>
+    <div class="backline"></div>
+    <h2>Get in touch</h2>
+  </div>
   <div class=" form-container">
     <form>
       <h2>Get in touch</h2>
