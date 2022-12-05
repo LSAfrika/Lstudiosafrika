@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;0,700;1,200&display=swap');
 
+html,
+body {
+  scroll-behavior: smooth;
+
+}
+
 * {
   font-family: 'Poppins', sans-serif;
 }
@@ -12,14 +18,67 @@ nav {
   }
 
   img {
-    @apply w-[35px] h-[35px] overflow-hidden bg-cover rounded-full
+    @apply w-[35px] h-[35px] overflow-hidden bg-cover rounded-full;
   }
 
-  ul{
-    @apply ml-auto flex justify-start items-center mr-[16px] gap-4 font-medium;
-    li{ 
+  .menu {
+    @apply w-[40px] h-[40px] ml-auto mr-[8px] cursor-pointer rounded-md p-2;
+
+    &:hover {
+      @apply bg-white/20
+    }
+  }
+
+  .dropdownmenu {
+    @apply fixed z-20 top-0 bg-white flex flex-col justify-start items-center w-full h-screen text-blue-600;
+
+
+
+    .menutitle {
+      @apply w-full min-h-[60px] bg-blue-600 flex justify-between items-center text-white;
+
+      .logotitle {
+        @apply flex justify-center items-center gap-1;
+
+        .ls {
+          @apply w-[40px] h-[40px] p-1 text-2xl bg-white text-blue-700 ml-2 text-center rounded-full shadow-black shadow-sm font-bold
+        }
+
+        .divider {
+          width: 2px;
+          height: 30px;
+          background-color: white;
+        }
+      }
+
+      svg {
+        width: 30px;
+        height: 30px
+      }
+    }
+
+    a {
+      @apply text-3xl font-normal my-4 bg-red-400 w-full text-center min-h-[50px] align-middle
+    }
+  }
+
+  .opennav {
+    animation: openmenu .5s ease-in forwards;
+
+  }
+
+  .closenav {
+    animation: closemenu .75s ease-out forwards;
+
+  }
+
+  ul {
+    @apply ml-auto justify-start items-center mr-[16px] gap-4 font-medium hidden;
+
+    li {
       @apply px-2 py-1;
-      &:hover{
+
+      &:hover {
         @apply bg-white text-blue-700 rounded-md cursor-pointer
       }
     }
@@ -78,16 +137,16 @@ nav {
     }
   }
 
-  .sectiontitle:nth-child(1){
+  .sectiontitle:nth-child(1) {
     // @apply text-blue-700;
 
-    h2{
+    h2 {
       // @apply ;
 
     }
-    .backline{
-      @apply  h-[4px] shadow-black/40 shadow-sm
-      
+
+    .backline {
+      @apply h-[4px] shadow-black/40 shadow-sm
     }
 
   }
@@ -137,7 +196,7 @@ nav {
 }
 
 .home {
-  @apply mt-[56px]  h-fit relative min-h-screen;
+  @apply mt-[56px] h-fit relative min-h-screen;
   background-image: url('../assets/unsplash/arnold-francisca-f77Bh3inUpE-unsplash.jpg');
   background-size: cover;
   overflow: hidden;
@@ -230,11 +289,12 @@ nav {
   background-size: cover;
   overflow: hidden;
 
-  .sectiontitle{
-    h2{
+  .sectiontitle {
+    h2 {
       @apply text-blue-700
     }
-    .backline{
+
+    .backline {
       @apply bg-blue-700
     }
   }
@@ -253,10 +313,10 @@ nav {
       @apply w-[200px] min-h-[100px] h-[200px] py-2 overflow-hidden bg-white cursor-pointer relative flex flex-col items-center justify-center rounded-md shadow-md ml-auto mr-auto;
       box-shadow: 1px 3px 3px 2px rgba(0, 0, 0, 0.628);
 
-.hue{
+      .hue {
 
-  @apply bg-gradient-to-b from-transparent via-black/80  to-black;
-  position: absolute;
+        @apply bg-gradient-to-b from-transparent via-black/80 to-black;
+        position: absolute;
         top: 0;
         left: 0;
         // background-color: black;
@@ -268,9 +328,9 @@ nav {
         &:hover {
           @apply scale-105
         }
-  
 
-}
+
+      }
 
       &:hover {
         @apply scale-105 rounded-md
@@ -288,26 +348,28 @@ nav {
       }
 
       .projecttitle {
-        @apply ml-auto mr-auto font-semibold text-2xl my-2 mb-4 mt-auto text-white  py-1 rounded-full px-5 box-border z-10;
+        @apply ml-auto mr-auto font-semibold text-2xl my-2 mb-4 mt-auto text-white py-1 rounded-full px-5 box-border z-10;
         // text-[#303e9f]
       }
     }
 
-    .project:nth-child(1){
+    .project:nth-child(1) {
       @apply mt-4
     }
   }
 }
 
 .contactus {
-@apply bg-gradient-to-b from-blue-700 to-blue-600;
+  @apply bg-gradient-to-b from-blue-700 to-blue-600;
   min-height: fit-content;
   padding-bottom: 40px;
-  .sectiontitle{
-    h2{
+
+  .sectiontitle {
+    h2 {
       @apply text-white
     }
-    .backline{
+
+    .backline {
       @apply bg-white h-[2px]
     }
   }
@@ -349,6 +411,31 @@ nav {
 
     }
   }
+}
+
+
+@keyframes openmenu {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: 0px;
+  }
+
+}
+
+@keyframes closemenu {
+  0% {
+    left: 0px;
+
+  }
+
+  100% {
+    left: calc(100% + 10px);
+
+  }
+
 }
 
 @media screen and (min-width: 480px) {}
