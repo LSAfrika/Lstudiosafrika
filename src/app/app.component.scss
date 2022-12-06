@@ -11,7 +11,7 @@ body {
 }
 
 nav {
-  @apply w-full h-[56px] bg-gradient-to-r flex justify-start items-center from-blue-800 to-blue-600 text-white font-semibold text-lg fixed top-0 z-20 py-2 pl-2;
+  @apply w-full h-[56px] bg-blue-800 flex justify-start items-center text-white font-semibold text-lg fixed top-0 z-50 py-2 pl-2;
 
   .logo {
     @apply flex justify-center items-center gap-2 w-fit my-auto
@@ -196,23 +196,85 @@ nav {
 }
 
 .home {
-  @apply mt-[56px] h-fit relative min-h-screen;
-  background-image: url('../assets/unsplash/arnold-francisca-f77Bh3inUpE-unsplash.jpg');
+  @apply mt-[56px] h-fit pt-[100px] text-white font-bold relative min-h-screen bg-blue-800 flex-col justify-start items-center;
+  // background-image: url('../assets/unsplash/arnold-francisca-f77Bh3inUpE-unsplash.jpg');
   background-size: cover;
   overflow: hidden;
   position: relative;
+
+
+  .circle {
+    @apply absolute w-[150vh] h-[150vh] bg-white rounded-full left-1/4 top-[200px] z-0
+  }
+
+  .mobileherowrapper {
+    @apply flex flex-col justify-start items-center relative z-30;
+
+    .dynamictext {
+      @apply w-full bg-transparent h-[50px] my-4 relative overflow-hidden;
+
+      div {
+        @apply h-[50px] w-full text-center pt-4 font-bold;
+      }
+    }
+
+    button {
+      @apply bg-white text-blue-700 rounded-full px-4 py-2 float-right mt-5 text-2xl font-light outline-none border-[10px] border-blue-800;
+    }
+
+    .caption {
+      @apply italic text-lg font-semibold w-full float-left;
+    }
+
+    p {
+      @apply text-3xl font-light mb-4;
+    }
+
+    h2 {
+      @apply text-4xl py-2 px-4 bg-blue-900 text-white rounded-md border-white border-[4px] mb-4 rounded-r-full pr-4
+    }
+
+  }
+
+
+
+  // p {
+  //   @apply text-3xl font-light mb-4;
+  // }
+
+  // h2 {
+  //   @apply text-4xl py-2 px-4 bg-blue-900 text-white rounded-md border-white border-[4px] mb-4 rounded-r-full pr-4
+  // }
 }
 
+
+
 .aboutus {
-  @apply min-h-screen h-fit relative flex flex-col justify-start items-center;
-  background-image: url('../assets/unsplash/oskar-yildiz-cOkpTiJMGzA-unsplash.jpg');
+  @apply min-h-screen h-fit relative flex flex-col justify-start items-center bg-white mt-0;
+  // background-image: url('../assets/unsplash/oskar-yildiz-cOkpTiJMGzA-unsplash.jpg');
+
+
 
   background-size: cover;
   overflow: hidden;
   position: relative;
 
+  .sectiontitle {
+    h2 {
+      @apply text-blue-700 font-bold
+    }
+
+    .backline {
+      @apply bg-blue-700 h-[4px]
+    }
+  }
+
+  // .box {
+  //   @apply absolute w-[200px] h-[200px] bg-blue-800 top-0 rounded-full
+  // }
+
   .aboutuscontainer {
-    @apply w-4/5 min-h-[200px] p-4 my-2 bg-black/80 text-white shadow-white rounded-md backdrop-blur-sm;
+    @apply w-4/5 min-h-[200px] p-4 my-2 bg-blue-800 text-white shadow-white rounded-md backdrop-blur-sm;
 
     h2 {
       @apply text-lg font-semibold text-white underline underline-offset-8 text-center my-4
@@ -229,7 +291,7 @@ nav {
 }
 
 .services {
-  @apply relative h-fit bg-blue-700;
+  @apply relative h-fit bg-blue-800;
 
   .svgtop {
     @apply absolute top-0 left-0 h-[300px] w-full
@@ -254,7 +316,7 @@ nav {
     // box-shadow: 1px 3px 3px 2px rgba(0, 0, 0, 0.328);
 
     .text {
-      @apply px-4 py-2 bg-blue-600 text-white font-semibold w-fit float-left rounded-r-full;
+      @apply px-4 py-2 bg-blue-800 text-white font-semibold w-fit float-left rounded-r-full;
 
     }
   }
