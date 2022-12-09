@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Lstudiosafrika';
   open = false
-
+  mobiledev=false;
+switchtitle =1
   projects = [
     {
       title: 'ng chat',
@@ -26,10 +27,35 @@ export class AppComponent {
 
   ]
 
+  ngOnInit(){
+  
+      this.switch()
+
+  }
 
   togglemenu() {
     this.open = !this.open
     console.log('bool value: ', this.open);
 
   }
+
+  switch(){
+  
+    setTimeout(() => {
+      
+      
+    console.log('before update: ',this.switchtitle);
+
+    if(this.switchtitle===2){this.mobiledev=true}
+    if(this.switchtitle===4) {this.switchtitle=0
+    }
+    this.switchtitle++
+    console.log('after update: ',this.switchtitle);
+    this.switch() 
+    }, 3000);
+
+    
+  }
+
+
 }

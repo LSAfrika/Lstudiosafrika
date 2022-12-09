@@ -60,15 +60,16 @@
     </div>
   </div> -->
     <!-- <p>we are </p> -->
-    <h2>L Studios Afrika</h2>
+    <h2 >L Studios Afrika</h2>
+    <!-- {{switchtitle}} -->
 
 
     <div class="dynamictext">
       <!-- <div class="cursor"></div> -->
-      <div>FRONTEND DEVELOPER</div>
-      <div>BACKEND DEVELOPER</div>
-      <div>WEB DESIGNER</div>
-      <div>MOBILE DEVELOPER</div>
+      <div [ngClass]="{'in': switchtitle===1,'out': switchtitle===2}">FRONTEND DEVELOPER</div>
+      <div [ngClass]="{'in' :switchtitle===2,'out' :switchtitle===3}">BACKEND DEVELOPER</div>
+      <div [ngClass]="{'in' :switchtitle===3,'out' :switchtitle===4}">WEB DESIGNER</div>
+      <div *ngIf="mobiledev" [ngClass]="{'in' :switchtitle===4,'out' :switchtitle===1}">MOBILE DEVELOPER</div>
 
 
     </div>

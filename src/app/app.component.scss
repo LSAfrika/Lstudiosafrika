@@ -211,10 +211,10 @@ nav {
     @apply flex flex-col justify-start items-center relative z-30;
 
     .dynamictext {
-      @apply w-full bg-transparent h-[50px] my-4 relative overflow-hidden;
+      @apply w-full bg-transparent h-[50px] my-4 relative overflow-hidden relative;
 
       div {
-        @apply h-[50px] w-full text-center pt-4 font-bold;
+        @apply h-[50px] w-full text-center pt-4 font-bold mt-[55px] top-0 absolute text-2xl;
       }
     }
 
@@ -487,6 +487,14 @@ nav {
   div {}
 }
 
+.in{
+animation: titlein 1.5s ease-in forwards;
+}
+.out{
+  animation: titleout 1.5s ease-out forwards;
+
+}
+
 @keyframes openmenu {
   0% {
     left: 100%;
@@ -509,6 +517,35 @@ nav {
 
   }
 
+}
+
+@keyframes titlein {
+0%{
+margin-top: 55px;
+}
+70%{
+margin-top: 0px;
+}
+100%{
+  margin-top: 0px;
+
+}
+
+  
+}
+@keyframes titleout {
+
+  0%{
+    margin-top: 0px;
+    }
+    70%{
+    margin-top: -55px;
+    }
+    100%{
+      margin-top: -55px;
+    
+    }
+  
 }
 
 @media screen and (min-width: 425px) {
