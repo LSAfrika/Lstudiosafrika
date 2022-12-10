@@ -3,6 +3,7 @@
 html,
 body {
   scroll-behavior: smooth;
+  max-width: 1100px;
 
 }
 
@@ -88,7 +89,7 @@ nav {
 
 
 .sectionContainer {
-  @apply w-full min-h-full bg-gray-300/50 box-border flex flex-col items-center justify-start py-[16px];
+  @apply w-full min-h-full bg-gray-300/50 box-border flex flex-col max-w-[1100px] ml-auto mr-auto items-center justify-start py-[16px];
 
   h1 {
     @apply text-white py-2 px-5 bg-blue-700 rounded-full text-lg font-semibold
@@ -204,7 +205,7 @@ nav {
 
 
   .circle {
-    @apply absolute w-[150vh] h-[150vh] bg-white rounded-full left-1/4 top-[200px] z-0
+    @apply absolute w-[150vh] h-[150vh] bg-white rounded-full left-1/4 top-[250px] z-0
   }
 
   .mobileherowrapper {
@@ -487,10 +488,11 @@ nav {
   div {}
 }
 
-.in{
-animation: titlein 1.5s ease-in forwards;
+.in {
+  animation: titlein 1.5s ease-in forwards;
 }
-.out{
+
+.out {
   animation: titleout 1.5s ease-out forwards;
 
 }
@@ -520,32 +522,37 @@ animation: titlein 1.5s ease-in forwards;
 }
 
 @keyframes titlein {
-0%{
-margin-top: 55px;
-}
-70%{
-margin-top: 0px;
-}
-100%{
-  margin-top: 0px;
+  0% {
+    margin-top: 55px;
+  }
+
+  70% {
+    margin-top: 0px;
+  }
+
+  100% {
+    margin-top: 0px;
+
+  }
+
 
 }
 
-  
-}
 @keyframes titleout {
 
-  0%{
+  0% {
     margin-top: 0px;
-    }
-    70%{
+  }
+
+  70% {
     margin-top: -55px;
-    }
-    100%{
-      margin-top: -55px;
-    
-    }
-  
+  }
+
+  100% {
+    margin-top: -55px;
+
+  }
+
 }
 
 @media screen and (min-width: 425px) {
