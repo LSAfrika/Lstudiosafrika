@@ -3,7 +3,6 @@
 html,
 body {
   scroll-behavior: smooth;
-  max-width: 1100px;
 
 }
 
@@ -14,8 +13,15 @@ body {
 nav {
   @apply w-full h-[56px] bg-blue-800 flex justify-start items-center text-white font-semibold text-lg fixed top-0 z-50 py-2 pl-2;
 
+
+  .lineunder {
+    border: none;
+    border-bottom: 3px solid white;
+    font-weight: 500
+  }
+
   .logo {
-    @apply flex justify-center items-center gap-2 w-fit my-auto
+    @apply flex justify-center items-center gap-2 w-fit my-auto z-40
   }
 
   img {
@@ -31,12 +37,12 @@ nav {
   }
 
   .dropdownmenu {
-    @apply fixed z-20 top-0 bg-white flex flex-col justify-start items-center w-full h-screen text-blue-600;
+    @apply fixed z-20 top-0 bg-gradient-to-b from-blue-800 to-blue-600 flex flex-col justify-start items-center w-full h-screen text-white left-[100%];
 
 
 
     .menutitle {
-      @apply w-full min-h-[60px] bg-blue-600 flex justify-between items-center text-white;
+      @apply w-full min-h-[60px] bg-blue-800 flex justify-between items-center text-white;
 
       .logotitle {
         @apply flex justify-center items-center gap-1;
@@ -54,33 +60,35 @@ nav {
 
       svg {
         width: 30px;
-        height: 30px
+        height: 30px;
+        margin-left: auto;
+        margin-right: 16px;
       }
     }
 
     a {
-      @apply text-3xl font-normal my-4 bg-red-400 w-full text-center min-h-[50px] align-middle
+      @apply text-3xl font-normal my-4 w-full text-center min-h-[50px] align-middle
     }
   }
 
   .opennav {
-    animation: openmenu .5s ease-in forwards;
+    animation: openmenu .25s ease-in forwards;
 
   }
 
   .closenav {
-    animation: closemenu .75s ease-out forwards;
+    animation: closemenu .5s ease-out forwards;
 
   }
 
   ul {
-    @apply ml-auto justify-start items-center mr-[16px] gap-4 font-medium hidden;
+    @apply ml-auto justify-start items-center mr-[16px] gap-4 font-light hidden;
 
-    li {
-      @apply px-2 py-1;
+    a {
+      @apply px-2 py-1 cursor-pointer;
 
       &:hover {
-        @apply bg-white text-blue-700 rounded-md cursor-pointer
+        @apply border-b-[1pxn] border-b-white
       }
     }
   }
@@ -89,7 +97,7 @@ nav {
 
 
 .sectionContainer {
-  @apply w-full min-h-full bg-gray-300/50 box-border flex flex-col max-w-[1100px] ml-auto mr-auto items-center justify-start py-[16px];
+  @apply w-full min-h-full bg-gray-300/50 box-border flex flex-col ml-auto mr-auto items-center justify-start py-[16px];
 
   h1 {
     @apply text-white py-2 px-5 bg-blue-700 rounded-full text-lg font-semibold
@@ -152,6 +160,11 @@ nav {
 
   }
 
+}
+
+.sectionContainer::after {
+  max-width: 100%;
+  background-color: teal
 }
 
 .overlay {
@@ -219,8 +232,14 @@ nav {
       }
     }
 
+    button::before {
+      content: '';
+      background-color: teal;
+      width: 200px
+    }
+
     button {
-      @apply bg-white text-blue-700 rounded-full px-4 py-2 float-right mt-5 text-2xl font-light outline-none border-[10px] border-blue-800;
+      @apply bg-white text-blue-700 rounded-full font-semibold px-4 py-2 float-right mt-5 text-2xl outline-none border-[10px] border-blue-800;
     }
 
     .caption {
@@ -275,7 +294,7 @@ nav {
   // }
 
   .aboutuscontainer {
-    @apply w-4/5 min-h-[200px] p-4 my-2 bg-gradient-to-br from-blue-800 to-blue-500 text-white shadow-white rounded-md backdrop-blur-sm;
+    @apply w-4/5 min-h-[200px] p-4 my-2 bg-blue-800/90 backdrop-blur-md text-white shadow-white rounded-md;
 
     h2 {
       @apply text-lg font-semibold text-white underline underline-offset-8 text-center my-4
@@ -305,6 +324,16 @@ nav {
   // background-image: url('../assets/unsplash/oskar-yildiz-cOkpTiJMGzA-unsplash.jpg');
   background-size: cover;
   overflow: hidden;
+
+  .servicecardholder {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    // background-color: #fff;
+
+  }
 
   .servicescard {
     @apply w-2/3 min-h-[250px] bg-black/40 backdrop-blur-sm my-3 flex flex-col justify-start items-center p-[16px] box-border;
@@ -500,10 +529,12 @@ nav {
 @keyframes openmenu {
   0% {
     left: 100%;
+    opacity: 0;
   }
 
   100% {
     left: 0px;
+    opacity: 1;
   }
 
 }
@@ -511,11 +542,12 @@ nav {
 @keyframes closemenu {
   0% {
     left: 0px;
-
+    opacity: 1;
   }
 
   100% {
     left: calc(100% + 10px);
+    opacity: 0;
 
   }
 
@@ -583,6 +615,17 @@ nav {
 
 @media screen and (min-width: 768px) {
 
+  nav {
+
+    .menu {
+      display: none;
+    }
+
+    ul {
+      display: flex
+    }
+  }
+
   .sectionContainer {
     .sectiontitle {
       @apply w-full flex justify-center items-center;
@@ -604,6 +647,17 @@ nav {
   .services {
     @apply flex-row justify-center flex-wrap gap-2;
 
+    .servicecardholder {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      max-width: 1000px;
+      gap: 16px // background-color: #fff;
+
+    }
+
     .servicescard {
       @apply max-w-[220px]
     }
@@ -618,4 +672,89 @@ nav {
   }
 }
 
-@media screen and (min-width: 900px) {}
+@media screen and (min-width: 900px) {
+  .portfolio {
+    min-height: fit-content;
+  }
+
+  .cardprojects {
+    // background-color: purple;
+    max-width: 1000px;
+    min-height: 500px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .services {
+    min-height: 500px !important;
+
+    .servicecardholder {
+      // background-color: pink;
+    }
+
+    .servicescard {
+      @apply max-w-[275px]
+    }
+  }
+
+  .portfolio {
+    min-height: 500px !important;
+
+  }
+
+  .aboutus {
+    display: grid;
+    grid-template-columns: 1fr minmax(400px, 550px) minmax(400px, 550px) 1fr;
+    grid-template-rows: 100px 1fr 1fr;
+    min-height: 700px;
+    // max-width: 1100px;
+    background-size: cover;
+    background-image: url('../assets/unsplash/arnold-francisca-f77Bh3inUpE-unsplash.jpg');
+    align-items: stretch;
+    justify-items: center;
+    align-content: center;
+
+    .sectiontitle {
+
+      grid-column: 1/-1;
+
+      h2 {
+        color: white;
+
+      }
+
+      .backline {
+        background-color: white
+      }
+    }
+
+    .whoarewe {
+      @apply bg-black/80 backdrop-blur-md;
+
+      grid-column: 2/3;
+      grid-row: 2/3;
+
+    }
+
+    .ourspecialties {
+      @apply bg-black/80 backdrop-blur-md;
+
+
+
+      grid-column: 2/3;
+      grid-row: 3/4;
+    }
+
+    .chooseus {
+      @apply bg-black/80 backdrop-blur-md;
+
+
+
+      grid-column: 3/4;
+      grid-row: 2/4;
+      min-height: 485px;
+    }
+  }
+}
