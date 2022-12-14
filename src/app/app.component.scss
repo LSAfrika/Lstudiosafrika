@@ -279,6 +279,10 @@ nav {
   overflow: hidden;
   position: relative;
 
+  .lgscreenaboutus {
+    display: none;
+  }
+
   .sectiontitle {
     h2 {
       @apply text-blue-700 font-bold
@@ -590,6 +594,10 @@ nav {
 @media screen and (min-width: 425px) {
 
   .portfolio {
+    .sectiontitle {
+      margin-top: 24px
+    }
+
     .cardprojects {
       @apply flex-row justify-center flex-wrap;
 
@@ -705,56 +713,94 @@ nav {
   }
 
   .aboutus {
-    display: grid;
-    grid-template-columns: 1fr minmax(400px, 550px) minmax(400px, 550px) 1fr;
-    grid-template-rows: 100px 1fr 1fr;
+    display: flex;
+    // grid-template-columns: 1fr minmax(400px, 550px) minmax(400px, 550px) 1fr;
+    // grid-template-rows: 100px 1fr 1fr;
     min-height: 700px;
     // max-width: 1100px;
     background-size: cover;
-    background-image: url('../assets/unsplash/arnold-francisca-f77Bh3inUpE-unsplash.jpg');
+    background-image: url('../assets/unsplash/mean\ 2.png');
     align-items: stretch;
     justify-items: center;
     align-content: center;
 
-    .sectiontitle {
+    .aboutuscontainer {
+      display: none;
+    }
 
-      grid-column: 1/-1;
+    .lgscreenaboutus {
+      position: relative;
+      display: flex;
+      width: 100%;
+      min-height: 700px;
+      // padding: 4px;
+      // background-color: teal;
+    }
+
+    .lgscreenaboutus::after {
+      content: '';
+      width: 100%;
+      min-height: 700px;
+      height: inherit;
+      position: absolute;
+      top: -18px;
+      bottom: -30px;
+      background: black;
+      opacity: .1;
+    }
+
+    .sectiontitle {
+      position: relative;
+      height: 100px;
+      padding: 0;
+      margin-top: 24px;
 
       h2 {
-        color: white;
+        // color: white;
+        font-size: 28px;
 
       }
 
       .backline {
-        background-color: white
+        // background-color: white
       }
     }
 
-    .whoarewe {
-      @apply bg-black/80 backdrop-blur-md;
-
-      grid-column: 2/3;
-      grid-row: 2/3;
-
+    .sectiontitle::after {
+      content: '';
+      width: 100%;
+      position: absolute;
+      top: -40px;
+      background-color: black;
+      opacity: .1;
+      height: 122px
     }
 
-    .ourspecialties {
-      @apply bg-black/80 backdrop-blur-md;
+    // .whoarewe {
+    //   @apply bg-black/80 backdrop-blur-md;
+
+    //   grid-column: 2/3;
+    //   grid-row: 2/3;
+
+    // }
+
+    // .ourspecialties {
+    //   @apply bg-black/80 backdrop-blur-md;
 
 
 
-      grid-column: 2/3;
-      grid-row: 3/4;
-    }
+    //   grid-column: 2/3;
+    //   grid-row: 3/4;
+    // }
 
-    .chooseus {
-      @apply bg-black/80 backdrop-blur-md;
+    // .chooseus {
+    //   @apply bg-black/80 backdrop-blur-md;
 
 
 
-      grid-column: 3/4;
-      grid-row: 2/4;
-      min-height: 485px;
-    }
+    //   grid-column: 3/4;
+    //   grid-row: 2/4;
+    //   min-height: 485px;
+    // }
   }
 }
