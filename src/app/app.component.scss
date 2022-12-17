@@ -619,6 +619,35 @@ nav {
       }
     }
   }
+
+  .sectionContainer {
+
+
+    .aboutuscontainer {
+      @apply w-[90%] grid grid-cols-2 grid-rows-[50px_1fr] max-w-[650px];
+
+      img {
+        @apply row-span-2 col-span-1 w-fit h-fit justify-center items-center max-w-[240px] min-h-[200px] mr-auto ml-auto mt-auto mb-auto
+      }
+    }
+
+    .chooseus {
+      @apply pb-4;
+
+      img {
+        @apply max-w-[210px]
+      }
+    }
+
+    .ourspecialties {
+      img {
+        @apply w-fit h-fit justify-center items-center max-w-[240px] min-h-[200px];
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -650,6 +679,23 @@ nav {
         @apply w-[25%]
       }
     }
+
+    .aboutuscontainer {
+      @apply w-[90%] max-w-[750px] min-h-[250px];
+
+      img {
+        @apply row-span-2 col-span-1 w-fit h-fit
+      }
+    }
+
+    .ourspecialties {
+      img {
+        @apply w-fit h-fit justify-center items-center max-w-[240px] min-h-[200px];
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+
+    }
   }
 
   .services {
@@ -671,13 +717,13 @@ nav {
     }
   }
 
-  .aboutus {
-    @apply h-fit;
+  // .aboutus {
+  //   @apply h-fit;
 
-    .aboutuscontainer {
-      @apply max-w-[500px]
-    }
-  }
+  //   .aboutuscontainer {
+  //     @apply max-w-[500px]
+  //   }
+  // }
 }
 
 @media screen and (min-width: 900px) {
@@ -717,37 +763,67 @@ nav {
     // grid-template-columns: 1fr minmax(400px, 550px) minmax(400px, 550px) 1fr;
     // grid-template-rows: 100px 1fr 1fr;
     min-height: 700px;
+    flex-direction: row;
+    flex-wrap: wrap;
     // max-width: 1100px;
     background-size: cover;
     background-image: url('../assets/unsplash/mean\ 2.png');
-    align-items: stretch;
-    justify-items: center;
-    align-content: center;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    // align-content: center;
 
     .aboutuscontainer {
-      display: none;
-    }
-
-    .lgscreenaboutus {
-      position: relative;
       display: flex;
-      width: 100%;
-      min-height: 700px;
-      // padding: 4px;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      height: fit-content;
+      max-width: 400px;
+      min-height: 540px;
+
+      // background-color: black;
+      // opacity: .8;
+      @apply backdrop-blur-sm bg-gradient-to-br from-blue-800 to-blue-600;
+
       // background-color: teal;
+      img {
+        max-width: 170px;
+        max-height: 170px;
+        margin: 0;
+      }
+
+
+
     }
 
-    .lgscreenaboutus::after {
-      content: '';
-      width: 100%;
-      min-height: 700px;
-      height: inherit;
-      position: absolute;
-      top: -18px;
-      bottom: -30px;
-      background: black;
-      opacity: .1;
+    .ourspecialties {
+
+      img {
+        max-height: 170px;
+      }
     }
+
+    // .lgscreenaboutus {
+    //   position: absolute;
+    //   display: flex;
+    //   width: 100%;
+    //   min-height: 700px;
+    //   // padding: 4px;
+    //   // background-color: teal;
+    // }
+
+    // .lgscreenaboutus::after {
+    //   content: '';
+    //   width: 100%;
+    //   min-height: 700px;
+    //   height: inherit;
+    //   position: absolute;
+    //   top: -18px;
+    //   bottom: -30px;
+    //   background: black;
+    //   opacity: .1;
+    // }
 
     .sectiontitle {
       position: relative;
@@ -766,15 +842,15 @@ nav {
       }
     }
 
-    .sectiontitle::after {
-      content: '';
-      width: 100%;
-      position: absolute;
-      top: -40px;
-      background-color: black;
-      opacity: .1;
-      height: 122px
-    }
+    // .sectiontitle::after {
+    //   content: '';
+    //   width: 100%;
+    //   position: absolute;
+    //   top: -40px;
+    //   background-color: black;
+    //   opacity: .1;
+    //   height: 122px
+    // }
 
     // .whoarewe {
     //   @apply bg-black/80 backdrop-blur-md;
