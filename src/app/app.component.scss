@@ -406,12 +406,12 @@ nav {
 
 
     .project {
-      @apply w-4/5 min-h-[100px] h-[175px] py-2 overflow-hidden mb-2 bg-white cursor-pointer relative flex flex-col items-center justify-center rounded-md shadow-md ml-auto mr-auto;
+      @apply w-4/5 min-h-[100px] h-[175px] py-2 overflow-hidden mb-2 bg-white cursor-pointer gap-3 relative flex flex-col items-center justify-center rounded-md shadow-md ml-auto mr-auto;
       box-shadow: 1px 3px 3px 2px rgba(0, 0, 0, 0.628);
 
       .hue {
 
-        @apply bg-gradient-to-b from-transparent via-black/80 to-black;
+        @apply bg-gradient-to-b from-black/70 via-black/40 to-black;
         position: absolute;
         top: 0;
         left: 0;
@@ -444,8 +444,12 @@ nav {
       }
 
       .projecttitle {
-        @apply ml-auto mr-auto font-semibold text-2xl my-2 mb-4 mt-auto text-white py-1 rounded-full px-5 box-border z-10;
+        @apply ml-auto mr-auto font-normal text-2xl my-2 mb-4 mt-auto text-white py-1 rounded-full px-5 box-border relative z-10;
         // text-[#303e9f]
+      }
+
+      button {
+        @apply bg-blue-700 px-6 box-border rounded-full outline-none border-white border-2 min-w-[60px] relative z-20 text-white
       }
     }
 
@@ -599,7 +603,7 @@ nav {
     }
 
     .cardprojects {
-      @apply flex-row justify-center flex-wrap;
+      @apply flex-row justify-center flex-wrap gap-3;
 
       .project {
         @apply max-w-[265px]
@@ -665,7 +669,7 @@ nav {
 
   .sectionContainer {
     .sectiontitle {
-      @apply w-full flex justify-center items-center;
+      @apply w-full flex justify-center items-center mt-[16px];
 
       h2 {
         @apply text-center
@@ -714,6 +718,26 @@ nav {
 
     .servicescard {
       @apply max-w-[220px]
+    }
+  }
+
+  .portfolio {
+    @apply min-h-fit;
+
+    .cardprojects {
+      gap: 20px;
+
+      .project {
+        @apply mx-0
+      }
+    }
+  }
+
+  .contactus {
+
+    .form-container {
+
+      @apply max-w-[300px]
     }
   }
 

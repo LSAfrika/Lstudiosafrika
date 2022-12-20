@@ -13,14 +13,20 @@ export class AppComponent {
   selection = 1
   projects = [
     {
-      title: 'ng chat',
+      title: 'chat',
       bgimage: '../assets/unsplash/daniel-korpai-r73OFSry5AI-unsplash.jpg'
     }, {
-      title: 'ng snapshare',
+      title: 'snapshare',
       bgimage: '../assets/unsplash/daniel-korpai-r73OFSry5AI-unsplash.jpg'
     }, {
-      title: 'ng check list',
+      title: 'check list',
       bgimage: '../assets/unsplash/kelly-sikkema--1_RZL8BGBM-unsplash.jpg'
+    }, {
+      title: ' gallery',
+      bgimage: '../assets/unsplash/annie-spratt-EvBPSTn-p5U-unsplash.jpg'
+    }, {
+      title: 'insta share',
+      bgimage: '../assets/unsplash/annie-spratt-EvBPSTn-p5U-unsplash.jpg'
     }, {
       title: 'ng gallery',
       bgimage: '../assets/unsplash/annie-spratt-EvBPSTn-p5U-unsplash.jpg'
