@@ -1,0 +1,31 @@
+.panel {
+  @apply w-[80%] h-fit rounded-md bg-white min-h-[300px] justify-start items-center pt-5 flex-col flex px-4 gap-3 relative max-w-[400px]
+}
+
+.closemodal {
+  @apply absolute top-2 right-1 z-10 w-[30px] h-[30px] cursor-pointer
+}
+
+.title {
+  @apply bg-blue-700 text-white font-medium pr-10 pl-2 py-2 rounded-r-full mr-auto rounded-l-md
+}
+
+.technology {
+  @apply w-full min-h-[50px] p-2 flex justify-start items-center gap-1;
+
+  .icons {
+    @apply w-[25px] h-[25px] rounded-full shadow-black shadow-sm overflow-hidden bg-white;
+  }
+}
+
+button {
+  @apply bg-blue-700 text-white font-medium px-6 py-1 rounded-full w-fit flex justify-center gap-2 mb-4;
+
+  div {
+    @apply text-lg;
+  }
+
+  svg {
+    @apply w-[25px] h-[25px]
+  }
+}

@@ -148,7 +148,7 @@
         <div class="text">Frontend development</div>
       </div>
 
-      <div class="icon"> <img src="../assets/1581277.png" alt=""></div>
+      <div class="icon"> <img src="../assets/angularicon.png" alt=""></div>
       <div class="title">Angular 2+</div>
 
     </div>
@@ -196,11 +196,11 @@
   </p> -->
 
   <div class="cardprojects">
-    <div *ngFor="let project of projects" class="project">
+    <div *ngFor="let project of projects; let i=index" class="project">
       <img src="{{project.bgimage}}" alt="chat">
       <div class="projecttitle">{{project.title}}</div>
       <div class="hue"></div>
-      <button>view</button>
+      <button (click)="viewproject(i)">view</button>
     </div>
     <!-- <div class="project">
       <img src="../assets/todo.png" alt="chat">
@@ -224,19 +224,26 @@
     <h2>Get in touch</h2>
   </div>
   <div class=" form-container">
-    <form>
+    <form [formGroup]="messageform">
       <h2>Get in touch</h2>
 
       <div class=" form-group">
-        <input type="text" class="" id="exampleInput7" placeholder="Name">
+        <input type="text" class="" id="exampleInput7" placeholder="Name" formControlName="name">
+        <div *ngIf="_name.touched">name field is required</div>
       </div>
       <div class=" form-group">
-        <input type="email" id="exampleInput8" placeholder="Email address">
+        <input type="email" id="exampleInput8" placeholder="Email address" formControlName="email">
+        <div *ngIf="_email.dirty && _email.invalid">please input valid email</div>
+        <div *ngIf="_email.touched && _email.invalid">email field is required</div>
+
       </div>
       <div class=" form-group">
-        <textarea rows="3" placeholder="Message"></textarea>
+        <textarea rows="3" placeholder="Message" formControlName="message"></textarea>
+        <div *ngIf="_message.touched && _message.invalid">message field is required</div>
+
       </div>
-      <button>Send</button>
+      <button disabled="messageform.invalid" [ngClass]="{disable: messageform.invalid, enable:messageform.valid}"
+        (click)="sendmessage()">Send</button>
     </form>
   </div>
 
@@ -269,4 +276,5 @@
 
 </section>
 
+<app-viewproject *ngIf="openmodal" [project]="selectedproject" (closemodal)="closemodal($event)"></app-viewproject>
 <!-- </div> -->

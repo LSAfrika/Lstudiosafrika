@@ -1,4 +1,6 @@
+import { Projectmodel } from './interface/projectmodel';
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,47 +10,114 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Lstudiosafrika';
   open = 0
+  openmodal = false
   mobiledev = false;
   switchtitle = 1
   selection = 1
-  projects = [
+  selectedproject: Projectmodel
+  messageform: FormGroup
+  projects: Projectmodel[] = [
     {
-      title: 'chat',
-      bgimage: '../assets/unsplash/daniel-korpai-r73OFSry5AI-unsplash.jpg'
+      title: 'NG chat',
+      bgimage: '../assets/unsplash/daniel-korpai-r73OFSry5AI-unsplash.jpg',
+      icons: [
+        '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
+      ],
+      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda reprehenderit aliquamreiciendis repudiandae sit porro',
+      url: 'http://localhost:4200'
     }, {
       title: 'snapshare',
-      bgimage: '../assets/unsplash/daniel-korpai-r73OFSry5AI-unsplash.jpg'
+      bgimage: '../assets/unsplash/daniel-korpai-r73OFSry5AI-unsplash.jpg',
+      icons: [
+        '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
+      ],
+      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda reprehenderit aliquamreiciendis repudiandae sit porro',
+      url: 'http://localhost:4200'
     }, {
       title: 'check list',
-      bgimage: '../assets/unsplash/kelly-sikkema--1_RZL8BGBM-unsplash.jpg'
+      bgimage: '../assets/unsplash/kelly-sikkema--1_RZL8BGBM-unsplash.jpg',
+      icons: [
+        '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
+      ],
+      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda reprehenderit aliquamreiciendis repudiandae sit porro',
+      url: 'http://localhost:4200'
     }, {
       title: ' gallery',
-      bgimage: '../assets/unsplash/annie-spratt-EvBPSTn-p5U-unsplash.jpg'
+      bgimage: '../assets/unsplash/annie-spratt-EvBPSTn-p5U-unsplash.jpg',
+      icons: [
+        '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
+      ],
+      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda reprehenderit aliquamreiciendis repudiandae sit porro',
+      url: 'http://localhost:4200'
     }, {
       title: 'insta share',
-      bgimage: '../assets/unsplash/annie-spratt-EvBPSTn-p5U-unsplash.jpg'
+      bgimage: '../assets/unsplash/annie-spratt-EvBPSTn-p5U-unsplash.jpg',
+      icons: [
+        '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
+      ],
+      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda reprehenderit aliquamreiciendis repudiandae sit porro',
+      url: 'http://localhost:4200'
     }, {
       title: 'ng gallery',
-      bgimage: '../assets/unsplash/annie-spratt-EvBPSTn-p5U-unsplash.jpg'
+      bgimage: '../assets/unsplash/annie-spratt-EvBPSTn-p5U-unsplash.jpg',
+      icons: [
+        '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
+      ],
+      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda reprehenderit aliquamreiciendis repudiandae sit porro',
+      url: 'http://localhost:4200'
     },
 
   ]
 
-  constructor() {
+  constructor(private fb: FormBuilder) {
+
 
   }
   ngOnInit() {
 
     this.switch()
+    this.messageformbuild()
+  }
+
+  messageformbuild() {
+    this.messageform = this.fb.group({
+      name: ['', [Validators.required, Validators.minLength(5)]],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', [Validators.required]],
+    })
+  }
+
+  get _name() {
+    return this.messageform.get('name')
+  }
+  get _email() {
+    return this.messageform.get('email')
+  }
+  get _message() {
+    return this.messageform.get('message')
+  }
+
+
+  sendmessage() {
+    console.log('message to be sent to server: ', this.messageform.value);
 
   }
 
+  viewproject(i) {
+    console.log('retrieved project: ', this.projects[i])
+    this.openmodal = true
+    this.selectedproject = this.projects[i]
+  }
   togglemenu() {
     console.log('bool value: ', this.open);
     if (this.open === 1) return this.open = 2
     if (this.open === 2) return this.open = 1
     if (this.open === 0) return this.open = 1
 
+  }
+
+  closemodal(event) {
+    this.openmodal = event
   }
 
   switch() {
