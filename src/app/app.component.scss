@@ -774,6 +774,35 @@ app-viewproject {
     min-height: fit-content;
   }
 
+  .home {
+
+    // background-image: url('../assets/unsplash/mean\ 2.png');
+
+    .box {
+      display: none;
+      width: 800px;
+      height: 800px;
+      position: absolute;
+      z-index: 20;
+      bottom: -35%;
+      background-color: white;
+      right: -20%;
+      border-radius: 501px 0 0;
+    }
+  }
+
+  .home .circle {
+    // background-color: blue;
+    // display: none;
+    border-radius: 500px 0 0 0;
+    bottom: -25%;
+    left: 30%;
+    // right: -50%;
+    width: 100vh;
+    height: 100vh;
+    // top: 100px;
+  }
+
   .cardprojects {
     // background-color: purple;
     max-width: 1000px;
@@ -921,5 +950,30 @@ app-viewproject {
     //   grid-row: 2/4;
     //   min-height: 485px;
     // }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .home {
+
+    .circle {
+      display: none;
+      background-color: red;
+    }
+
+    .mobileherowrapper {
+      margin-right: auto;
+      margin-left: 50px;
+    }
+
+    .box {
+      background-color: red;
+      bottom: -40%;
+      right: -10%;
+      display: none;
+
+    }
+
   }
 }
