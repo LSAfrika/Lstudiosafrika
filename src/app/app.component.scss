@@ -97,7 +97,7 @@ nav {
 
 
 .sectionContainer {
-  @apply w-full min-h-full bg-gray-300/50 box-border flex flex-col ml-auto mr-auto items-center justify-start py-[16px];
+  @apply w-full min-h-fit bg-gray-300/50 box-border flex flex-col ml-auto mr-auto items-center justify-start py-[16px];
 
   h1 {
     @apply text-white py-2 px-5 bg-blue-700 rounded-full text-lg font-semibold
@@ -216,6 +216,9 @@ nav {
   overflow: hidden;
   position: relative;
 
+  .box {
+    display: none
+  }
 
   .circle {
     @apply absolute w-[150vh] h-[150vh] bg-white rounded-full left-1/4 top-[250px] z-0
@@ -774,22 +777,7 @@ app-viewproject {
     min-height: fit-content;
   }
 
-  .home {
 
-    // background-image: url('../assets/unsplash/mean\ 2.png');
-
-    .box {
-      display: none;
-      width: 800px;
-      height: 800px;
-      position: absolute;
-      z-index: 20;
-      bottom: -35%;
-      background-color: white;
-      right: -20%;
-      border-radius: 501px 0 0;
-    }
-  }
 
   .home .circle {
     // background-color: blue;
@@ -814,7 +802,7 @@ app-viewproject {
   }
 
   .services {
-    min-height: 500px !important;
+    min-height: 650px !important;
 
     .servicecardholder {
       // background-color: pink;
@@ -956,6 +944,7 @@ app-viewproject {
 @media screen and (min-width: 1024px) {
 
   .home {
+    // min-height: fit-content;
 
     .circle {
       display: none;
@@ -965,15 +954,104 @@ app-viewproject {
     .mobileherowrapper {
       margin-right: auto;
       margin-left: 50px;
+
+      min-width: 500px;
+      min-height: 200px;
+      // background-color: pink;
+
+      .caption {
+        font-size: 2.125rem;
+        line-height: 2.75rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        br {
+          display: none;
+        }
+      }
+
+      h2 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 3.5rem;
+        line-height: 2.5rem;
+      }
+
+      .dynamictext {
+        div {
+          font-size: 2.5rem;
+        }
+      }
+
+      button {
+        font-size: 2.5rem;
+        line-height: 3rem;
+      }
     }
 
     .box {
-      background-color: red;
-      bottom: -40%;
-      right: -10%;
-      display: none;
+      // display: none;
+      width: 50%;
+      min-height: 100%;
+      // clip-path: polygon(9% 0, 100% 0, 100% 100%, 0% 100%);
+      position: absolute;
+      z-index: 20;
+      top: 0;
+      background-color: transparent;
+      // background-color: red;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      // margin-top: 56PX;
+      right: 0;
+
+      img {
+        min-width: 850px;
+        min-height: 850px;
+        // border-radius: 999px;
+        margin-top: -130px;
+        // overflow: hidden;
+
+      }
+
+      // .technologyused {
+      //   width: 80%;
+      //   min-height: 100px;
+      //   display: none;
+      //   opacity: 0;
+      //   // background-color: green;
+      //   // margin-top: 32px;
+      //   margin-bottom: 16px;
+      //   display: flex;
+      //   justify-content: center;
+      //   gap: 8px;
+      //   align-items: center;
+      //   // background-image: url('../assets/unsplash/mean\ 2.png');
+
+
+      //   .techicons {
+      //     width: 150px;
+      //     height: 150px;
+      //     border-radius: 100%;
+      //     // background-color: red;
+      //     overflow: hidden;
+      //     justify-content: center;
+      //     align-items: center;
+      //     display: flex;
+
+      //     img {
+      //       border-radius: inherit;
+      //     }
+
+      //   }
+      // }
 
     }
+
+
 
   }
 }

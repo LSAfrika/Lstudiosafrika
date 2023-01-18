@@ -67,9 +67,10 @@ export class AppComponent {
       url: 'http://localhost:4200'
     },
 
-  ]
-
+  ];
+  icons = []
   constructor(private fb: FormBuilder) {
+    this.icons = ['../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png']
 
 
   }

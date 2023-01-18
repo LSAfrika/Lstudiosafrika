@@ -1,5 +1,5 @@
 .panel {
-  @apply w-[80%] h-fit rounded-md bg-white min-h-[300px] justify-start items-center pt-5 flex-col flex px-4 gap-3 relative max-w-[400px]
+  @apply w-[80%] h-fit rounded-md bg-white min-h-[400px] justify-start items-center pt-5 flex-col flex px-4 gap-3 relative max-w-[350px]
 }
 
 .closemodal {
@@ -19,7 +19,7 @@
 }
 
 button {
-  @apply bg-blue-700 text-white font-medium px-6 py-1 rounded-full w-fit flex justify-center gap-2 mb-4;
+  @apply bg-blue-700 text-white font-medium px-6 py-1 rounded-full w-fit flex justify-center gap-2 mb-8 mt-auto;
 
   div {
     @apply text-lg;
