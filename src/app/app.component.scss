@@ -317,6 +317,10 @@ nav {
 .services {
   @apply relative h-fit bg-blue-800;
 
+  .servicecardholderdesktop {
+    @apply hidden
+  }
+
   .svgtop {
     @apply absolute top-0 left-0 h-[300px] w-full
   }
@@ -729,9 +733,43 @@ app-viewproject {
   .services {
     @apply flex-row justify-center flex-wrap gap-2;
 
+    .servicecardholderdesktop {
+      @apply flex flex-col justify-start items-center max-w-[75%];
+      width: 90%;
+      height: fit-content;
+
+      .servicecarddesktop {
+        min-height: 200px;
+        // background-color: orange;
+        margin-top: 16px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+
+        img {
+          width: 200px;
+          height: 200px;
+          overflow: hidden;
+        }
+
+        .description {
+          max-width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 2rem;
+          padding: 8px;
+
+        }
+      }
+    }
+
     .servicecardholder {
       width: 100%;
-      display: flex;
+      display: none;
       flex-direction: row;
       justify-content: center;
       align-items: center;
@@ -801,6 +839,14 @@ app-viewproject {
 @media screen and (min-width: 900px) {
   .portfolio {
     min-height: fit-content;
+
+    .cardprojects {
+      // display: none;
+
+      .project {
+        @apply min-w-[250px] min-h-[225px]
+      }
+    }
   }
 
 
@@ -832,6 +878,7 @@ app-viewproject {
 
     .servicecardholder {
       // background-color: pink;
+      display: none;
     }
 
     .servicescard {
@@ -1109,4 +1156,11 @@ app-viewproject {
 
   }
 
+  .services {
+    .servicecardholderdesktop {
+      @apply flex flex-col justify-start items-center max-w-[1000px];
+      width: 90%;
+      height: fit-content;
+    }
+  }
 }
