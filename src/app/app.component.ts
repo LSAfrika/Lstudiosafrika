@@ -147,6 +147,7 @@ export class AppComponent {
     if (location === 'about') this.selection = 2
     if (location === 'services') this.selection = 3
     if (location === 'portfolio') this.selection = 4
+    if (location === 'contacts') this.selection = 5
 
 
     document.getElementById(location).scrollIntoView({

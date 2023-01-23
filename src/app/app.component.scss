@@ -296,12 +296,9 @@ nav {
     }
   }
 
-  // .box {
-  //   @apply absolute w-[200px] h-[200px] bg-blue-800 top-0 rounded-full
-  // }
 
   .aboutuscontainer {
-    @apply w-4/5 min-h-[200px] p-4 my-2 bg-blue-800/90 backdrop-blur-md text-white shadow-white rounded-md;
+    @apply w-4/5 min-h-[200px] p-4 my-2 bg-blue-800 backdrop-blur-md text-white shadow-white rounded-md;
 
     h2 {
       @apply text-lg font-semibold text-white underline underline-offset-8 text-center my-4
@@ -343,17 +340,18 @@ nav {
   }
 
   .servicescard {
-    @apply w-2/3 min-h-[250px] bg-black/40 backdrop-blur-sm my-3 flex flex-col justify-start items-center p-[16px] box-border;
+    @apply w-2/3 min-h-[250px] my-3 flex flex-col justify-start items-center p-[16px] box-border;
     border-radius: 10px;
-    box-shadow: 1px 3px 15px 2px rgba(0, 0, 0, 0.28)
+    // box-shadow: 1px 3px 15px 2px rgba(0, 0, 0, 0.28)
   }
 
   .leadtitle {
-    @apply py-2 text-white font-semibold w-full my-2;
+    @apply py-2 text-white font-semibold w-full my-2 flex justify-center;
     // box-shadow: 1px 3px 3px 2px rgba(0, 0, 0, 0.328);
 
+
     .text {
-      @apply px-4 py-2 bg-blue-800 text-white font-semibold w-fit float-left rounded-r-full;
+      @apply px-4 py-2 font-semibold w-fit float-left rounded-full bg-white text-blue-700 mb-3;
 
     }
   }
@@ -737,13 +735,29 @@ app-viewproject {
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      max-width: 1000px;
-      gap: 16px // background-color: #fff;
+      max-width: 1100px;
+      // gap: 16px // background-color: #fff;
+
+      // @apply grid grid-cols-2 grid-rows-2;
+      // place-items: center;
 
     }
 
     .servicescard {
-      @apply max-w-[220px]
+      @apply max-w-[300px];
+
+      .icon {
+        @apply w-[150px] h-[150px] bg-transparent
+      }
+    }
+
+    .leadtitle .text {
+      min-width: 100px;
+      text-align: center;
+
+      span {
+        display: none
+      }
     }
   }
 
@@ -814,7 +828,7 @@ app-viewproject {
   }
 
   .services {
-    min-height: 650px !important;
+    min-height: 550px !important;
 
     .servicecardholder {
       // background-color: pink;
@@ -839,7 +853,7 @@ app-viewproject {
     flex-wrap: wrap;
     // max-width: 1100px;
     background-size: cover;
-    background-image: url('../assets/unsplash/mean\ 2.png');
+    // background-image: url('../assets/unsplash/mean\ 2.png');
     align-items: center;
     justify-content: center;
     gap: 16px;
@@ -953,18 +967,29 @@ app-viewproject {
   }
 
   .contactus {
-    @apply grid grid-cols-2 grid-rows-3;
+    @apply grid grid-cols-2 grid-flow-row pb-0;
 
     .sectiontitle {
       @apply col-span-2
     }
 
     .form-container {
-      @apply row-span-4
+      @apply row-span-4 ml-auto mr-20
+    }
+
+    .footericons {
+      min-height: 0;
+      margin-top: 0;
+      justify-content: flex-start;
+      cursor: pointer;
+    }
+
+    .footercontacts {
+      justify-content: flex-start;
     }
 
     .copyright {
-      @apply col-span-2 bg-red-400 w-full
+      @apply col-span-2 w-full flex justify-center mb-2
     }
   }
 }
@@ -982,7 +1007,7 @@ app-viewproject {
     .mobileherowrapper {
       margin-right: auto;
       margin-left: 50px;
-
+      margin-top: 4rem;
       min-width: 500px;
       min-height: 200px;
       // background-color: pink;
@@ -1025,6 +1050,7 @@ app-viewproject {
       min-height: 100%;
       // clip-path: polygon(9% 0, 100% 0, 100% 100%, 0% 100%);
       position: absolute;
+      margin-top: 4rem;
       z-index: 20;
       top: 0;
       background-color: transparent;
@@ -1082,4 +1108,5 @@ app-viewproject {
 
 
   }
+
 }

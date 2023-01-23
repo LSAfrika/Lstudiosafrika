@@ -38,6 +38,8 @@
     <a [ngClass]="{lineunder: selection===2}" (click)="scrolltocontent('about')">About us</a>
     <a [ngClass]="{lineunder: selection===3}" (click)="scrolltocontent('services')">services</a>
     <a [ngClass]="{lineunder: selection===4}" (click)="scrolltocontent('portfolio')">Portfolio</a>
+    <a [ngClass]="{lineunder: selection===5}" (click)="scrolltocontent('contacts')"
+      style="background-color: white;color:royalblue;font-weight:500;border-radius: 10px;">contact us</a>
     <!-- <a href="#contacts">Contact us</a> -->
   </ul>
 </nav>
@@ -176,7 +178,7 @@
   <div class="servicecardholder">
     <div class="servicescard">
       <div class="leadtitle">
-        <div class="text">Frontend development</div>
+        <div class="text">Frontend <span>development</span> </div>
       </div>
 
       <div class="icon"> <img src="../assets/angularicon.png" alt=""></div>
@@ -186,7 +188,7 @@
 
     <div class="servicescard">
       <div class="leadtitle">
-        <div class="text">Backend development</div>
+        <div class="text">Backend <span>development</span> </div>
       </div>
 
       <div class="icon">
@@ -200,7 +202,7 @@
 
     <div class="servicescard">
       <div class="leadtitle">
-        <div class="text">Mobile development</div>
+        <div class="text">Mobile <span>development</span> </div>
       </div>
 
       <div class="icon">
@@ -208,6 +210,21 @@
 
       </div>
       <div class=" title">Ionic/Angular
+      </div>
+
+    </div>
+
+
+    <div class="servicescard">
+      <div class="leadtitle">
+        <div class="text">Ui/Ux <span>development</span> </div>
+      </div>
+
+      <div class="icon">
+        <img src="../assets/logo figma icon.png" alt="">
+
+      </div>
+      <div class=" title">figma
       </div>
 
     </div>
