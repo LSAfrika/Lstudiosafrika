@@ -734,24 +734,28 @@ app-viewproject {
     @apply flex-row justify-center flex-wrap gap-2;
 
     .servicecardholderdesktop {
-      @apply flex flex-col justify-start items-center max-w-[75%];
+      @apply flex flex-col justify-start items-center;
       width: 90%;
       height: fit-content;
+
 
       .servicecarddesktop {
         min-height: 200px;
         // background-color: orange;
-        margin-top: 16px;
+        margin-bottom: 32px;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 4rem;
+        gap: 3rem;
+        max-width: 1100px;
+        // background-color: teal;
 
         img {
-          width: 200px;
-          height: 200px;
+          width: 250px;
+          height: 250px;
           overflow: hidden;
+          // background: #000;
         }
 
         .description {
@@ -762,8 +766,18 @@ app-viewproject {
           align-items: center;
           gap: 2rem;
           padding: 8px;
+          color: white;
+
+
+          .titledesktop {
+            @apply text-lg text-blue-800 font-semibold bg-white rounded-full py-1 px-5
+          }
 
         }
+      }
+
+      .servicecardflexreverse {
+        flex-direction: row-reverse;
       }
     }
 
@@ -874,7 +888,7 @@ app-viewproject {
   }
 
   .services {
-    min-height: 550px !important;
+    // min-height: 550px !important;
 
     .servicecardholder {
       // background-color: pink;
@@ -1021,7 +1035,7 @@ app-viewproject {
     }
 
     .form-container {
-      @apply row-span-4 ml-auto mr-20
+      @apply row-span-4 ml-auto mr-[100px]
     }
 
     .footericons {
@@ -1029,10 +1043,13 @@ app-viewproject {
       margin-top: 0;
       justify-content: flex-start;
       cursor: pointer;
+      padding-left: 100px;
     }
 
     .footercontacts {
       justify-content: flex-start;
+      padding-left: 100px;
+
     }
 
     .copyright {
