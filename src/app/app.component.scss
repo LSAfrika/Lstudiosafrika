@@ -910,7 +910,7 @@ app-viewproject {
     // grid-template-columns: 1fr minmax(400px, 550px) minmax(400px, 550px) 1fr;
     // grid-template-rows: 100px 1fr 1fr;
     min-height: 700px;
-    flex-direction: row;
+    // flex-direction: row;
     flex-wrap: wrap;
     // max-width: 1100px;
     background-size: cover;
@@ -921,28 +921,31 @@ app-viewproject {
     // align-content: center;
 
     .aboutuscontainer {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      height: fit-content;
-      max-width: 400px;
-      min-height: 540px;
-
-      // background-color: black;
-      // opacity: .8;
-      @apply backdrop-blur-sm bg-gradient-to-br from-blue-800 to-blue-600;
-
-      // background-color: teal;
-      img {
-        max-width: 170px;
-        max-height: 170px;
-        margin: 0;
-      }
-
-
-
+      max-width: 1200px;
     }
+
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: flex-start;
+    //   align-items: center;
+    //   height: fit-content;
+    //   max-width: 400px;
+    //   min-height: 540px;
+
+    //   // background-color: black;
+    //   // opacity: .8;
+    //   @apply backdrop-blur-sm bg-gradient-to-br from-blue-800 to-blue-600;
+
+    //   // background-color: teal;
+    //   img {
+    //     max-width: 170px;
+    //     max-height: 170px;
+    //     margin: 0;
+    //   }
+
+
+
+    // }
 
     .ourspecialties {
 
@@ -1179,5 +1182,32 @@ app-viewproject {
       width: 90%;
       height: fit-content;
     }
+  }
+
+  .aboutus {
+    .aboutuscontainer {
+      max-width: 1200px;
+      min-height: 400px;
+      background-color: white;
+      @apply text-blue-700;
+
+      img {
+        min-width: 500px;
+        min-height: 500px;
+      }
+
+      h2 {
+        @apply text-blue-800 text-3xl font-bold mt-20
+      }
+
+      p {
+        @apply text-2xl font-normal my-auto
+      }
+
+      ul {
+        @apply text-2xl my-auto
+      }
+    }
+
   }
 }
