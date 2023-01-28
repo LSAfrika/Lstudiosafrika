@@ -129,7 +129,7 @@
     <img src="../assets/unsplash/Meeting-bro.svg" alt="">
     <h2>who are we?</h2>
     <p>we are a small but well equipped software firm found in Nairobi Kenya passionate about software development to
-      improve and better the lives of fellow human beingsand while at it make a living fromit </p>
+      improve and better the lives of fellow human beings and while at it make a living from it </p>
 
   </div>
 
@@ -245,7 +245,7 @@
   </div>
 
   <div class="servicecardholderdesktop">
-    <div class="servicecarddesktop  servicecardflexreverse">
+    <div class="servicecarddesktop servicecardflexreverse">
       <img src="../assets/express-js-icon-20.png" alt="" srcset="">
 
       <div class="description">
@@ -258,7 +258,7 @@
   </div>
 
   <div class="servicecardholderdesktop">
-    <div class="servicecarddesktop   ">
+    <div class="servicecarddesktop ">
       <img style="border-radius: 999px; overflow:hidden" src="../assets/Logo_Ionic.png" alt="" srcset="">
 
       <div class="description">
@@ -272,7 +272,7 @@
   </div>
 
   <div style="margin-bottom: 32px;" class="servicecardholderdesktop servicecardflexreverse">
-    <div class="servicecarddesktop  servicecardflexreverse">
+    <div class="servicecarddesktop servicecardflexreverse">
       <img src="../assets/logo figma icon.png" alt="" srcset="">
 
       <div class="description">
@@ -331,7 +331,7 @@
 
       <div class=" form-group">
         <input type="text" class="" id="exampleInput7" placeholder="Name" formControlName="name">
-        <div *ngIf="_name.touched">name field is required</div>
+        <div *ngIf="_name.touched &&  _name.invalid">name field is required</div>
       </div>
       <div class=" form-group">
         <input type="email" id="exampleInput8" placeholder="Email address" formControlName="email">
@@ -344,8 +344,10 @@
         <div *ngIf="_message.touched && _message.invalid">message field is required</div>
 
       </div>
-      <button disabled="messageform.invalid" [ngClass]="{disable: messageform.invalid, enable:messageform.valid}"
-        (click)="sendmessage()">Send</button>
+      {{messageform.invalid }}
+      <button [disabled]="messageform.invalid" [ngClass]="{disable: messageform.invalid, enable:messageform.valid}"
+        (click)="sendmessage(messageform.value)">Send</button>
+
     </form>
   </div>
 

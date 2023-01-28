@@ -1,6 +1,10 @@
 import { Projectmodel } from './interface/projectmodel';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { initializeApp } from "firebase/app";
+import { environment } from 'src/environments/environment';
+import { getFirestore } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 
 @Component({
   selector: 'app-root',
@@ -9,6 +13,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AppComponent {
   title = 'Lstudiosafrika';
+
+  app = initializeApp(environment.firebaseConfig)
+  db = getFirestore(this.app);
+
   open = 0
   openmodal = false
   mobiledev = false;
@@ -88,6 +96,10 @@ export class AppComponent {
     })
   }
 
+  async postmessage(message) {
+
+  }
+
   get _name() {
     return this.messageform.get('name')
   }
@@ -99,8 +111,20 @@ export class AppComponent {
   }
 
 
-  sendmessage() {
+  async sendmessage(message) {
     console.log('message to be sent to server: ', this.messageform.value);
+
+    try {
+      const messageref = await addDoc(collection(this.db, 'usermessages'), {
+        ...message
+      })
+      alert('thank you for your message we will get back to you shortly')
+      console.log(messageref.id);
+      this.messageformbuild()
+    } catch (error) {
+      console.log('error occured:', error.message);
+
+    }
 
   }
 
