@@ -344,7 +344,7 @@
         <div *ngIf="_message.touched && _message.invalid">message field is required</div>
 
       </div>
-      {{messageform.invalid }}
+
       <button [disabled]="messageform.invalid" [ngClass]="{disable: messageform.invalid, enable:messageform.valid}"
         (click)="sendmessage(messageform.value)">Send</button>
 
