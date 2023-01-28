@@ -149,11 +149,6 @@ nav {
   .sectiontitle:nth-child(1) {
     // @apply text-blue-700;
 
-    h2 {
-      // @apply ;
-
-    }
-
     .backline {
       @apply h-[4px] shadow-black/40 shadow-sm
     }
@@ -228,7 +223,7 @@ nav {
     @apply flex flex-col justify-start items-center relative z-30;
 
     .dynamictext {
-      @apply w-full bg-transparent h-[50px] my-4 relative overflow-hidden relative;
+      @apply w-full bg-transparent h-[50px] my-4 overflow-hidden relative;
 
       div {
         @apply h-[50px] w-full text-center pt-4 font-bold mt-[55px] top-0 absolute text-2xl;
@@ -299,6 +294,8 @@ nav {
 
   .aboutuscontainer {
     @apply w-4/5 min-h-[200px] p-4 my-2 bg-blue-800 backdrop-blur-md text-white shadow-white rounded-md;
+
+    animation: aboutusentrance 2s ease-in forwards;
 
     h2 {
       @apply text-lg font-semibold text-white underline underline-offset-8 text-center my-4
@@ -498,19 +495,47 @@ nav {
     }
 
     button {
-      @apply w-full px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md transition duration-150 ease-in-out;
+      @apply w-full px-6 py-2.5 bg-blue-600 gap-4 text-white flex justify-center items-center font-medium text-xs leading-tight uppercase rounded shadow-md transition duration-150 ease-in-out;
 
-      // &:hover {
-      //   @apply bg-blue-700 shadow-lg
-      // }
 
-      // &focus {
-      //   @apply bg-blue-700 shadow-lg outline-none ring-0
-      // }
+      .lds-facebook {
+        display: inline-block;
+        position: relative;
+        min-width: 40px;
+        // background-color: teal;
+        width: fit-content;
+        height: 30px;
+        margin-bottom: 16px;
 
-      // &:active {
-      //   @apply bg-blue-800 shadow-lg
-      // }
+
+
+      }
+
+      .lds-facebook div {
+        display: inline-block;
+        position: absolute;
+        border-radius: 999px;
+        // left: 4px;
+        top: 0;
+        width: 6px;
+        background: #fff;
+        animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+      }
+
+      .lds-facebook div:nth-child(1) {
+        left: 8px;
+        animation-delay: -0.24s;
+      }
+
+      .lds-facebook div:nth-child(2) {
+        left: 20px;
+        animation-delay: -0.12s;
+      }
+
+      .lds-facebook div:nth-child(3) {
+        left: 32px;
+        animation-delay: 0;
+      }
 
     }
 
@@ -611,6 +636,58 @@ nav {
   }
 
 }
+
+
+
+@keyframes heroimageentrance {
+  0% {
+    right: -110%
+  }
+
+  100% {
+    right: 0;
+  }
+
+}
+
+@keyframes herotextentrance {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+@keyframes aboutusentrance {
+
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 32px;
+  }
+
+  50%,
+  100% {
+    top: 16px;
+    height: 16px;
+  }
+}
+
+
+
 
 app-viewproject {
   min-height: 100vh;
@@ -987,9 +1064,7 @@ app-viewproject {
 
       }
 
-      .backline {
-        // background-color: white
-      }
+
     }
 
     // .sectiontitle::after {
@@ -1079,6 +1154,8 @@ app-viewproject {
       min-height: 200px;
       // background-color: pink;
 
+      animation: herotextentrance 3s forwards;
+
       .caption {
         font-size: 2.125rem;
         line-height: 2.75rem;
@@ -1128,47 +1205,19 @@ app-viewproject {
       align-items: center;
       // margin-top: 56PX;
       right: 0;
+      overflow: hidden;
 
       img {
         min-width: 850px;
         min-height: 850px;
         // border-radius: 999px;
         margin-top: -130px;
+        position: relative;
         // overflow: hidden;
-
+        animation: heroimageentrance 3s forwards;
       }
 
-      // .technologyused {
-      //   width: 80%;
-      //   min-height: 100px;
-      //   display: none;
-      //   opacity: 0;
-      //   // background-color: green;
-      //   // margin-top: 32px;
-      //   margin-bottom: 16px;
-      //   display: flex;
-      //   justify-content: center;
-      //   gap: 8px;
-      //   align-items: center;
-      //   // background-image: url('../assets/unsplash/mean\ 2.png');
 
-
-      //   .techicons {
-      //     width: 150px;
-      //     height: 150px;
-      //     border-radius: 100%;
-      //     // background-color: red;
-      //     overflow: hidden;
-      //     justify-content: center;
-      //     align-items: center;
-      //     display: flex;
-
-      //     img {
-      //       border-radius: inherit;
-      //     }
-
-      //   }
-      // }
 
     }
 
@@ -1188,7 +1237,7 @@ app-viewproject {
     .aboutuscontainer {
       max-width: 1200px;
       min-height: 400px;
-      background-color: white;
+      background-color: pink;
       @apply text-blue-700;
 
       img {
@@ -1197,7 +1246,7 @@ app-viewproject {
       }
 
       h2 {
-        @apply text-blue-800 text-3xl font-bold mt-20
+        @apply text-blue-800 text-3xl font-bold mt-20 no-underline
       }
 
       p {

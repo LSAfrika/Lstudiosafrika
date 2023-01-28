@@ -1,10 +1,11 @@
 import { Projectmodel } from './interface/projectmodel';
-import { Component } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { initializeApp } from "firebase/app";
 import { environment } from 'src/environments/environment';
 import { getFirestore } from "firebase/firestore";
 import { collection, addDoc } from "firebase/firestore";
+
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,13 @@ export class AppComponent {
   app = initializeApp(environment.firebaseConfig)
   db = getFirestore(this.app);
 
+
+  @ViewChildren('intersect', { read: ElementRef }) intersecting: QueryList<ElementRef>
+
+  observer: any
+
+
+  sendingusermessage = false
   open = 0
   openmodal = false
   mobiledev = false;
@@ -82,11 +90,54 @@ export class AppComponent {
 
 
   }
+
+
+
+
   ngOnInit() {
 
     this.switch()
     this.messageformbuild()
+    this.intersectionmethod()
+
   }
+
+  ngAfterViewInit(): void {
+    // console.log(this.intersect);
+
+    // this.observer.observe(this.intersecting[0].nativeElement)
+
+
+    this.intersecting.forEach(inters => {
+
+      console.log(inters);
+
+      this.observer.observe(inters.nativeElement)
+
+
+    });
+  }
+
+  intersectionmethod() {
+    let options = {
+      root: document.querySelector('fullapp'),
+      rootMargin: '0px',
+      threshold: 0.5
+    }
+
+    this.observer = new IntersectionObserver((entries) => {
+
+      // console.log('all entries with observer', entries);
+
+      if (entries[0].isIntersecting) {
+        // console.log('class names: ',entries[0].nativeElement.classList);
+
+        console.log('is intersectiong', entries[0].target.classList);
+
+      }
+    }, options)
+  }
+
 
   messageformbuild() {
     this.messageform = this.fb.group({
@@ -96,9 +147,6 @@ export class AppComponent {
     })
   }
 
-  async postmessage(message) {
-
-  }
 
   get _name() {
     return this.messageform.get('name')
@@ -113,14 +161,15 @@ export class AppComponent {
 
   async sendmessage(message) {
     console.log('message to be sent to server: ', this.messageform.value);
-
+    this.sendingusermessage = true
     try {
       const messageref = await addDoc(collection(this.db, 'usermessages'), {
         ...message
       })
-      alert('thank you for your message we will get back to you shortly')
+      this.sendingusermessage = false
       console.log(messageref.id);
       this.messageformbuild()
+      alert('thank you for your message we will get back to you shortly')
     } catch (error) {
       console.log('error occured:', error.message);
 

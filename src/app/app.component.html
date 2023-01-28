@@ -1,61 +1,63 @@
-<nav>
-  <div (click)="scrolltocontent('home')" class="logo">
-    <img src="../assets/l-studio afrika Logo.png" alt="">
-    <div>LSAfrika</div>
+<div #fullapp>
 
-  </div>
+  <nav>
+    <div (click)="scrolltocontent('home')" class="logo">
+      <img src="../assets/l-studio afrika Logo.png" alt="">
+      <div>LSAfrika</div>
 
-  <div (click)="togglemenu()" class="menu">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-    </svg>
-  </div>
+    </div>
 
-  <div class="dropdownmenu" [ngClass]="{opennav: open===1 , closenav:open===2}">
-    <div class="menutitle">
-      <!-- <div class="logotitle">
+    <div (click)="togglemenu()" class="menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </div>
+
+    <div class="dropdownmenu" [ngClass]="{opennav: open===1 , closenav:open===2}">
+      <div class="menutitle">
+        <!-- <div class="logotitle">
         <div class="ls">LS</div>
         <div class="divider"></div>
         <div class="afrika">Afrika</div>
       </div> -->
-      <svg (click)="togglemenu()" fill="none" stroke="rgb(255 255 255)" viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-      </svg>
+        <svg (click)="togglemenu()" fill="none" stroke="rgb(255 255 255)" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+      </div>
+      <a (click)="togglemenu()" href="#home">Home</a>
+      <a (click)="togglemenu()" href="#about">About us</a>
+      <a (click)="togglemenu()" href="#services">services</a>
+      <a (click)="togglemenu()" href="#portfolio">Portfolio</a>
+      <a (click)="togglemenu()" href="#contacts">Contact us</a>
     </div>
-    <a (click)="togglemenu()" href="#home">Home</a>
-    <a (click)="togglemenu()" href="#about">About us</a>
-    <a (click)="togglemenu()" href="#services">services</a>
-    <a (click)="togglemenu()" href="#portfolio">Portfolio</a>
-    <a (click)="togglemenu()" href="#contacts">Contact us</a>
-  </div>
 
 
-  <ul>
+    <ul>
 
-    <a [ngClass]="{lineunder: selection===1}" (click)="scrolltocontent('home')">Home</a>
-    <a [ngClass]="{lineunder: selection===2}" (click)="scrolltocontent('about')">About us</a>
-    <a [ngClass]="{lineunder: selection===3}" (click)="scrolltocontent('services')">services</a>
-    <a [ngClass]="{lineunder: selection===4}" (click)="scrolltocontent('portfolio')">Portfolio</a>
-    <a [ngClass]="{lineunder: selection===5}" (click)="scrolltocontent('contacts')"
-      style="background-color: white;color:royalblue;font-weight:500;border-radius: 10px;">contact us</a>
-    <!-- <a href="#contacts">Contact us</a> -->
-  </ul>
-</nav>
-<section id="home" class="home sectionContainer">
+      <a [ngClass]="{lineunder: selection===1}" (click)="scrolltocontent('home')">Home</a>
+      <a [ngClass]="{lineunder: selection===2}" (click)="scrolltocontent('about')">About us</a>
+      <a [ngClass]="{lineunder: selection===3}" (click)="scrolltocontent('services')">services</a>
+      <a [ngClass]="{lineunder: selection===4}" (click)="scrolltocontent('portfolio')">Portfolio</a>
+      <a [ngClass]="{lineunder: selection===5}" (click)="scrolltocontent('contacts')"
+        style="background-color: white;color:royalblue;font-weight:500;border-radius: 10px;">contact us</a>
+      <!-- <a href="#contacts">Contact us</a> -->
+    </ul>
+  </nav>
+  <section id="home" class="home sectionContainer">
 
-  <div class="circle"></div>
+    <div class="circle"></div>
 
-  <div class="box">
+    <div class="box">
 
-    <img src="../assets/unsplash/Development-cuate.svg" alt="">
-    <!--  -->
-    <!-- <div class="img">
+      <img src="../assets/unsplash/Development-cuate.svg" alt="">
+      <!--  -->
+      <!-- <div class="img">
       <img src="../assets/l-studio afrika Logo.png" alt="" srcset="">
 
     </div> -->
-    <!-- <div class="technologyused">
+      <!-- <div class="technologyused">
 
 
       <div class="techicons">
@@ -76,9 +78,9 @@
 
     </div> -->
 
-  </div>
-  <div class=" mobileherowrapper">
-    <!-- <div class="overlay">
+    </div>
+    <div class=" mobileherowrapper">
+      <!-- <div class="overlay">
 
     <div class="backdropblur">
 
@@ -92,219 +94,221 @@
       <button>Talk to us</button>
     </div>
   </div> -->
-    <!-- <p>we are </p> -->
-    <h2>L Studios Afrika</h2>
-    <!-- {{switchtitle}} -->
+      <!-- <p>we are </p> -->
+      <h2>L Studios Afrika</h2>
+      <!-- {{switchtitle}} -->
 
 
-    <div class="dynamictext">
-      <!-- <div class="cursor"></div> -->
-      <div [ngClass]="{'in': switchtitle===1,'out': switchtitle===2}">FRONTEND DEVELOPER</div>
-      <div [ngClass]="{'in' :switchtitle===2,'out' :switchtitle===3}">BACKEND DEVELOPER</div>
-      <div [ngClass]="{'in' :switchtitle===3,'out' :switchtitle===4}">WEB DESIGNER</div>
-      <div *ngIf="mobiledev" [ngClass]="{'in' :switchtitle===4,'out' :switchtitle===1}">MOBILE DEVELOPER</div>
+      <div class="dynamictext">
+        <!-- <div class="cursor"></div> -->
+        <div [ngClass]="{'in': switchtitle===1,'out': switchtitle===2}">FRONTEND DEVELOPER</div>
+        <div [ngClass]="{'in' :switchtitle===2,'out' :switchtitle===3}">BACKEND DEVELOPER</div>
+        <div [ngClass]="{'in' :switchtitle===3,'out' :switchtitle===4}">WEB DESIGNER</div>
+        <div *ngIf="mobiledev" [ngClass]="{'in' :switchtitle===4,'out' :switchtitle===1}">MOBILE DEVELOPER</div>
 
+
+      </div>
+
+
+
+      <div class="caption"> bringing your ideas <br> to reality <br>
+      </div>
+      <button (click)="scrolltocontent('contacts')"> <strong>Talk to us</strong></button>
+    </div>
+
+  </section>
+  <section id="about" class="aboutus sectionContainer">
+
+
+    <!-- <div class="box"></div> -->
+    <div class="sectiontitle">
+      <div class="backline"></div>
+      <div class="backline"></div>
+      <h2>ABOUT US</h2>
+    </div>
+    <div #intersect class="aboutuscontainer whoarewe">
+
+      <img src="../assets/unsplash/Meeting-bro.svg" alt="">
+      <h2>who are we?</h2>
+      <p>we are a small but well equipped software firm found in Nairobi Kenya passionate about software development to
+        improve and better the lives of fellow human beings and while at it make a living from it </p>
 
     </div>
 
 
 
-    <div class="caption"> bringing your ideas <br> to reality <br>
+    <div #intersect class="aboutuscontainer ourspecialties">
+
+      <img src="../assets/Cross-platform software-amico.svg" alt="">
+
+      <h2>Our specialties you ask?</h2>
+      <p>Our profficiency is in web development both frontend and backend and mobile development
+        using tools at our disposal to bring rich and well meaning user experience</p>
     </div>
-    <button (click)="scrolltocontent('contacts')"> <strong>Talk to us</strong></button>
-  </div>
+    <div #intersect class="aboutuscontainer chooseus">
 
-</section>
-<section id="about" class="aboutus sectionContainer">
+      <img src="../assets/unsplash/Business Plan-amico.svg" alt="">
 
+      <h2>why choose us?</h2>
 
-  <!-- <div class="box"></div> -->
-  <div class="sectiontitle">
-    <div class="backline"></div>
-    <div class="backline"></div>
-    <h2>ABOUT US</h2>
-  </div>
-  <div class="aboutuscontainer whoarewe">
+      <ul>
+        <li> <strong>.</strong> we strive to walk with you from start to end from conception to actualization </li><br>
+        <li> <strong>.</strong> we bring our experience from a technological stand point and giving advice objectively
+        </li><br>
+        <li> <strong>.</strong> we offer competitive pricing model tailored on app type app size duration of time etc
+        </li>
+        <br>
 
-    <img src="../assets/unsplash/Meeting-bro.svg" alt="">
-    <h2>who are we?</h2>
-    <p>we are a small but well equipped software firm found in Nairobi Kenya passionate about software development to
-      improve and better the lives of fellow human beings and while at it make a living from it </p>
+      </ul>
+    </div>
 
-  </div>
-
-
-
-  <div class="aboutuscontainer ourspecialties">
-
-    <img src="../assets/Cross-platform software-amico.svg" alt="">
-
-    <h2>Our specialties you ask?</h2>
-    <p>Our profficiency is in web development both frontend and backend and mobile development
-      using tools at our disposal to bring rich and well meaning user experience</p>
-  </div>
-  <div class="aboutuscontainer chooseus">
-
-    <img src="../assets/unsplash/Business Plan-amico.svg" alt="">
-
-    <h2>why choose us?</h2>
-
-    <ul>
-      <li> <strong>.</strong> we strive to walk with you from start to end from conception to actualization </li><br>
-      <li> <strong>.</strong> we bring our experience from a technological stand point and giving advice objectively
-      </li><br>
-      <li> <strong>.</strong> we offer competitive pricing model tailored on app type app size duration of time etc
-      </li>
-      <br>
-
-    </ul>
-  </div>
-
-  <!-- <div class="lgscreenaboutus">
+    <!-- <div class="lgscreenaboutus">
 
   </div> -->
-  <!-- <button class="btn">Get a quote</button> -->
+    <!-- <button class="btn">Get a quote</button> -->
 
-</section>
+  </section>
 
 
-<section id="services" class="services sectionContainer">
+  <section id="services" class="services sectionContainer">
 
-  <div class="sectiontitle">
-    <div class="backline"></div>
-    <div class="backline"></div>
-    <h2>SERVICES OFFERED</h2>
-  </div>
-  <div class="servicecardholder">
-    <div class="servicescard">
-      <div class="leadtitle">
-        <div class="text">Frontend <span>development</span> </div>
+    <div class="sectiontitle">
+      <div class="backline"></div>
+      <div class="backline"></div>
+      <h2>SERVICES OFFERED</h2>
+    </div>
+    <div class="servicecardholder">
+      <div class="servicescard">
+        <div class="leadtitle">
+          <div class="text">Frontend <span>development</span> </div>
+        </div>
+
+        <div class="icon"> <img src="../assets/angularicon.png" alt=""></div>
+        <div class="title">Angular 2+</div>
+
       </div>
 
-      <div class="icon"> <img src="../assets/angularicon.png" alt=""></div>
-      <div class="title">Angular 2+</div>
+      <div class="servicescard">
+        <div class="leadtitle">
+          <div class="text">Backend <span>development</span> </div>
+        </div>
+
+        <div class="icon">
+          <div class="icon"> <img src="../assets/express-js-icon-20.png" alt=""></div>
+
+
+        </div>
+        <div class="title">Express/Node Js</div>
+
+      </div>
+
+      <div class="servicescard">
+        <div class="leadtitle">
+          <div class="text">Mobile <span>development</span> </div>
+        </div>
+
+        <div class="icon">
+          <img src="../assets/Logo_Ionic.png" alt="">
+
+        </div>
+        <div class=" title">Ionic/Angular
+        </div>
+
+      </div>
+
+
+      <div class="servicescard">
+        <div class="leadtitle">
+          <div class="text">Ui/Ux <span>development</span> </div>
+        </div>
+
+        <div class="icon">
+          <img src="../assets/logo figma icon.png" alt="">
+
+        </div>
+        <div class=" title">figma
+        </div>
+
+      </div>
 
     </div>
 
-    <div class="servicescard">
-      <div class="leadtitle">
-        <div class="text">Backend <span>development</span> </div>
-      </div>
+    <div #intersect class="servicecardholderdesktop">
+      <div class="servicecarddesktop">
+        <img src="../assets/angularicon.png" alt="" srcset="">
 
-      <div class="icon">
-        <div class="icon"> <img src="../assets/express-js-icon-20.png" alt=""></div>
-
-
-      </div>
-      <div class="title">Express/Node Js</div>
-
-    </div>
-
-    <div class="servicescard">
-      <div class="leadtitle">
-        <div class="text">Mobile <span>development</span> </div>
-      </div>
-
-      <div class="icon">
-        <img src="../assets/Logo_Ionic.png" alt="">
-
-      </div>
-      <div class=" title">Ionic/Angular
+        <div class="description">
+          <div class="titledesktop">frontend development</div>
+          <div> Bringing you beautiful rich user experiences through the power of Angular. <br> building large
+            commercial
+            scalable apps to meet your needs</div>
+        </div>
       </div>
 
     </div>
 
+    <div #intersect class="servicecardholderdesktop">
+      <div class="servicecarddesktop servicecardflexreverse">
+        <img src="../assets/express-js-icon-20.png" alt="" srcset="">
 
-    <div class="servicescard">
-      <div class="leadtitle">
-        <div class="text">Ui/Ux <span>development</span> </div>
-      </div>
-
-      <div class="icon">
-        <img src="../assets/logo figma icon.png" alt="">
-
-      </div>
-      <div class=" title">figma
+        <div class="description">
+          <div class="titledesktop">Backend development</div>
+          <div> Through this lightweight yet powerfull node js framwork we will bring powerful well structured scalable
+            maintanable and secure backend applications ranging from simple apps to large commercial apps</div>
+        </div>
       </div>
 
     </div>
 
-  </div>
+    <div #intersect class="servicecardholderdesktop">
+      <div class="servicecarddesktop ">
+        <img style="border-radius: 999px; overflow:hidden" src="../assets/Logo_Ionic.png" alt="" srcset="">
 
-  <div class="servicecardholderdesktop">
-    <div class="servicecarddesktop">
-      <img src="../assets/angularicon.png" alt="" srcset="">
-
-      <div class="description">
-        <div class="titledesktop">frontend development</div>
-        <div> Bringing you beautiful rich user experiences through the power of Angular. <br> building large commercial
-          scalable apps to meet your needs</div>
+        <div class="description">
+          <div class="titledesktop">Mobile development</div>
+          <div> Need a mobile app we got you using the ionic framework in conjuction with Angular and capacitor using
+            web
+            technologies we bring authentic user experiences to our client with beautiful well tailored Ui well pleasing
+            to the eye</div>
+        </div>
       </div>
+
     </div>
 
-  </div>
+    <div #intersect style="margin-bottom: 32px;" class="servicecardholderdesktop servicecardflexreverse">
+      <div class="servicecarddesktop servicecardflexreverse">
+        <img src="../assets/logo figma icon.png" alt="" srcset="">
 
-  <div class="servicecardholderdesktop">
-    <div class="servicecarddesktop servicecardflexreverse">
-      <img src="../assets/express-js-icon-20.png" alt="" srcset="">
-
-      <div class="description">
-        <div class="titledesktop">Backend development</div>
-        <div> Through this lightweight yet powerfull node js framwork we will bring powerful well structured scalable
-          maintanable and secure backend applications ranging from simple apps to large commercial apps</div>
+        <div class="description">
+          <div class="titledesktop">UI/UX Development</div>
+          <div> All our prototyping and ui design in done using Figma <br> A powerful tool to design conceptualilze and
+            bring forth rich user interface</div>
+        </div>
       </div>
+
     </div>
 
-  </div>
+  </section>
+  <section id="portfolio" class="sectionContainer portfolio ">
 
-  <div class="servicecardholderdesktop">
-    <div class="servicecarddesktop ">
-      <img style="border-radius: 999px; overflow:hidden" src="../assets/Logo_Ionic.png" alt="" srcset="">
-
-      <div class="description">
-        <div class="titledesktop">Mobile development</div>
-        <div> Need a mobile app we got you using the ionic framework in conjuction with Angular and capacitor using web
-          technologies we bring authentic user experiences to our client with beautiful well tailored Ui well pleasing
-          to the eye</div>
-      </div>
+    <div class="sectiontitle">
+      <div class="backline"></div>
+      <div class="backline"></div>
+      <h2>PORFOLIO PROJECTS</h2>
     </div>
-
-  </div>
-
-  <div style="margin-bottom: 32px;" class="servicecardholderdesktop servicecardflexreverse">
-    <div class="servicecarddesktop servicecardflexreverse">
-      <img src="../assets/logo figma icon.png" alt="" srcset="">
-
-      <div class="description">
-        <div class="titledesktop">UI/UX Development</div>
-        <div> All our prototyping and ui design in done using Figma <br> A powerful tool to design conceptualilze and
-          bring forth rich user interface</div>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-<section id="portfolio" class="sectionContainer portfolio ">
-
-  <div class="sectiontitle">
-    <div class="backline"></div>
-    <div class="backline"></div>
-    <h2>PORFOLIO PROJECTS</h2>
-  </div>
-  <!--
+    <!--
   <p class="portfolioparagraph">
     here are our sample fullstack projects fully built with Angular and express
   </p> -->
 
-  <div class="cardprojects">
-    <div *ngFor="let project of projects; let i=index" class="project">
-      <img src="{{project.bgimage}}" alt="chat">
-      <div class="projecttitle">{{project.title}}</div>
-      <div class="hue"></div>
-      <button (click)="viewproject(i)">view</button>
-    </div>
-    <!-- <div class="project">
+    <div class="cardprojects">
+      <div *ngFor="let project of projects; let i=index" class="project">
+        <img src="{{project.bgimage}}" alt="chat">
+        <div class="projecttitle">{{project.title}}</div>
+        <div class="hue"></div>
+        <button (click)="viewproject(i)">view</button>
+      </div>
+      <!-- <div class="project">
       <img src="../assets/todo.png" alt="chat">
       <div class="projecttitle">ng todo </div>
     </div>
@@ -314,103 +318,118 @@
       <div class="projecttitle">ng snapshare </div>
     </div> -->
 
-  </div>
+    </div>
 
 
-</section>
-<section id="contacts" class="contactus sectionContainer">
+  </section>
+  <section id="contacts" class="contactus sectionContainer">
 
-  <div class="sectiontitle">
-    <div class="backline"></div>
-    <div class="backline"></div>
-    <h2>Get in touch</h2>
-  </div>
-  <div class=" form-container">
-    <form [formGroup]="messageform">
-      <h2>Talk to us</h2>
+    <div class="sectiontitle">
+      <div class="backline"></div>
+      <div class="backline"></div>
+      <h2>Get in touch</h2>
+    </div>
+    <div class=" form-container">
+      <form [formGroup]="messageform">
+        <h2>Talk to us</h2>
 
-      <div class=" form-group">
-        <input type="text" class="" id="exampleInput7" placeholder="Name" formControlName="name">
-        <div *ngIf="_name.touched &&  _name.invalid">name field is required</div>
-      </div>
-      <div class=" form-group">
-        <input type="email" id="exampleInput8" placeholder="Email address" formControlName="email">
-        <div *ngIf="_email.dirty && _email.invalid">please input valid email</div>
-        <div *ngIf="_email.touched && _email.invalid">email field is required</div>
+        <div class=" form-group">
+          <input type="text" class="" id="exampleInput7" placeholder="Name" formControlName="name">
+          <div *ngIf="_name.touched &&  _name.invalid">name field is required</div>
+        </div>
+        <div class=" form-group">
+          <input type="email" id="exampleInput8" placeholder="Email address" formControlName="email">
+          <div *ngIf="_email.dirty && _email.invalid">please input valid email</div>
+          <div *ngIf="_email.touched && _email.invalid">email field is required</div>
 
-      </div>
-      <div class=" form-group">
-        <textarea rows="3" placeholder="Message" formControlName="message"></textarea>
-        <div *ngIf="_message.touched && _message.invalid">message field is required</div>
+        </div>
+        <div class=" form-group">
+          <textarea rows="3" placeholder="Message" formControlName="message"></textarea>
+          <div *ngIf="_message.touched && _message.invalid">message field is required</div>
 
-      </div>
+        </div>
 
-      <button [disabled]="messageform.invalid" [ngClass]="{disable: messageform.invalid, enable:messageform.valid}"
-        (click)="sendmessage(messageform.value)">Send</button>
+        <button *ngIf="!sendingusermessage" [disabled]="messageform.invalid"
+          [ngClass]="{disable: messageform.invalid, enable:messageform.valid}" (click)="sendmessage(messageform.value)">
+          <div>Send</div>
 
-    </form>
-  </div>
 
-  <div class="footericons">
+        </button>
 
-    <a href="https://github.com/LSAfrika/" target="blank">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-        <path
-          d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+        <button *ngIf="sendingusermessage" class="enable">
+
+          <div class="lds-facebook">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div>sending...</div>
+        </button>
+
+      </form>
+    </div>
+
+    <div class="footericons">
+
+      <a href="https://github.com/LSAfrika/" target="blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+          <path
+            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+        </svg>
+      </a>
+
+      <a href="https://www.linkedin.com/in/l-studios-afrika-004323252/" target="blank">
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path
+            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+        </svg>
+      </a>
+
+
+      <a href="https://twitter.com/LS_Afrika" target="blank">
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path
+            d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z" />
+        </svg>
+      </a>
+
+    </div>
+    <div class="footercontacts">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+        </path>
       </svg>
-    </a>
-
-    <a href="https://www.linkedin.com/in/l-studios-afrika-004323252/" target="blank">
-
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-        <path
-          d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+      <div>+254713767648</div>
+    </div>
+    <div class="footercontacts">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+        </path>
       </svg>
-    </a>
-
-
-    <a href="https://twitter.com/LS_Afrika" target="blank">
-
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-        <path
-          d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z" />
+      <div>+254779783837 </div>
+    </div>
+    <div class="footercontacts">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+        </path>
       </svg>
-    </a>
+      <div>lstudiosafrika@gmail.com</div>
+    </div>
 
-  </div>
-  <div class="footercontacts">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
-      </path>
-    </svg>
-    <div>+254713767648</div>
-  </div>
-  <div class="footercontacts">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
-      </path>
-    </svg>
-    <div>+254779783837 </div>
-  </div>
-  <div class="footercontacts">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-    </svg>
-    <div>lstudiosafrika@gmail.com</div>
-  </div>
-
-  <div class="footercontacts copyright">
-    <span>&copy;</span>
-    <div><strong>LSAfrika</strong> (2023)</div>
-  </div>
+    <div class="footercontacts copyright">
+      <span>&copy;</span>
+      <div><strong>LSAfrika</strong> (2023)</div>
+    </div>
 
 
 
-</section>
-<!-- <section class="footer"></section> -->
-
+  </section>
+  <!-- <section class="footer"></section> -->
+</div>
 <app-viewproject *ngIf="openmodal" [project]="selectedproject" (closemodal)="closemodal($event)"></app-viewproject>
 <!-- </div> -->
