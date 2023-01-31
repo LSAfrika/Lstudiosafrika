@@ -1,10 +1,10 @@
 import { Projectmodel } from './interface/projectmodel';
 import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { initializeApp } from "firebase/app";
+import { initializeApp } from 'firebase/app';
 import { environment } from 'src/environments/environment';
-import { getFirestore } from "firebase/firestore";
-import { collection, addDoc } from "firebase/firestore";
+import { getFirestore } from 'firebase/firestore';
+import { collection, addDoc } from 'firebase/firestore';
 
 
 @Component({
@@ -15,27 +15,27 @@ import { collection, addDoc } from "firebase/firestore";
 export class AppComponent {
   title = 'Lstudiosafrika';
 
-  app = initializeApp(environment.firebaseConfig)
+  app = initializeApp(environment.firebaseConfig);
   db = getFirestore(this.app);
 
 
-  @ViewChildren('intersect', { read: ElementRef }) intersecting: QueryList<ElementRef>
+  @ViewChildren('intersect', { read: ElementRef }) intersecting: QueryList<ElementRef>;
 
-  observer: any
+  observer: any;
 
 
-  sendingusermessage = false
-  open = 0
-  openmodal = false
+  sendingusermessage = false;
+  open = 0;
+  openmodal = false;
   mobiledev = false;
-  switchtitle = 1
-  selection = 1
-  selectedproject: Projectmodel
-  messageform: FormGroup
+  switchtitle = 1;
+  selection = 1;
+  selectedproject: Projectmodel;
+  messageform: FormGroup;
   projects: Projectmodel[] = [
     {
       title: 'NG chat',
-      bgimage: '../assets/unsplash/daniel-korpai-r73OFSry5AI-unsplash.jpg',
+      bgimage: '../assets/unsplash/chating.jpg',
       icons: [
         '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
       ],
@@ -43,7 +43,7 @@ export class AppComponent {
       url: 'http://localhost:4200'
     }, {
       title: 'snapshare',
-      bgimage: '../assets/unsplash/daniel-korpai-r73OFSry5AI-unsplash.jpg',
+      bgimage: '../assets/unsplash/chating.jpg',
       icons: [
         '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
       ],
@@ -51,7 +51,7 @@ export class AppComponent {
       url: 'http://localhost:4200'
     }, {
       title: 'check list',
-      bgimage: '../assets/unsplash/kelly-sikkema--1_RZL8BGBM-unsplash.jpg',
+      bgimage: '../assets/unsplash/notes.jpg',
       icons: [
         '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
       ],
@@ -59,7 +59,7 @@ export class AppComponent {
       url: 'http://localhost:4200'
     }, {
       title: ' gallery',
-      bgimage: '../assets/unsplash/annie-spratt-EvBPSTn-p5U-unsplash.jpg',
+      bgimage: '../assets/unsplash/gallery.jpg',
       icons: [
         '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
       ],
@@ -67,7 +67,7 @@ export class AppComponent {
       url: 'http://localhost:4200'
     }, {
       title: 'insta share',
-      bgimage: '../assets/unsplash/annie-spratt-EvBPSTn-p5U-unsplash.jpg',
+      bgimage: '../assets/unsplash/gallery.jpg',
       icons: [
         '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
       ],
@@ -75,7 +75,7 @@ export class AppComponent {
       url: 'http://localhost:4200'
     }, {
       title: 'ng gallery',
-      bgimage: '../assets/unsplash/annie-spratt-EvBPSTn-p5U-unsplash.jpg',
+      bgimage: '../assets/unsplash/gallery.jpg',
       icons: [
         '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
       ],
@@ -84,9 +84,9 @@ export class AppComponent {
     },
 
   ];
-  icons = []
+  icons = [];
   constructor(private fb: FormBuilder) {
-    this.icons = ['../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png']
+    this.icons = ['../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'];
 
 
   }
@@ -96,9 +96,9 @@ export class AppComponent {
 
   ngOnInit() {
 
-    this.switch()
-    this.messageformbuild()
-    this.intersectionmethod()
+    this.switch();
+    this.messageformbuild();
+    this.intersectionmethod();
 
   }
 
@@ -112,18 +112,18 @@ export class AppComponent {
 
       console.log(inters);
 
-      this.observer.observe(inters.nativeElement)
+      this.observer.observe(inters.nativeElement);
 
 
     });
   }
 
   intersectionmethod() {
-    let options = {
+    const options = {
       root: document.querySelector('fullapp'),
       rootMargin: '0px',
       threshold: 0.5
-    }
+    };
 
     this.observer = new IntersectionObserver((entries) => {
 
@@ -133,9 +133,10 @@ export class AppComponent {
         // console.log('class names: ',entries[0].nativeElement.classList);
 
         console.log('is intersectiong', entries[0].target.classList);
+        entries[0].target.classList.add('aboutusanimation');
 
       }
-    }, options)
+    }, options);
   }
 
 
@@ -144,32 +145,32 @@ export class AppComponent {
       name: ['', [Validators.required, Validators.minLength(5)]],
       email: ['', [Validators.required, Validators.email]],
       message: ['', [Validators.required]],
-    })
+    });
   }
 
 
   get _name() {
-    return this.messageform.get('name')
+    return this.messageform.get('name');
   }
   get _email() {
-    return this.messageform.get('email')
+    return this.messageform.get('email');
   }
   get _message() {
-    return this.messageform.get('message')
+    return this.messageform.get('message');
   }
 
 
   async sendmessage(message) {
     console.log('message to be sent to server: ', this.messageform.value);
-    this.sendingusermessage = true
+    this.sendingusermessage = true;
     try {
       const messageref = await addDoc(collection(this.db, 'usermessages'), {
         ...message
-      })
-      this.sendingusermessage = false
+      });
+      this.sendingusermessage = false;
       console.log(messageref.id);
-      this.messageformbuild()
-      alert('thank you for your message we will get back to you shortly')
+      this.messageformbuild();
+      alert('thank you for your message we will get back to you shortly');
     } catch (error) {
       console.log('error occured:', error.message);
 
@@ -178,20 +179,21 @@ export class AppComponent {
   }
 
   viewproject(i) {
-    console.log('retrieved project: ', this.projects[i])
-    this.openmodal = true
-    this.selectedproject = this.projects[i]
+    console.log('retrieved project: ', this.projects[i]);
+    this.openmodal = true;
+    this.selectedproject = this.projects[i];
   }
   togglemenu() {
     console.log('bool value: ', this.open);
-    if (this.open === 1) return this.open = 2
-    if (this.open === 2) return this.open = 1
-    if (this.open === 0) return this.open = 1
+
+    if (this.open === 1) { return this.open = 2; }
+    if (this.open === 2) { return this.open = 1; }
+    if (this.open === 0) { return this.open = 1; }
 
   }
 
   closemodal(event) {
-    this.openmodal = event
+    this.openmodal = event;
   }
 
   switch() {
@@ -201,13 +203,13 @@ export class AppComponent {
 
       // console.log('before update: ', this.switchtitle);
 
-      if (this.switchtitle === 2) { this.mobiledev = true }
+      if (this.switchtitle === 2) { this.mobiledev = true; }
       if (this.switchtitle === 4) {
-        this.switchtitle = 0
+        this.switchtitle = 0;
       }
-      this.switchtitle++
+      this.switchtitle++;
       // console.log('after update: ', this.switchtitle);
-      this.switch()
+      this.switch();
     }, 3000);
 
 
@@ -216,17 +218,17 @@ export class AppComponent {
 
   scrolltocontent(location: string) {
     // this.scroller.scrollToAnchor("contacts");
-    if (location === 'home') this.selection = 1
-    if (location === 'about') this.selection = 2
-    if (location === 'services') this.selection = 3
-    if (location === 'portfolio') this.selection = 4
-    if (location === 'contacts') this.selection = 5
+    if (location === 'home') { this.selection = 1; }
+    if (location === 'about') { this.selection = 2; }
+    if (location === 'services') { this.selection = 3; }
+    if (location === 'portfolio') { this.selection = 4; }
+    if (location === 'contacts') { this.selection = 5; }
 
 
     document.getElementById(location).scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest"
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
     });
   }
 
