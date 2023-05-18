@@ -11,7 +11,7 @@ body {
 }
 
 nav {
-  @apply w-full h-[56px] bg-blue-800 flex justify-start items-center text-white font-semibold text-lg fixed top-0 z-50 py-2 pl-2;
+  @apply w-full h-[56px] bg-[#0f0c27] flex justify-start items-center text-white font-semibold text-lg fixed top-0 z-50 py-2 pl-2;
 
 
   .lineunder {
@@ -37,12 +37,12 @@ nav {
   }
 
   .dropdownmenu {
-    @apply fixed z-20 top-0 bg-gradient-to-b from-blue-800 to-blue-600 flex flex-col justify-start items-center w-full h-screen text-white left-[100%];
+    @apply fixed z-20 top-0 bg-[#0f0c27] flex flex-col justify-start items-center w-full h-screen text-white left-[100%];
 
 
 
     .menutitle {
-      @apply w-full min-h-[60px] bg-blue-800 flex justify-between items-center text-white;
+      @apply w-full min-h-[60px] bg-[#0f0c27] flex justify-between items-center text-white;
 
       .logotitle {
         @apply flex justify-center items-center gap-1;
@@ -97,14 +97,14 @@ nav {
 
 
 .sectionContainer {
-  @apply w-full min-h-fit bg-gray-300/50 box-border flex flex-col ml-auto mr-auto items-center justify-start py-[16px];
+  @apply w-full min-h-fit bg-[#0f0c27] box-border flex flex-col ml-auto mr-auto items-center justify-start py-[16px];
 
   h1 {
     @apply text-white py-2 px-5 bg-blue-700 rounded-full text-lg font-semibold
   }
 
   .sectiontitle {
-    @apply text-lg font-semibold text-white px-5 py-2;
+    @apply text-[30px] font-semibold text-white px-5 py-2;
     position: relative;
     width: 100%;
     // padding: 4px;
@@ -157,10 +157,6 @@ nav {
 
 }
 
-.sectionContainer::after {
-  max-width: 100%;
-  background-color: teal
-}
 
 .overlay {
   @apply absolute top-0 left-0 w-full h-screen min-h-[300px] z-10 flex flex-col justify-start items-center text-white text-lg font-semibold box-border;
@@ -168,7 +164,7 @@ nav {
 
 
   .backdropblur {
-    @apply w-[90%] h-fit flex flex-col text-center p-2 justify-start items-center shadow-white/10 mb-[20px] shadow-md mt-[20px] rounded-md gap-10 backdrop-blur py-4;
+    @apply w-[90%] min-h-[100vh] flex flex-col text-center p-2 justify-start items-center shadow-white/10 mb-[20px] shadow-md mt-[20px] rounded-md gap-10 backdrop-blur py-4;
 
     .homelogo {
       @apply w-[100px] h-[100px] bg-gradient-to-b bg-white rounded-full overflow-hidden mt-4;
@@ -205,7 +201,7 @@ nav {
 }
 
 .home {
-  @apply mt-[56px] h-fit pt-[100px] text-white font-bold relative min-h-screen bg-blue-800 flex-col justify-start items-center;
+  @apply mt-[56px]  min-h-screen h-fit pt-[175px] text-white font-bold relative   flex-col justify-start items-center;
   // background-image: url('../assets/unsplash/arnold-francisca-f77Bh3inUpE-unsplash.jpg');
   background-size: cover;
   overflow: hidden;
@@ -215,9 +211,7 @@ nav {
     display: none
   }
 
-  .circle {
-    @apply absolute w-[150vh] h-[150vh] bg-white rounded-full left-1/4 top-[250px] z-0
-  }
+
 
   .mobileherowrapper {
     @apply flex flex-col justify-start items-center relative z-30;
@@ -237,11 +231,11 @@ nav {
     }
 
     button {
-      @apply bg-white text-blue-700 rounded-full font-semibold px-4 py-2 float-right mt-5 text-2xl outline-none border-[10px] border-blue-800;
+      @apply bg-white  text-[#0f0c27] rounded-full font-light px-4 py-2 float-right mt-10 text-2xl outline-none border-[10px] border-[#0f0c27];
     }
 
     .caption {
-      @apply italic text-lg font-semibold w-full float-left;
+      @apply italic text-lg font-semibold  float-left;
     }
 
     p {
@@ -249,26 +243,19 @@ nav {
     }
 
     h2 {
-      @apply text-4xl py-2 px-4 bg-blue-900 text-white rounded-md border-white border-[4px] mb-4 rounded-r-full pr-4
+      @apply text-4xl py-2 px-4 bg-[#0f0c27] text-white rounded-md border-white border-[4px] mb-4 rounded-r-full pr-4
     }
 
   }
 
 
 
-  // p {
-  //   @apply text-3xl font-light mb-4;
-  // }
-
-  // h2 {
-  //   @apply text-4xl py-2 px-4 bg-blue-900 text-white rounded-md border-white border-[4px] mb-4 rounded-r-full pr-4
-  // }
 }
 
 
 
 .aboutus {
-  @apply min-h-screen h-fit relative flex flex-col justify-start items-center bg-white mt-0;
+  @apply min-h-screen h-fit relative flex flex-col justify-start items-center bg-[#0f0c27] mt-0;
   // background-image: url('../assets/unsplash/oskar-yildiz-cOkpTiJMGzA-unsplash.jpg');
 
 
@@ -287,18 +274,59 @@ nav {
     }
 
     .backline {
-      @apply bg-blue-700 h-[4px]
+      @apply bg-[#0f0c27] h-[4px]
     }
   }
 
+  .title{
+    @apply text-white text-4xl font-semibold
+  }
+.avatar{
+  @apply min-w-[200px] min-h-[200px] bg-slate-200 rounded-full mt-5
+}
+.description{
+  @apply max-w-[400px] w-full min-h-[500px]  rounded-md mt-5 text-white text-base text-center font-normal p-2;
+  strong{
+    @apply text-pink-600 text-[20px]
+  }
+
+  .resume{
+    @apply text-[20px] font-semibold mt-[50px] text-white bg-pink-700 min-w-[180px] px-2 py-3 outline-none min-h-[25px] rounded-md flex justify-center
+    items-center gap-3 mx-auto
+  }
+.skill{
+  @apply text-[30px] font-semibold
+}
+.skillscontainer{
+  @apply w-full  flex flex-col items-start mt-6;
+
+  .tag{
+    @apply w-full  flex justify-between ;
+    .tech{
+@apply font-semibold text-lg
+    }
+    .percent{
+      @apply font-normal text-lg
+    }
+  }
+
+  .progress{
+    @apply bg-slate-400 w-full min-h-[10px] rounded-full mt-2;
+.progvalue{
+  @apply bg-blue-800 min-h-[10px] rounded-full
+}
+
+  }
+}
+}
 
   .aboutuscontainer {
-    @apply w-4/5 min-h-[200px] p-4 my-2 bg-blue-800 backdrop-blur-md text-white shadow-white rounded-md relative;
+    @apply w-4/5 min-h-[200px] p-4 my-2 text-slate-200 font-semibold  relative;
 
     // animation: aboutusentrance 2s ease-in forwards;
 
     h2 {
-      @apply text-lg font-semibold text-white underline underline-offset-8 text-center my-4
+      @apply text-2xl font-bold text-blue-700  text-center my-4
     }
 
 
@@ -312,7 +340,34 @@ nav {
 }
 
 .services {
-  @apply relative h-fit bg-blue-800;
+  @apply relative h-fit bg-[#0f0c27] min-h-screen;
+
+.servicecontainer{
+  @apply w-[90%] min-h-[300px] h-[300px] bg-pink-600 rounded-md
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   .servicecardholderdesktop {
     @apply hidden relative
@@ -460,7 +515,7 @@ nav {
 }
 
 .contactus {
-  @apply bg-gradient-to-b from-blue-800 to-blue-600;
+  @apply bg-[#0f0c27];
   min-height: fit-content;
   padding-bottom: 40px;
 
@@ -1152,6 +1207,7 @@ animation: servicesaboutusanimation .3s ease-in forwards;
     }
 
     .box {
+      @apply bg-slate-300;
       // display: none;
       width: 50%;
       min-height: 100%;
