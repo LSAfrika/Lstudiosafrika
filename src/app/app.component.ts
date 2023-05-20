@@ -5,6 +5,7 @@ import { initializeApp } from 'firebase/app';
 import { environment } from 'src/environments/environment';
 import { getFirestore } from 'firebase/firestore';
 import { collection, addDoc } from 'firebase/firestore';
+import { Servicesmodel } from './interface/servicesmodel';
 
 
 @Component({
@@ -31,11 +32,15 @@ export class AppComponent {
   switchtitle = 1;
   selection = 1;
   selectedproject: Projectmodel;
+  selectedservice: Servicesmodel;
+
+  Viewproject=false
+  Viewservice=false
   messageform: FormGroup;
   projects: Projectmodel[] = [
     {
       title: 'NG chat',
-      bgimage: '../assets/unsplash/chating.jpg',
+      bgimage: '../assets/ngchat.png',
       icons: [
         '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
       ],
@@ -43,7 +48,7 @@ export class AppComponent {
       url: 'http://localhost:4200'
     }, {
       title: 'snapshare',
-      bgimage: '../assets/unsplash/chating.jpg',
+      bgimage: '../assets/snapshare.PNG',
       icons: [
         '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
       ],
@@ -51,39 +56,71 @@ export class AppComponent {
       url: 'http://localhost:4200'
     }, {
       title: 'check list',
-      bgimage: '../assets/unsplash/notes.jpg',
+      bgimage: '../assets/tasksio.png',
       icons: [
         '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
       ],
       desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda reprehenderit aliquamreiciendis repudiandae sit porro',
       url: 'http://localhost:4200'
     }, {
-      title: ' gallery',
-      bgimage: '../assets/unsplash/gallery.jpg',
+      title: ' nduthi.ke',
+      bgimage: '../assets/nduthike.png',
       icons: [
         '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
       ],
       desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda reprehenderit aliquamreiciendis repudiandae sit porro',
       url: 'http://localhost:4200'
-    }, {
-      title: 'insta share',
-      bgimage: '../assets/unsplash/gallery.jpg',
-      icons: [
-        '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
-      ],
-      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda reprehenderit aliquamreiciendis repudiandae sit porro',
-      url: 'http://localhost:4200'
-    }, {
-      title: 'ng gallery',
-      bgimage: '../assets/unsplash/gallery.jpg',
-      icons: [
-        '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
-      ],
-      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda reprehenderit aliquamreiciendis repudiandae sit porro',
-      url: 'http://localhost:4200'
-    },
+    }
+    // , {
+    //   title: 'insta share',
+    //   bgimage: '../assets/unsplash/gallery.jpg',
+    //   icons: [
+    //     '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
+    //   ],
+    //   desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda reprehenderit aliquamreiciendis repudiandae sit porro',
+    //   url: 'http://localhost:4200'
+    // }, {
+    //   title: 'ng gallery',
+    //   bgimage: '../assets/unsplash/gallery.jpg',
+    //   icons: [
+    //     '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
+    //   ],
+    //   desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda reprehenderit aliquamreiciendis repudiandae sit porro',
+    //   url: 'http://localhost:4200'
+    // },
 
   ];
+  services: Servicesmodel[]=[
+    {
+      title:'fullstack development',
+      icon:'../assets/meanstack.png',
+      desc:`
+      we develop our full stack applications using the MEAN architecture where frontend we
+       use Angular backend we use Express.js on top of Node.js and databse of choice mongoDb `,
+
+    },
+    {
+      title:'Frontend development',
+      icon:'../assets/angularicon.png',
+      desc:`
+      Our frontend technology of choice is Angular due to its highly robust scalable and effecient architecture for delivery of great frontend user experiences`,
+
+    },
+    {
+      title:'Backend development',
+      icon:'../assets/express-js-icon-20.png',
+      desc:`
+      We deploy our backend applications using the power of express on top of node js for easy to read well maintained and scalable code base `,
+
+    },
+    {
+      title:'Mobile development',
+      icon:'../assets/Logo_Ionic.png',
+      desc:`
+      Using the power of web technologies we bulid mobile apps using IONIC(angular) to build beutiful well thought out designs for quality ui/ux`,
+
+    }
+  ]
   icons = [];
   constructor(private fb: FormBuilder) {
     this.icons = ['../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'];
@@ -172,7 +209,10 @@ export class AppComponent {
       this.messageformbuild();
       alert('thank you for your message we will get back to you shortly');
     } catch (error) {
-      console.log('error occured:', error.message);
+      console.log('error occured:', error);
+      alert(' an error occured please try agin later')
+      this.sendingusermessage = false;
+
 
     }
 
@@ -180,8 +220,20 @@ export class AppComponent {
 
   viewproject(i) {
     console.log('retrieved project: ', this.projects[i]);
+    this.Viewproject=true;
+    this.Viewservice=false
     this.openmodal = true;
     this.selectedproject = this.projects[i];
+  }
+  viewservice(i){
+
+    this.Viewproject=false;
+    this.Viewservice=true
+    this.openmodal = true;
+    this.selectedservice=this.services[i]
+    console.log('service to view',this.selectedservice);
+
+
   }
   togglemenu() {
     console.log('bool value: ', this.open);

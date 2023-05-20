@@ -101,9 +101,9 @@
 
       <div class="dynamictext">
         <!-- <div class="cursor"></div> -->
-        <div [ngClass]="{'in': switchtitle===1,'out': switchtitle===2}">FRONTEND DEVELOPER</div>
-        <div [ngClass]="{'in' :switchtitle===2,'out' :switchtitle===3}">BACKEND DEVELOPER</div>
-        <div [ngClass]="{'in' :switchtitle===3,'out' :switchtitle===4}">WEB DESIGNER</div>
+        <div [ngClass]="{'in': switchtitle===1,'out': switchtitle===2}">FULLSTACK DEVELOPER</div>
+        <div [ngClass]="{'in' :switchtitle===2,'out' :switchtitle===3}">FRONTEND DEVELOPER</div>
+        <div [ngClass]="{'in' :switchtitle===3,'out' :switchtitle===4}">BACKEND DEVELOPER</div>
         <div *ngIf="mobiledev" [ngClass]="{'in' :switchtitle===4,'out' :switchtitle===1}">MOBILE DEVELOPER</div>
 
 
@@ -202,130 +202,65 @@
       <h2>Services</h2>
     </div>
 
-    <div class="servicecontainer"></div>
+    <div class="servicecontainer">
 
+      <div class="serviceicon">
 
+        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" style="fill: rgba(255 255 255 );" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 8.2c0-.318-.126-.623-.351-.849-.226-.225-.531-.351-.849-.351h-6.6c-.318 0-.623.126-.849.351-.225.226-.351.531-.351.849v13.6c0 .318.126.623.351.849.226.225.531.351.849.351h6.6c.318 0 .623-.126.849-.351.225-.226.351-.531.351-.849v-13.6zm-11 14.8h-8l2.599-3h5.401v3zm6.5-1c-.553 0-1-.448-1-1s.447-1 1-1c.552 0 .999.448.999 1s-.447 1-.999 1zm3.5-3v-9.024h-7v9.024h7zm-2-14h-2v-2h-17v13h11v2h-13v-17h21v4zm-.5 4c.276 0 .5-.224.5-.5s-.224-.5-.5-.5h-2c-.276 0-.5.224-.5.5s.224.5.5.5h2z"/></svg>
 
-
-
-    <!-- <div class="servicecardholder">
-      <div class="servicescard">
-        <div class="leadtitle">
-          <div class="text">Frontend <span>development</span> </div>
-        </div>
-
-        <div class="icon"> <img src="../assets/angularicon.png" alt=""></div>
-        <div class="title">Angular 2+</div>
-
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255 255 255)"><path d="M20 3H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM4 9V5h16v4zm16 4H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2zM4 19v-4h16v4z"></path><path d="M17 6h2v2h-2zm-3 0h2v2h-2zm3 10h2v2h-2zm-3 0h2v2h-2z"></path></svg>
       </div>
-
-      <div class="servicescard">
-        <div class="leadtitle">
-          <div class="text">Backend <span>development</span> </div>
-        </div>
-
-        <div class="icon">
-          <div class="icon"> <img src="../assets/express-js-icon-20.png" alt=""></div>
-
-
-        </div>
-        <div class="title">Express/Node Js</div>
-
-      </div>
-
-      <div class="servicescard">
-        <div class="leadtitle">
-          <div class="text">Mobile <span>development</span> </div>
-        </div>
-
-        <div class="icon">
-          <img src="../assets/Logo_Ionic.png" alt="">
-
-        </div>
-        <div class=" title">Ionic/Angular
-        </div>
-
-      </div>
-
-
-      <div class="servicescard">
-        <div class="leadtitle">
-          <div class="text">Ui/Ux <span>development</span> </div>
-        </div>
-
-        <div class="icon">
-          <img src="../assets/logo figma icon.png" alt="">
-
-        </div>
-        <div class=" title">figma
-        </div>
-
-      </div>
+      <div class="servicetitle">Full stack development</div>
+      <div (click)="viewservice(0)" class="servicedetails">Details</div>
 
     </div>
 
-    <div  #intersect class="servicecardholderdesktop">
-      <div class="servicecarddesktop">
-        <img src="../assets/angularicon.png" alt="" srcset="">
+    <div class="servicecontainer">
 
-        <div class="description">
-          <div class="titledesktop">frontend development</div>
-          <div> Bringing you beautiful rich user experiences through the power of Angular. <br> building large
-            commercial
-            scalable apps to meet your needs</div>
-        </div>
+      <div class="serviceicon">
+
+        <!-- <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" style="fill: rgba(255 255 255 );" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 8.2c0-.318-.126-.623-.351-.849-.226-.225-.531-.351-.849-.351h-6.6c-.318 0-.623.126-.849.351-.225.226-.351.531-.351.849v13.6c0 .318.126.623.351.849.226.225.531.351.849.351h6.6c.318 0 .623-.126.849-.351.225-.226.351-.531.351-.849v-13.6zm-11 14.8h-8l2.599-3h5.401v3zm6.5-1c-.553 0-1-.448-1-1s.447-1 1-1c.552 0 .999.448.999 1s-.447 1-.999 1zm3.5-3v-9.024h-7v9.024h7zm-2-14h-2v-2h-17v13h11v2h-13v-17h21v4zm-.5 4c.276 0 .5-.224.5-.5s-.224-.5-.5-.5h-2c-.276 0-.5.224-.5.5s.224.5.5.5h2z"/></svg> -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(255 255 255 );width:75px;height:75px" viewBox="0 0 24 24"><path d="M24 10.935v2.131l-8 3.947v-2.23l5.64-2.783-5.64-2.79v-2.223l8 3.948zm-16 3.848l-5.64-2.783 5.64-2.79v-2.223l-8 3.948v2.131l8 3.947v-2.23zm7.047-10.783h-2.078l-4.011 16h2.073l4.016-16z"/></svg>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255 255 255)"><path d="M20 3H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM4 9V5h16v4zm16 4H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2zM4 19v-4h16v4z"></path><path d="M17 6h2v2h-2zm-3 0h2v2h-2zm3 10h2v2h-2zm-3 0h2v2h-2z"></path></svg> -->
       </div>
+      <div class="servicetitle">Frontend development</div>
+      <div (click)="viewservice(1)" class="servicedetails">Details</div>
+
+    </div>
+    <div class="servicecontainer">
+
+      <div class="serviceicon">
+
+        <!-- <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" style="fill: rgba(255 255 255 );" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 8.2c0-.318-.126-.623-.351-.849-.226-.225-.531-.351-.849-.351h-6.6c-.318 0-.623.126-.849.351-.225.226-.351.531-.351.849v13.6c0 .318.126.623.351.849.226.225.531.351.849.351h6.6c.318 0 .623-.126.849-.351.225-.226.351-.531.351-.849v-13.6zm-11 14.8h-8l2.599-3h5.401v3zm6.5-1c-.553 0-1-.448-1-1s.447-1 1-1c.552 0 .999.448.999 1s-.447 1-.999 1zm3.5-3v-9.024h-7v9.024h7zm-2-14h-2v-2h-17v13h11v2h-13v-17h21v4zm-.5 4c.276 0 .5-.224.5-.5s-.224-.5-.5-.5h-2c-.276 0-.5.224-.5.5s.224.5.5.5h2z"/></svg> -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255 255 255);width:75px;height:75px;"><path d="M20 3H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-5 5h-2V6h2zm4 0h-2V6h2zm1 5H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2zm-5 5h-2v-2h2zm4 0h-2v-2h2z"></path></svg>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255 255 255)"><path d="M20 3H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM4 9V5h16v4zm16 4H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2zM4 19v-4h16v4z"></path><path d="M17 6h2v2h-2zm-3 0h2v2h-2zm3 10h2v2h-2zm-3 0h2v2h-2z"></path></svg> -->
+      </div>
+      <div class="servicetitle">Backend development</div>
+      <div (click)="viewservice(2)" class="servicedetails">Details</div>
+
+    </div>
+    <div class="servicecontainer">
+
+      <div class="serviceicon">
+
+        <!-- <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" style="fill: rgba(255 255 255 );" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 8.2c0-.318-.126-.623-.351-.849-.226-.225-.531-.351-.849-.351h-6.6c-.318 0-.623.126-.849.351-.225.226-.351.531-.351.849v13.6c0 .318.126.623.351.849.226.225.531.351.849.351h6.6c.318 0 .623-.126.849-.351.225-.226.351-.531.351-.849v-13.6zm-11 14.8h-8l2.599-3h5.401v3zm6.5-1c-.553 0-1-.448-1-1s.447-1 1-1c.552 0 .999.448.999 1s-.447 1-.999 1zm3.5-3v-9.024h-7v9.024h7zm-2-14h-2v-2h-17v13h11v2h-13v-17h21v4zm-.5 4c.276 0 .5-.224.5-.5s-.224-.5-.5-.5h-2c-.276 0-.5.224-.5.5s.224.5.5.5h2z"/></svg> -->
+        <svg width="24" height="24" viewBox="0 0 24 24"  style="fill: rgba(255 255 255 );width:75px;height:75px" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M13.563 24h-11.563c-1.104 0-2-.896-2-2v-20c0-1.104.896-2 2-2h14c1.104 0 2 .896 2 2v4h-2v-3h-14v17h11v2.5c0 .524.182 1.175.563 1.5zm8.937-17c.828 0 1.5.672 1.5 1.5v14c0 .826-.671 1.5-1.5 1.5h-7c-.829 0-1.5-.675-1.5-1.5v-14c0-.827.673-1.5 1.5-1.5h7zm-13.5 14c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm10 2c-.553 0-1-.448-1-1s.447-1 1-1c.552 0 .999.448.999 1s-.447 1-.999 1zm4-3v-10.024h-8v10.024h8zm-3.5-11c.275 0 .5-.224.5-.5s-.225-.5-.5-.5h-1c-.276 0-.5.224-.5.5s.224.5.5.5h1z"/></svg>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255 255 255)"><path d="M20 3H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM4 9V5h16v4zm16 4H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2zM4 19v-4h16v4z"></path><path d="M17 6h2v2h-2zm-3 0h2v2h-2zm3 10h2v2h-2zm-3 0h2v2h-2z"></path></svg> -->
+      </div>
+      <div class="servicetitle">Mobile development</div>
+      <div (click)="viewservice(3)" class="servicedetails">Details</div>
 
     </div>
 
-    <div #intersect class="servicecardholderdesktop">
-      <div class="servicecarddesktop servicecardflexreverse">
-        <img src="../assets/express-js-icon-20.png" alt="" srcset="">
 
-        <div class="description">
-          <div class="titledesktop">Backend development</div>
-          <div> Through this lightweight yet powerfull node js framwork we will bring powerful well structured scalable
-            maintanable and secure backend applications ranging from simple apps to large commercial apps</div>
-        </div>
-      </div>
-
-    </div>
-
-    <div #intersect class="servicecardholderdesktop">
-      <div class="servicecarddesktop ">
-        <img style="border-radius: 999px; overflow:hidden" src="../assets/Logo_Ionic.png" alt="" srcset="">
-
-        <div class="description">
-          <div class="titledesktop">Mobile development</div>
-          <div> Need a mobile app we got you using the ionic framework in conjuction with Angular and capacitor using
-            web
-            technologies we bring authentic user experiences to our client with beautiful well tailored Ui well pleasing
-            to the eye</div>
-        </div>
-      </div>
-
-    </div>
-
-    <div #intersect style="margin-bottom: 32px;" class="servicecardholderdesktop servicecardflexreverse">
-      <div class="servicecarddesktop servicecardflexreverse">
-        <img src="../assets/logo figma icon.png" alt="" srcset="">
-
-        <div class="description">
-          <div class="titledesktop">UI/UX Development</div>
-          <div> All our prototyping and ui design in done using Figma <br> A powerful tool to design conceptualilze and
-            bring forth rich user interface</div>
-        </div>
-      </div>
-
-    </div> -->
 
   </section>
   <section id="portfolio" class="sectionContainer portfolio ">
 
     <div class="sectiontitle">
-      <div class="backline"></div>
-      <div class="backline"></div>
-      <h2>PORFOLIO PROJECTS</h2>
+      <!-- <div class="backline"></div> -->
+      <!-- <div class="backline"></div> -->
+      <h2>Portfolio</h2>
     </div>
     <!--
   <p class="portfolioparagraph">
@@ -333,11 +268,12 @@
   </p> -->
 
     <div class="cardprojects">
-      <div *ngFor="let project of projects; let i=index" class="project">
-        <img src="{{project.bgimage}}" alt="chat">
-        <div class="projecttitle">{{project.title}}</div>
-        <div class="hue"></div>
-        <button (click)="viewproject(i)">view</button>
+      <div *ngFor="let project of projects; let i=index" style="background-image:url({{project.bgimage}}) ;" class="project">
+        <!-- <img src="{{project.bgimage}}" alt="chat"> -->
+        <!-- <div class="projecttitle">{{project.title}}</div> -->
+        <!-- <div class="hue"></div> -->
+        <svg (click)="viewproject(i)" xmlns="http://www.w3.org/2000/svg" class="info" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255 255 255 1);"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg>
+        <!-- <button (click)="viewproject(i)">view</button> -->
       </div>
       <!-- <div class="project">
       <img src="../assets/todo.png" alt="chat">
@@ -356,8 +292,8 @@
   <section id="contacts" class="contactus sectionContainer">
 
     <div class="sectiontitle">
-      <div class="backline"></div>
-      <div class="backline"></div>
+      <!-- <div class="backline"></div> -->
+      <!-- <div class="backline"></div> -->
       <h2>Get in touch</h2>
     </div>
     <div class=" form-container">
@@ -462,5 +398,5 @@
   </section>
   <!-- <section class="footer"></section> -->
 </div>
-<app-viewproject *ngIf="openmodal" [project]="selectedproject" (closemodal)="closemodal($event)"></app-viewproject>
+<app-viewproject *ngIf="openmodal" [project]="selectedproject" [service]="selectedservice" [viewproject]="Viewproject" [viewservice]="Viewservice" (closemodal)="closemodal($event)"></app-viewproject>
 <!-- </div> -->

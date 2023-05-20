@@ -8,6 +8,7 @@ body {
 
 * {
   font-family: 'Poppins', sans-serif;
+  // @apply bg-[#0f0c27]
 }
 
 nav {
@@ -340,33 +341,28 @@ nav {
 }
 
 .services {
-  @apply relative h-fit bg-[#0f0c27] min-h-screen;
+  @apply relative h-fit bg-[#0f0c27]  lg:min-h-[50vh] ;
 
 .servicecontainer{
-  @apply w-[90%] min-h-[300px] h-[300px] bg-pink-600 rounded-md
+  @apply w-[85%] max-w-[300px] bg-[#110e2b]  mt-5 min-h-[300px] h-[300px]  lg:mt-0  flex flex-col rounded-md lg:max-w-[350px] lg:min-h-[350px]
+  justify-center items-center;
+  .serviceicon{
+    @apply min-w-[100px] h-[100px]  w-fit flex justify-center items-center;
+    svg{
+      width: 50px;
+      height: 50px
+    }
+  }
+  .servicetitle{
+    @apply text-lg font-semibold text-white mt-5;
+  }
+
+  .servicedetails{
+    @apply font-semibold text-lg text-pink-600 mt-5 cursor-pointer
+
+  }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   .servicecardholderdesktop {
@@ -444,7 +440,7 @@ nav {
 
   .sectiontitle {
     h2 {
-      @apply text-blue-700
+      @apply text-white font-semibold text-3xl
     }
 
     .backline {
@@ -463,8 +459,13 @@ nav {
 
 
     .project {
-      @apply w-[70%] min-h-[100px] h-[175px] py-2 overflow-hidden mb-2 bg-white cursor-pointer gap-3 relative flex flex-col items-center justify-center rounded-md shadow-md ml-auto mr-auto;
+      @apply w-[256px]  h-[256px] relative py-2 overflow-hidden mb-2 bg-cover bg-emerald-500 cursor-pointer gap-3 relative flex flex-col items-center justify-center rounded-md shadow-md ml-auto mr-auto;
       box-shadow: 1px 3px 3px 2px rgba(0, 0, 0, 0.628);
+
+
+      .info{
+        @apply absolute top-0 right-1 w-[40px] h-[40px] fill-white
+      }
 
       .hue {
 
@@ -506,7 +507,7 @@ nav {
       }
 
       button {
-        @apply bg-blue-700 px-6 box-border rounded-full outline-none border-white border-2 min-w-[60px] relative z-20 text-white
+        @apply bg-pink-700 mt-auto mb-5 px-6 box-border rounded-full outline-none border-white border-2 min-w-[60px] relative z-20 text-white
       }
     }
 
@@ -521,7 +522,7 @@ nav {
 
   .sectiontitle {
     h2 {
-      @apply text-white
+      @apply text-white font-semibold text-3xl
     }
 
     .backline {
@@ -530,7 +531,7 @@ nav {
   }
 
   .form-container {
-    @apply block max-w-md p-6 bg-white rounded-lg shadow-lg w-2/3 min-h-[350px];
+    @apply block max-w-md p-6 bg-white rounded-md shadow-lg w-2/3 min-h-[350px];
 
     .form-group {
       @apply mb-6 mt-4;
@@ -775,7 +776,7 @@ app-viewproject {
   left: 0;
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.371);
-  @apply flex flex-col justify-center items-center p-2;
+  @apply flex flex-col justify-center items-center p-2 backdrop-blur-sm;
 }
 
 @media screen and (min-width: 425px) {
