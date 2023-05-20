@@ -41,8 +41,8 @@
       <a [ngClass]="{lineunder: selection===3}" (click)="scrolltocontent('services')">services</a>
       <a [ngClass]="{lineunder: selection===4}" (click)="scrolltocontent('portfolio')">Portfolio</a>
       <a [ngClass]="{lineunder: selection===5}" (click)="scrolltocontent('contacts')"
-        style="background-color: white;color:#0f0c27;font-weight:500;border-radius: 5px;">contact us</a>
-      <!-- <a href="#contacts">Contact us</a> -->
+        style="background-color: white;color:#0f0c27;font-weight:500;border-radius: 5px;margin-left: auto;">contact us</a>
+
     </ul>
   </nav>
   <section id="home" class="home sectionContainer">
@@ -113,7 +113,7 @@
 
       <div class="caption"> You conceptualize it we realize it<br>
       </div>
-      <button (click)="scrolltocontent('contacts')"> <strong>Talk to us</strong></button>
+      <button (click)="scrolltocontent('contacts')"> Talk to us</button>
     </div>
 
   </section>
@@ -127,7 +127,7 @@
     We strive to bring about scalable well maintained robust and effecient applications to our clients fom individuals to  institutions
     <br> <br>
     <!-- <i >Talk to us lets see how we can get your <br> next project up and running</i> <br> -->
-    <!-- <button>contact us</button> -->
+
 
 
 
@@ -185,8 +185,8 @@
 
 
     <button class="resume">
-      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" style="fill: rgba(255 255 255);"><path d="M19 9h-4V3H9v6H5l7 8zM4 19h16v2H4z"></path></svg>
-      <div>Download resume</div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"  style="fill: rgba(255 255 255);background-color: rgb(190 24 93)"><path d="M19 9h-4V3H9v6H5l7 8zM4 19h16v2H4z"></path></svg>
+      <div style="background-color: rgb(190 24 93);">Download resume</div>
     </button>
 </div>
 
@@ -297,7 +297,7 @@
       <h2>Get in touch</h2>
     </div>
     <div class=" form-container">
-      <form [formGroup]="messageform">
+      <form class="form-group" [formGroup]="messageform">
         <h2>Talk to us</h2>
 
         <div class=" form-group">

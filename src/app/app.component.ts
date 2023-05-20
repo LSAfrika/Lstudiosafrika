@@ -42,50 +42,51 @@ export class AppComponent {
       title: 'NG chat',
       bgimage: '../assets/ngchat.png',
       icons: [
-        '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
+        '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/node.png'  , '../../../assets/mongodb.svg',
+        '../../../assets/socket.png'
       ],
-      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda reprehenderit aliquamreiciendis repudiandae sit porro',
+      desc: 'This is a full stack chat application built with the MEAN stack & socket.io to deliver a rich social experience  ',
       url: 'http://localhost:4200'
     }, {
       title: 'snapshare',
       bgimage: '../assets/snapshare.PNG',
       icons: [
-        '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
+        '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/node.png' , '../../../assets/mongodb.svg', '../../../assets/socket.png'
       ],
-      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda reprehenderit aliquamreiciendis repudiandae sit porro',
+      desc: 'A lite social media site for sharing images  with friends capabilities include \n posting images,  commenting, sending direct messages, having live messages and live notifications with socket.io ',
       url: 'http://localhost:4200'
     }, {
-      title: 'check list',
+      title: 'tasks.io',
       bgimage: '../assets/tasksio.png',
       icons: [
-        '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
+        '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/node.png', '../../../assets/mongodb.svg'
       ],
-      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda reprehenderit aliquamreiciendis repudiandae sit porro',
+      desc: 'simple to do app to perform CRUD operations includes authentication and storage of user data marking todos as complete or pending (MEAN stack)',
       url: 'http://localhost:4200'
     }, {
       title: ' nduthi.ke',
       bgimage: '../assets/nduthike.png',
       icons: [
-        '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
+        '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/node.png', '../../../assets/mongodb.svg'
       ],
-      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda reprehenderit aliquamreiciendis repudiandae sit porro',
+      desc: 'This is a client\'s app that is 80% done all thats remaining is payment intergration and ui polishing also a full stack app link is to a mock demo to show full functionality of the web app',
       url: 'http://localhost:4200'
     }
     // , {
     //   title: 'insta share',
     //   bgimage: '../assets/unsplash/gallery.jpg',
     //   icons: [
-    //     '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
+    //     '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/node.png'
     //   ],
-    //   desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda reprehenderit aliquamreiciendis repudiandae sit porro',
+    //   desc: '',
     //   url: 'http://localhost:4200'
     // }, {
     //   title: 'ng gallery',
     //   bgimage: '../assets/unsplash/gallery.jpg',
     //   icons: [
-    //     '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'
+    //     '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/node.png'
     //   ],
-    //   desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda reprehenderit aliquamreiciendis repudiandae sit porro',
+    //   desc: '',
     //   url: 'http://localhost:4200'
     // },
 
@@ -123,7 +124,7 @@ export class AppComponent {
   ]
   icons = [];
   constructor(private fb: FormBuilder) {
-    this.icons = ['../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/Logo_Ionic.png', '../../../assets/node.png'];
+    this.icons = ['../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/node.png'];
 
 
   }

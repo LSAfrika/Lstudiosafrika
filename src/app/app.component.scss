@@ -4,11 +4,14 @@ html,
 body {
   scroll-behavior: smooth;
 
+
+
 }
 
 * {
   font-family: 'Poppins', sans-serif;
-  // @apply bg-[#0f0c27]
+//  @apply bg-[#0f0c27]
+
 }
 
 nav {
@@ -83,7 +86,7 @@ nav {
   }
 
   ul {
-    @apply ml-auto justify-start items-center mr-[16px] gap-4 font-light hidden;
+    @apply ml-auto justify-start  items-center mr-[16px] gap-4 font-light hidden;
 
     a {
       @apply px-2 py-1 cursor-pointer;
@@ -232,7 +235,7 @@ nav {
     }
 
     button {
-      @apply bg-white  text-[#0f0c27] rounded-full font-light px-4 py-2 float-right mt-10 text-2xl outline-none border-[10px] border-[#0f0c27];
+      @apply bg-white  text-[#0f0c27] rounded-full  font-semibold px-4 py-2 float-right mt-10 text-2xl outline-none border-[10px] border-[#0f0c27];
     }
 
     .caption {
@@ -534,7 +537,10 @@ nav {
     @apply block max-w-md p-6 bg-white rounded-md shadow-lg w-2/3 min-h-[350px];
 
     .form-group {
-      @apply mb-6 mt-4;
+      @apply mb-6 mt-4 bg-white;
+      h2{
+        @apply bg-white
+      }
 
       input,
       textarea {
@@ -775,8 +781,8 @@ app-viewproject {
   top: 0;
   left: 0;
   z-index: 100;
-  background-color: rgba(0, 0, 0, 0.371);
-  @apply flex flex-col justify-center items-center p-2 backdrop-blur-sm;
+  background-color: rgba(0, 0, 0, 0.45);
+  @apply flex flex-col justify-center items-center p-2 backdrop-blur-md;
 }
 
 @media screen and (min-width: 425px) {
@@ -790,7 +796,7 @@ app-viewproject {
       @apply flex-row justify-center flex-wrap gap-3;
 
       .project {
-        @apply max-w-[250px]
+        @apply max-w-[256px]
       }
     }
   }
@@ -803,7 +809,7 @@ app-viewproject {
       @apply grid-cols-3;
 
       .project {
-        @apply max-w-[200px]
+
       }
     }
   }
@@ -990,7 +996,7 @@ app-viewproject {
       gap: 20px;
 
       .project {
-        @apply mx-0
+        @apply mx-0 min-w-[256px]
       }
     }
   }

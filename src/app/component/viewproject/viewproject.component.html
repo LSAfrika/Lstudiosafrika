@@ -9,7 +9,7 @@
   <ng-container *ngIf="viewproject==true">
   <div class="title">{{project.title}}</div>
   <div class="technology">
-    <div class="icons" *ngFor="let icon of project.icons">
+    <div class="icons"  *ngFor="let icon of project.icons;let i=index">
       <img src="{{icon}}" alt="" srcset="">
     </div>
   </div>

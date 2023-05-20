@@ -18,6 +18,9 @@
   .icons {
     @apply w-[25px] h-[25px] rounded-full shadow-black shadow-sm overflow-hidden  md:w-[50px] md:h-[50px];
   }
+  .iconsbg{
+    @apply fill-white
+  }
   .servicelogo{
     @apply w-fit rounded-md ;
     img{
