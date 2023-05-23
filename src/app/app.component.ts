@@ -6,6 +6,7 @@ import { environment } from 'src/environments/environment';
 import { getFirestore } from 'firebase/firestore';
 import { collection, addDoc } from 'firebase/firestore';
 import { Servicesmodel } from './interface/servicesmodel';
+import { ThrowStmt } from '@angular/compiler';
 
 
 @Component({
@@ -34,6 +35,7 @@ export class AppComponent {
   selectedproject: Projectmodel;
   selectedservice: Servicesmodel;
 
+  view=0
   Viewproject=false
   Viewservice=false
   messageform: FormGroup;
@@ -137,7 +139,20 @@ export class AppComponent {
     this.switch();
     this.messageformbuild();
     this.intersectionmethod();
+// this.cyclehomeimages()
 
+
+  }
+
+
+  cyclehomeimages(){
+
+    if(this.view>=3)this.view=0
+
+    this.view++
+    setTimeout(() => {
+      this.cyclehomeimages()
+    }, 5000);
   }
 
   ngAfterViewInit(): void {

@@ -10,7 +10,7 @@ body {
 
 * {
   font-family: 'Poppins', sans-serif;
-//  @apply bg-[#0f0c27]
+  // @apply bg-[#f0f0f0]
 
 }
 
@@ -21,11 +21,17 @@ nav {
   .lineunder {
     border: none;
     border-bottom: 3px solid white;
-    font-weight: 500
+    font-weight: 500;
+    @apply font-bold
   }
 
   .logo {
-    @apply flex justify-center items-center gap-2 w-fit my-auto z-40
+    @apply flex justify-center items-center gap-2 w-fit my-auto z-40;
+    background-color: inherit;
+div{
+  background-color: inherit;
+
+}
   }
 
   img {
@@ -71,7 +77,9 @@ nav {
     }
 
     a {
-      @apply text-3xl font-normal my-4 w-full text-center min-h-[50px] align-middle
+      @apply text-3xl font-normal my-4 w-full text-center min-h-[50px] align-middle;
+      background-color: inherit;
+
     }
   }
 
@@ -86,10 +94,14 @@ nav {
   }
 
   ul {
-    @apply ml-auto justify-start  items-center mr-[16px] gap-4 font-light hidden;
+    @apply ml-auto justify-start  items-center mr-[16px] gap-4 font-light hidden ;
+    background-color: inherit;
+
 
     a {
-      @apply px-2 py-1 cursor-pointer;
+      @apply px-2 py-1 cursor-pointer font-normal;
+      background-color: inherit;
+
 
       &:hover {
         @apply border-b-[1pxn] border-b-white
@@ -214,7 +226,9 @@ nav {
   .box {
     display: none
   }
-
+.svgs{
+  display: none
+}
 
 
   .mobileherowrapper {
@@ -283,31 +297,38 @@ nav {
   }
 
   .title{
-    @apply text-white text-4xl font-semibold
+    @apply text-white text-4xl font-semibold text-center
   }
-.avatar{
-  @apply min-w-[200px] min-h-[200px] bg-slate-200 rounded-full mt-5
-}
+
 .description{
-  @apply max-w-[400px] w-full min-h-[500px]  rounded-md mt-5 text-white text-base text-center font-normal p-2;
+  @apply max-w-[400px] w-full mb-5  rounded-md mt-5 text-white text-base text-center font-normal p-2;
   strong{
     @apply text-pink-600 text-[20px]
   }
+
+}
+.avatar{
+  @apply max-w-[200px] max-h-[200px] min-w-[200px] min-h-[200px] bg-slate-200 rounded-full mt-5 mx-auto mb-5
+}
+.skillcontainer{
+  @apply max-w-[400px] w-full min-h-[500px] text-white text-base text-center font-normal p-2;
+
+
 
   .resume{
     @apply text-[20px] font-semibold mt-[50px] text-white bg-pink-700 min-w-[180px] px-2 py-3 outline-none min-h-[25px] rounded-md flex justify-center
     items-center gap-3 mx-auto
   }
-.skill{
+  .skill{
   @apply text-[30px] font-semibold
-}
-.skillscontainer{
+  }
+  .skillscontainer{
   @apply w-full  flex flex-col items-start mt-6;
 
   .tag{
     @apply w-full  flex justify-between ;
     .tech{
-@apply font-semibold text-lg
+  @apply font-semibold text-lg
     }
     .percent{
       @apply font-normal text-lg
@@ -316,13 +337,16 @@ nav {
 
   .progress{
     @apply bg-slate-400 w-full min-h-[10px] rounded-full mt-2;
-.progvalue{
+  .progvalue{
   @apply bg-blue-800 min-h-[10px] rounded-full
-}
+  }
 
   }
+  }
 }
-}
+
+
+
 
   .aboutuscontainer {
     @apply w-4/5 min-h-[200px] p-4 my-2 text-slate-200 font-semibold  relative;
@@ -772,6 +796,21 @@ top: 100px;
 
 }
 
+@keyframes home {
+
+  0%{
+    opacity: 0;
+    // scale: 0;
+    // right: -50%;
+  }
+  100%{
+    opacity: 1;
+    // scale: 1;
+    // right: 100px;
+  }
+
+}
+
 
 
 app-viewproject {
@@ -854,6 +893,7 @@ app-viewproject {
 
     ul {
       display: flex
+
     }
   }
 
@@ -994,6 +1034,7 @@ app-viewproject {
 
     .cardprojects {
       gap: 20px;
+      @apply max-w-[1200px];
 
       .project {
         @apply mx-0 min-w-[256px]
@@ -1131,7 +1172,7 @@ animation: servicesaboutusanimation .3s ease-in forwards;
   }
 
   .contactus {
-    @apply grid grid-cols-2 grid-flow-row pb-0;
+    @apply grid grid-cols-2 grid-flow-row pb-0 min-h-[100vh];
 
     .sectiontitle {
       @apply col-span-2
@@ -1164,28 +1205,29 @@ animation: servicesaboutusanimation .3s ease-in forwards;
 @media screen and (min-width: 1024px) {
 
   .home {
-    // min-height: fit-content;
 
-    .circle {
-      display: none;
-      background-color: red;
-    }
+.maxwidthhome{
+  @apply w-full max-w-[1300px] h-screen flex justify-center flex-row items-start justify-center;
+}
 
     .mobileherowrapper {
       margin-right: auto;
-      margin-left: 50px;
-      margin-top: 4rem;
-      min-width: 500px;
+      // margin-left: 20px;
+      // margin-top: 2rem;
+      background-color: inherit;
+      min-width: 300px;
       min-height: 200px;
       // background-color: pink;
-
+background-color: #0f0c27;
       animation: herotextentrance 3s forwards;
 
       .caption {
-        font-size: 2.125rem;
+        font-size: 2rem;
         line-height: 2.75rem;
         margin-top: 2rem;
         margin-bottom: 2rem;
+      background-color: inherit;
+
 
         br {
           display: none;
@@ -1197,55 +1239,50 @@ animation: servicesaboutusanimation .3s ease-in forwards;
         padding-bottom: 1.5rem;
         padding-left: 2rem;
         padding-right: 2rem;
-        font-size: 3.5rem;
+        font-size: 3.25rem;
+      background-color: inherit;
+
         line-height: 2.5rem;
       }
 
       .dynamictext {
         div {
-          font-size: 2.5rem;
+          font-size: 2.25rem;
+      background-color: inherit;
+
         }
       }
 
       button {
-        font-size: 2.5rem;
-        line-height: 3rem;
+        font-size: 2.2rem;
+        line-height:2.5rem;
       }
     }
 
-    .box {
-      @apply bg-slate-300;
-      // display: none;
-      width: 50%;
-      min-height: 100%;
-      // clip-path: polygon(9% 0, 100% 0, 100% 100%, 0% 100%);
+
+    .svgs{
+      // margin-right: 20px;
+      margin-left: auto;
+      // margin-top: 2rem;
       position: absolute;
-      margin-top: 4rem;
-      z-index: 20;
-      top: 0;
-      background-color: transparent;
-      // background-color: red;
+      // margin-bottom: 400px;
+      top: 100px;
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      // margin-top: 56PX;
-      right: 0;
-      overflow: hidden;
-
-      img {
-        min-width: 850px;
-        min-height: 850px;
-        // border-radius: 999px;
-        margin-top: -130px;
-        position: relative;
-        // overflow: hidden;
-        animation: heroimageentrance 3s forwards;
+      align-items: flex-start;
+      background-color: inherit;
+      min-width: 600px;
+      min-height: 600px;
+          //  background-color: teal;
+      flex-grow: 1;
+      right: 100px;
+      animation: home 3s ease-in forwards;
+      img{
+        // @apply mt-5
       }
 
-
-
     }
+
+
 
 
 
@@ -1259,29 +1296,34 @@ animation: servicesaboutusanimation .3s ease-in forwards;
     }
   }
 
+
   .aboutus {
+
+    justify-items: center;
+
+    .maxwidth{
+    @apply grid grid-cols-2 grid-rows-[100px_200px_300px] gap-x-[150px] ;
+
+      max-width: 1300px;
+
+    }
+
+    .title{
+@apply col-span-2 text-center
+    }
+    .description{
+      @apply row-start-2 row-end-4 col-start-1 col-end-2  ;
+    }
+    .skillcontainer{
+      @apply row-start-2 row-end-4 col-start-2 col-end-3 mt-7
+
+    }
     .aboutuscontainer {
       max-width: 1200px;
       min-height: 400px;
       // background-color: white;
-      @apply text-blue-700;
 
-      img {
-        min-width: 500px;
-        min-height: 500px;
-      }
 
-      h2 {
-        @apply text-blue-800 text-3xl font-bold mt-20 no-underline
-      }
-
-      p {
-        @apply text-2xl font-normal my-auto
-      }
-
-      ul {
-        @apply text-2xl my-auto
-      }
     }
 
   }
