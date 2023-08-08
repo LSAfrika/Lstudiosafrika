@@ -367,8 +367,12 @@ div{
 
 }
 
+
+
+
+//
 .services {
-  @apply relative h-fit bg-[#0f0c27]  lg:min-h-[50vh] ;
+  @apply relative h-fit  bg-[#0f0c27]  lg:min-h-[50vh] lg:pl-[200px]  lg:pr-[200px];
 
 .servicecontainer{
   @apply w-[85%] max-w-[300px] bg-[#110e2b]  mt-5 min-h-[300px] h-[300px]  lg:mt-0  flex flex-col rounded-md lg:max-w-[350px] lg:min-h-[350px]
