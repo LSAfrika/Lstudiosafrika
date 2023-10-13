@@ -6,7 +6,7 @@ import { environment } from 'src/environments/environment';
 import { getFirestore } from 'firebase/firestore';
 import { collection, addDoc } from 'firebase/firestore';
 import { Servicesmodel } from './interface/servicesmodel';
-import { ThrowStmt } from '@angular/compiler';
+
 
 
 @Component({
@@ -66,12 +66,21 @@ export class AppComponent {
       desc: 'simple to do app to perform CRUD operations includes authentication and storage of user data marking todos as complete or pending (MEAN stack)',
       url: 'http://localhost:4200'
     }, {
-      title: ' nduthi.ke',
+      title: ' Twitter clone ui',
+      bgimage: '../assets/nduthike.png',
+      icons: [
+        '../../../assets/angularicon.png', '../../../assets/node.png'
+      ],
+      desc: 'A recreation of X.com(twitter.com) using anguar and tailwind fully responsive',
+      url: 'http://localhost:4200'
+    }, {
+      title: ' NG commerce',
       bgimage: '../assets/nduthike.png',
       icons: [
         '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/node.png', '../../../assets/mongodb.svg'
       ],
-      desc: 'This is a client\'s app that is 80% done all thats remaining is payment intergration and ui polishing also a full stack app link is to a mock demo to show full functionality of the web app',
+      desc: `a fully fledge multivendor ecommerce web app both frontend and backend features include authentication,customer support, orders,
+      vendor creration and dashboard panel payments intergration `,
       url: 'http://localhost:4200'
     }
     // , {

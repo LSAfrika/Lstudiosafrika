@@ -211,17 +211,24 @@ div{
 
 
   button {
-    @apply bg-gradient-to-r from-blue-700 to-blue-500 py-1 px-4 rounded-full font-medium
+    @apply bg-gradient-to-r from-blue-700 to-blue-500 py-1 px-4 rounded-md font-medium
   }
 
 }
 
 .home {
-  @apply mt-[56px]  min-h-screen h-fit pt-[175px] text-white font-bold relative   flex-col justify-start items-center;
+  @apply mt-[56px]  min-h-screen h-fit pt-[60px] text-white font-bold relative   flex-col justify-start items-center
+
+lg:flex-row
+  ;
   // background-image: url('../assets/unsplash/arnold-francisca-f77Bh3inUpE-unsplash.jpg');
   background-size: cover;
   overflow: hidden;
   position: relative;
+
+  .socials{
+    @apply hidden sm:flex w-[50px] min-h-[200px]   justify-evenly items-center flex-col absolute left-[20px] top-[50%] translate-y-[-50%]
+  }
 
   .box {
     display: none
@@ -232,7 +239,22 @@ div{
 
 
   .mobileherowrapper {
-    @apply flex flex-col justify-start items-center relative z-30;
+    @apply flex flex-col justify-start items-center relative z-30 lg:w-full lg:max-w-[600px] xl:items-start lg:pl-20 xl:pl-[100px];
+
+    .welcomemobile{
+      @apply text-5xl mb-5 xl:text-[100px]
+    }
+.intro{
+  @apply max-w-[350px] font-light text-center text-xl xl:text-3xl xl:text-left;
+  line-height: 1.7;
+  strong{
+    @apply text-teal-500 font-bold text-xl xl:text-3xl
+  }
+}
+
+.projectq{
+  @apply mt-5 font-semibold
+}
 
     .dynamictext {
       @apply w-full bg-transparent h-[50px] my-4 overflow-hidden relative;
@@ -249,11 +271,12 @@ div{
     }
 
     button {
-      @apply bg-white  text-[#0f0c27] rounded-full  font-semibold px-4 py-2 float-right mt-10 text-2xl outline-none border-[10px] border-[#0f0c27];
+      @apply bg-white min-w-[250px]  text-[#0f0c27] rounded-[5px]
+        font-semibold px-4 py-2 float-right mt-10 text-2xl outline-none
     }
 
     .caption {
-      @apply italic text-lg font-semibold  float-left;
+      @apply  text-lg font-light text-teal-600 my-2  float-left;
     }
 
     p {
@@ -261,11 +284,15 @@ div{
     }
 
     h2 {
-      @apply text-4xl py-2 px-4 bg-[#0f0c27] text-white rounded-md border-white border-[4px] mb-4 rounded-r-full pr-4
+      @apply text-4xl py-2  bg-[#0f0c27] text-white px-8 border-white border-[4px] mb-4 rounded-md pr-4
     }
 
   }
-
+  .avatar{
+    @apply w-[250px] h-[250px] bg-teal-500 mb-5 rounded-full mx-auto  lg:w-[350px] lg:h-[350px] xl:w-[450px] xl:h-[450px];
+    animation: borderradius 8s ease-in-out infinite 1s;
+    box-shadow: inset 0 0 0 9px rgb(226 232 240/60%)
+  }
 
 
 }
@@ -303,12 +330,12 @@ div{
 .description{
   @apply max-w-[400px] w-full mb-5  rounded-md mt-5 text-white text-base text-center font-normal p-2;
   strong{
-    @apply text-pink-600 text-[20px]
+    @apply text-teal-600 text-[20px]
   }
 
 }
 .avatar{
-  @apply max-w-[200px] max-h-[200px] min-w-[200px] min-h-[200px] bg-slate-200 rounded-full mt-5 mx-auto mb-5
+  @apply max-w-[200px] max-h-[200px] min-w-[200px] min-h-[200px] bg-slate-200 rounded-md mt-5 mx-auto mb-5
 }
 .skillcontainer{
   @apply max-w-[400px] w-full min-h-[500px] text-white text-base text-center font-normal p-2;
@@ -316,7 +343,7 @@ div{
 
 
   .resume{
-    @apply text-[20px] font-semibold mt-[50px] text-white bg-pink-700 min-w-[180px] px-2 py-3 outline-none min-h-[25px] rounded-md flex justify-center
+    @apply text-[20px] font-semibold mt-[50px] text-white bg-teal-500 min-w-[180px] px-2 py-3 outline-none min-h-[25px] rounded-md flex justify-center
     items-center gap-3 mx-auto
   }
   .skill{
@@ -338,7 +365,7 @@ div{
   .progress{
     @apply bg-slate-400 w-full min-h-[10px] rounded-full mt-2;
   .progvalue{
-  @apply bg-blue-800 min-h-[10px] rounded-full
+  @apply bg-teal-500 min-h-[10px] rounded-full
   }
 
   }
@@ -389,7 +416,7 @@ div{
   }
 
   .servicedetails{
-    @apply font-semibold text-lg text-pink-600 mt-5 cursor-pointer
+    @apply font-semibold text-lg text-teal-500 mt-5 cursor-pointer
 
   }
 
@@ -490,7 +517,7 @@ div{
 
 
     .project {
-      @apply w-[256px]  h-[256px] relative py-2 overflow-hidden mb-2 bg-cover bg-emerald-500 cursor-pointer gap-3 relative flex flex-col items-center justify-center rounded-md shadow-md ml-auto mr-auto;
+      @apply w-[256px]  h-[256px]  py-2 overflow-hidden mb-2 bg-cover bg-emerald-500 cursor-pointer gap-3 relative flex flex-col items-center justify-center rounded-md shadow-md ml-auto mr-auto;
       box-shadow: 1px 3px 3px 2px rgba(0, 0, 0, 0.628);
 
 
@@ -518,7 +545,7 @@ div{
       }
 
       &:hover {
-        @apply scale-105 rounded-md
+     //   @apply scale-105 rounded-md
       }
 
       img {
@@ -538,7 +565,7 @@ div{
       }
 
       button {
-        @apply bg-pink-700 mt-auto mb-5 px-6 box-border rounded-full outline-none border-white border-2 min-w-[60px] relative z-20 text-white
+        @apply bg-teal-500 mt-auto mb-5 px-6 box-border rounded-full outline-none border-white border-2 min-w-[60px] relative z-20 text-white
       }
     }
 
@@ -562,7 +589,7 @@ div{
   }
 
   .form-container {
-    @apply block max-w-md p-6 bg-white rounded-md shadow-lg w-2/3 min-h-[350px];
+    @apply block max-w-md p-6 bg-white rounded-md shadow-lg w-2/3 min-h-[350px] sm:max-w-[350px];
 
     .form-group {
       @apply mb-6 mt-4 bg-white;
@@ -634,7 +661,7 @@ div{
     }
 
     .disable {
-      @apply bg-pink-700 cursor-not-allowed
+      @apply bg-teal-500 cursor-not-allowed
     }
   }
 
@@ -1211,57 +1238,10 @@ animation: servicesaboutusanimation .3s ease-in forwards;
   .home {
 
 .maxwidthhome{
-  @apply w-full max-w-[1300px] h-screen flex justify-center flex-row items-start justify-center;
+  @apply w-full max-w-[1200px]  h-screen flex  flex-row items-center justify-center lg:flex-row-reverse lg:mx-auto xl:max-w-[1400px]
+  xl:gap-[100px]
+  ;
 }
-
-    .mobileherowrapper {
-      margin-right: auto;
-      // margin-left: 20px;
-      // margin-top: 2rem;
-      background-color: inherit;
-      min-width: 300px;
-      min-height: 200px;
-      // background-color: pink;
-background-color: #0f0c27;
-      animation: herotextentrance 3s forwards;
-
-      .caption {
-        font-size: 2rem;
-        line-height: 2.75rem;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-      background-color: inherit;
-
-
-        br {
-          display: none;
-        }
-      }
-
-      h2 {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        font-size: 3.25rem;
-      background-color: inherit;
-
-        line-height: 2.5rem;
-      }
-
-      .dynamictext {
-        div {
-          font-size: 2.25rem;
-      background-color: inherit;
-
-        }
-      }
-
-      button {
-        font-size: 2.2rem;
-        line-height:2.5rem;
-      }
-    }
 
 
     .svgs{
@@ -1306,7 +1286,7 @@ background-color: #0f0c27;
     justify-items: center;
 
     .maxwidth{
-    @apply grid grid-cols-2 grid-rows-[100px_200px_300px] gap-x-[150px] ;
+    @apply grid grid-cols-2 grid-rows-[100px_200px_300px] gap-x-[150px] xl:gap-[100px];
 
       max-width: 1300px;
 
@@ -1329,6 +1309,19 @@ background-color: #0f0c27;
 
 
     }
+
+  }
+}
+
+@keyframes borderradius {
+  0%{
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50%{
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100%{
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
 
   }
 }

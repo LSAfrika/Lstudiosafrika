@@ -9,7 +9,7 @@
 }
 
 .title {
-  @apply bg-pink-700 text-white font-medium pr-10 pl-2 py-2 rounded-r-full mr-auto rounded-l-md
+  @apply bg-teal-500 text-white font-medium pr-10 pl-2 py-2 rounded-r-full mr-auto rounded-l-md
 }
 
 .technology {
@@ -40,7 +40,7 @@
 }
 
 button {
-  @apply bg-pink-700 text-white font-medium px-6 py-1 rounded-full w-fit flex justify-center gap-2 mb-8 mt-auto;
+  @apply bg-teal-500 text-white font-medium px-6 py-1 rounded-full w-fit flex justify-center gap-2 mb-8 mt-auto;
 
   div {
     @apply text-lg;
