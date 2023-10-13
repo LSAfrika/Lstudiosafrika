@@ -328,7 +328,20 @@ lg:flex-row
   }
 
 .description{
-  @apply max-w-[400px] w-full mb-5  rounded-md mt-5 text-white text-base text-center font-normal p-2;
+  @apply max-w-[400px] w-full mb-5  rounded-md mt-5 text-white text-base text-center font-normal p-2
+  ;
+  // md:max-w-[50%] md:flex md:flex-col md:justify-start md:items-center gap-8 md:p-8
+
+  // max-width: 50%;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: flex-start;
+  // align-items: center;
+  // gap: 2rem;
+  // padding: 8px;
+  // color: white;
+
+
   strong{
     @apply text-teal-600 text-[20px]
   }
@@ -1293,10 +1306,19 @@ animation: servicesaboutusanimation .3s ease-in forwards;
     }
 
     .title{
-@apply col-span-2 text-center
+@apply col-span-2 text-center flex justify-end flex-col ;
+span{
+  @apply mt-auto
+}
     }
     .description{
-      @apply row-start-2 row-end-4 col-start-1 col-end-2  ;
+      @apply row-start-2 row-end-4 col-start-1 col-end-2    ;
+      .avatar{
+        @apply max-w-[250px] max-h-[250px] min-h-[250px] min-w-[250px]
+      }
+      p{
+        @apply text-lg h-fit
+      }
     }
     .skillcontainer{
       @apply row-start-2 row-end-4 col-start-2 col-end-3 mt-7
