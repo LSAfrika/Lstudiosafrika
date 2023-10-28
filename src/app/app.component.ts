@@ -57,15 +57,17 @@ export class AppComponent {
       ],
       desc: 'A lite social media site for sharing images  with friends capabilities include \n posting images,  commenting, sending direct messages, having live messages and live notifications with socket.io ',
       url: 'http://localhost:4200'
-    }, {
-      title: 'tasks.io',
-      bgimage: '../assets/tasksio.png',
-      icons: [
-        '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/node.png', '../../../assets/mongodb.svg'
-      ],
-      desc: 'simple to do app to perform CRUD operations includes authentication and storage of user data marking todos as complete or pending (MEAN stack)',
-      url: 'http://localhost:4200'
-    }, {
+    }
+    // , {
+    //   title: 'tasks.io',
+    //   bgimage: '../assets/tasksio.png',
+    //   icons: [
+    //     '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/node.png', '../../../assets/mongodb.svg'
+    //   ],
+    //   desc: 'simple to do app to perform CRUD operations includes authentication and storage of user data marking todos as complete or pending (MEAN stack)',
+    //   url: 'http://localhost:4200'
+    // }
+    , {
       title: ' Twitter clone ui',
       bgimage: '../assets/nduthike.png',
       icons: [
