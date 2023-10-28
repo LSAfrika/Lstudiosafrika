@@ -6,7 +6,7 @@ import { environment } from 'src/environments/environment';
 import { getFirestore } from 'firebase/firestore';
 import { collection, addDoc } from 'firebase/firestore';
 import { Servicesmodel } from './interface/servicesmodel';
-
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -47,7 +47,7 @@ export class AppComponent {
         '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/node.png'  , '../../../assets/mongodb.svg',
         '../../../assets/socket.png'
       ],
-      desc: 'This is a full stack chat application built with the MEAN stack & socket.io to deliver a rich social experience  ',
+      desc: 'This is a full stack chat application built with the MEAN stack & socket.io to deliver a rich one to one chat experience  ',
       url: 'http://localhost:4200'
     }, {
       title: 'snapshare',
@@ -55,7 +55,7 @@ export class AppComponent {
       icons: [
         '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/node.png' , '../../../assets/mongodb.svg', '../../../assets/socket.png'
       ],
-      desc: 'A lite social media site for sharing images  with friends capabilities include \n posting images,  commenting, sending direct messages, having live messages and live notifications with socket.io ',
+      desc: 'A lite social media site for sharing photos  with friends capabilities include \n posting images,  commenting, sending direct messages, having live messages and live notifications with socket.io ',
       url: 'http://localhost:4200'
     }
     // , {
@@ -69,20 +69,20 @@ export class AppComponent {
     // }
     , {
       title: ' Twitter clone ui',
-      bgimage: '../assets/nduthike.png',
+      bgimage: '../assets/ngtwitter.PNG',
       icons: [
-        '../../../assets/angularicon.png', '../../../assets/node.png'
+        '../../../assets/angularicon.png'
       ],
       desc: 'A recreation of X.com(twitter.com) using anguar and tailwind fully responsive',
       url: 'http://localhost:4200'
     }, {
       title: ' NG commerce',
-      bgimage: '../assets/nduthike.png',
+      bgimage: '../assets/ngcommerce.PNG',
       icons: [
         '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/node.png', '../../../assets/mongodb.svg'
       ],
       desc: `a fully fledge multivendor ecommerce web app both frontend and backend features include authentication,customer support, orders,
-      vendor creration and dashboard panel payments intergration `,
+      vendor creration and dashboard panel payments intergration (W.I.P) `,
       url: 'http://localhost:4200'
     }
     // , {
@@ -136,7 +136,7 @@ export class AppComponent {
     }
   ]
   icons = [];
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,private location:Location) {
     this.icons = ['../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/node.png'];
 
 
@@ -297,11 +297,11 @@ export class AppComponent {
 
   scrolltocontent(location: string) {
     // this.scroller.scrollToAnchor("contacts");
-    if (location === 'home') { this.selection = 1; }
-    if (location === 'about') { this.selection = 2; }
-    if (location === 'services') { this.selection = 3; }
-    if (location === 'portfolio') { this.selection = 4; }
-    if (location === 'contacts') { this.selection = 5; }
+    if (location === 'home') { this.selection = 1;this.location.go('#home') }
+    if (location === 'about') { this.selection = 2;this.location.go('#about') }
+    if (location === 'services') { this.selection = 3;this.location.go('#services') }
+    if (location === 'portfolio') { this.selection = 4;this.location.go('#portfolio') }
+    if (location === 'contacts') { this.selection = 5; this.location.go('#contacts')}
 
 
     document.getElementById(location).scrollIntoView({
