@@ -1224,7 +1224,7 @@ animation: servicesaboutusanimation .3s ease-in forwards;
     @apply flex flex-col justify-start items-center gap-5 pb-0 min-h-[100vh];
 
     .sectiontitle {
-      @apply block min-w-full text-center flex justify-center items-center
+      @apply  min-w-full text-center flex justify-center items-center
     }
 
     .form-container {
@@ -1315,7 +1315,7 @@ animation: servicesaboutusanimation .3s ease-in forwards;
     justify-items: center;
 
     .maxwidth{
-    @apply grid grid-cols-2 grid-rows-[100px_200px_300px] gap-x-[150px] xl:gap-[100px];
+    @apply grid grid-cols-2 grid-rows-[100px_200px_400px] gap-x-[150px] xl:gap-[100px];
 
       max-width: 1300px;
 
