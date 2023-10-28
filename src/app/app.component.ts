@@ -44,7 +44,7 @@ export class AppComponent {
       title: 'NG chat',
       bgimage: '../assets/ngchat.png',
       icons: [
-        '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/node.png'  , '../../../assets/mongodb.svg',
+        '../../../assets/angularicon.png','../../../assets/tailwind.jpg', '../../../assets/EXPRESS.png', '../../../assets/node.png'  , '../../../assets/mongodb.svg',
         '../../../assets/socket.png'
       ],
       desc: 'This is a full stack chat application built with the MEAN stack & socket.io to deliver a rich one to one chat experience  ',
@@ -53,7 +53,7 @@ export class AppComponent {
       title: 'snapshare',
       bgimage: '../assets/snapshare.PNG',
       icons: [
-        '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/node.png' , '../../../assets/mongodb.svg', '../../../assets/socket.png'
+        '../../../assets/angularicon.png','../../../assets/tailwind.jpg', '../../../assets/EXPRESS.png', '../../../assets/node.png' , '../../../assets/mongodb.svg', '../../../assets/socket.png'
       ],
       desc: 'A lite social media site for sharing photos  with friends capabilities include \n posting images,  commenting, sending direct messages, having live messages and live notifications with socket.io ',
       url: 'http://localhost:4200'
@@ -71,7 +71,7 @@ export class AppComponent {
       title: ' Twitter clone ui',
       bgimage: '../assets/ngtwitter.PNG',
       icons: [
-        '../../../assets/angularicon.png'
+        '../../../assets/angularicon.png','../../../assets/tailwind.jpg'
       ],
       desc: 'A recreation of X.com(twitter.com) using anguar and tailwind fully responsive',
       url: 'http://localhost:4200'
@@ -79,7 +79,7 @@ export class AppComponent {
       title: ' NG commerce',
       bgimage: '../assets/ngcommerce.PNG',
       icons: [
-        '../../../assets/angularicon.png', '../../../assets/express-js-icon-20.png', '../../../assets/node.png', '../../../assets/mongodb.svg'
+        '../../../assets/angularicon.png','../../../assets/tailwind.jpg', '../../../assets/EXPRESS.png', '../../../assets/node.png', '../../../assets/mongodb.svg'
       ],
       desc: `a fully fledge multivendor ecommerce web app both frontend and backend features include authentication,customer support, orders,
       vendor creration and dashboard panel payments intergration (W.I.P) `,
