@@ -217,7 +217,7 @@ div{
 }
 
 .home {
-  @apply mt-[56px]  min-h-screen h-fit pt-[60px] text-white font-bold relative   flex-col justify-start items-center
+  @apply mt-[56px] lg:mt-0  min-h-screen h-fit pt-[60px] text-white font-bold relative   flex-col justify-start items-center
 
 lg:flex-row
   ;
@@ -239,17 +239,21 @@ lg:flex-row
 
 
   .mobileherowrapper {
-    @apply flex flex-col justify-start items-center relative z-30 lg:w-full lg:max-w-[600px] xl:items-start lg:pl-20 xl:pl-[100px];
+    @apply flex flex-col justify-start items-center relative z-30 
+    lg:w-full lg:max-w-[600px] xl:max-w-[800px] xl:items-center lg:pl-20 xl:pl-[100px];
 
     .welcomemobile{
       @apply text-5xl mb-5 xl:text-[100px]
     }
 .intro{
-  @apply max-w-[350px] font-light text-center text-xl xl:text-3xl xl:text-left;
+  @apply max-w-[350px] font-light text-center text-xl xl:text-3xl xl:max-w-[800px] xl:text-center;
   line-height: 1.7;
   strong{
     @apply text-teal-500 font-bold text-xl xl:text-3xl
   }
+}
+.talktomebtn{
+  // @apply ml-[50px]
 }
 
 .projectq{
@@ -351,7 +355,8 @@ lg:flex-row
 
 }
 .avatar{
-  @apply max-w-[200px] max-h-[200px] min-w-[200px] bg-cover overflow-hidden min-h-[200px] bg-slate-200 rounded-md mt-5 mx-auto mb-5;
+  @apply max-w-[200px] max-h-[200px] min-w-[200px]
+   bg-cover overflow-hidden min-h-[200px] bg-slate-200 rounded-md mt-5 mx-auto mb-5;
   background-image: url('../assets/me2.JPG')
 }
 .skillcontainer{
@@ -420,7 +425,10 @@ lg:flex-row
   @apply relative h-fit  bg-[#0f0c27]  lg:min-h-[50vh] lg:pl-[200px]  lg:pr-[200px] lg:gap-5;
 
 .servicecontainer{
-  @apply w-[85%] max-w-[300px] bg-[#110e2b]  mt-5 min-h-[300px] h-[300px]  lg:mt-0  flex flex-col rounded-md lg:max-w-[300px] lg:min-h-[300px]
+  @apply w-[85%] max-w-[300px] bg-[#110e2b] 
+   mt-5 min-h-[300px] h-[300px]  lg:mt-0  flex flex-col rounded-md lg:max-w-[300px] lg:min-h-[300px]
+
+   xl:min-h-[400px] xl:min-w-[400px]
   justify-center items-center;
   .serviceicon{
     @apply min-w-[100px] h-[100px]  w-fit flex justify-center items-center;
@@ -1331,6 +1339,7 @@ span{
       @apply row-start-2 row-end-4 col-start-1 col-end-2    ;
       .avatar{
         @apply max-w-[250px] max-h-[250px] min-h-[250px] min-w-[250px]
+        xl:max-w-[350px] xl:max-h-[350px] xl:min-h-[350px] xl:min-w-[350px]
       }
       p{
         @apply text-lg h-fit
@@ -1351,6 +1360,20 @@ span{
   }
 }
 
+@media screen and (min-width: 1280px) {
+.portfolio{
+  // @apply min
+
+  .project{
+    @apply min-w-[300px] min-h-[300px]
+  }
+}
+.cardprojects{
+  @apply max-w-[1200px];
+
+
+}
+}
 @keyframes borderradius {
   0%{
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
