@@ -39,6 +39,7 @@ export class AppComponent {
   Viewproject=false
   Viewservice=false
   messageform: FormGroup;
+  ngicon='../../../assets/angularicon.png'
   projects: Projectmodel[] = [
     {
       title: 'NG chat',

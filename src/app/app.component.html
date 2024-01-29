@@ -109,19 +109,23 @@
       <h4 class="title"> <span>About</span> </h4>
       <div class="description">
     <div class="avatar"></div>
-    <p>Hello my name is <br> <strong>Wilson Douglas Chege</strong> <br> <br> a full stack web engineer specialized in the
-      <strong>MEAN STACK   </strong><br>
-      (mongodb/mysql,express, angular, node)
-      <br> <br>
+    <p><strong>Wilson Douglas Chege</strong>  here a full stack web engineer specialized in the 
+      <strong>MEAN STACK   </strong> <br>
+      <span class="font-semibold text-base text-pink-600">(mongodb/mysql,express, angular, node)</span> <br>
+      
+     Personally, I strive to bring about scalable, well maintained, robust and effecient web applications.   <br> 
+     A personal mantra i've adopted is to treat each project as if it were mine and thus do it as I would do mine. <br>
+     In this regard I pour myself fully to a project to see it succeed, since when you succeed I succeed.       <br> <br>
+     <span class="italic font-light text-lg mt-5"> So lets see how we can get your next project up and running</span> <br>
 
 
-
-
-      i personally strive to bring about scalable, well maintained, robust and effecient web applications       <br> <br>
-      <!-- <i >Talk to us lets see how we can get your <br> next project up and running</i> <br> -->
-
-
-
+     <button  class="resumelg">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"  style="
+       fill: rgba(255 255 255);background-color: rgb(20 184 166 );
+       position: relative;z-index: 10;
+       "><path d="M19 9h-4V3H9v6H5l7 8zM4 19h16v2H4z"></path></svg>
+      <a href="../assets/Wilson Chege 2.pdf" > Resume</a>
+    </button>
 
 
     </p>
@@ -132,58 +136,61 @@
 
   <div class="skillcontainer">
   <div class="skill">Skills</div>
-  <div class="skillscontainer">
+
+  <div class="skillslg">
+    <div class="icon" ></div>
+    <div class="technology">Angular</div>
+    <div class="years">+6 years</div>
+  </div>
+  <div class="skillslg"></div>
+  <div class="skillslg"></div>
+  <div class="skillslg"></div>
+  <div class="skillslg"></div>
+  <div class="skillscontainer hidelg ">
   <div class="tag">
    <div class="tech">Angular</div>
-   <div class="percent">+95%</div>
+   <div class="percent">+6 years</div>
   </div>
   <div class="progress">
-   <div class="progvalue " style="width: 95%;"></div>
+   <div class="progvalue " style="width: 100%;"></div>
   </div>
   </div>
-  <div class="skillscontainer">
+  <div class="skillscontainer hidelg">
    <div class="tag">
      <div class="tech">Ionic(Angular)</div>
-     <div class="percent">+90%</div>
+     <div class="percent">+6 years</div>
    </div>
    <div class="progress">
-     <div class="progvalue " style="width: 90%;"></div>
+     <div class="progvalue " style="width: 100%;"></div>
    </div>
    </div>
-  <div class="skillscontainer">
+  <div class="skillscontainer hidelg">
    <div class="tag">
-     <div class="tech">Express.Js</div>
-     <div class="percent">+85%</div>
+     <div class="tech">Express.Js / Node.Js</div>
+     <div class="percent">+5 years</div>
    </div>
    <div class="progress">
-     <div class="progvalue " style="width: 85%;"></div>
+     <div class="progvalue " style="width: 80%;"></div>
    </div>
    </div>
-   <div class="skillscontainer">
-     <div class="tag">
-       <div class="tech">Node.Js</div>
-       <div class="percent">+85%</div>
-     </div>
-     <div class="progress">
-       <div class="progvalue " style="width: 85%;"></div>
-     </div>
-     </div>
-   <div class="skillscontainer">
+ 
+     
+   <div class="skillscontainer hidelg">
      <div class="tag">
        <div class="tech">Mongo DB</div>
-       <div class="percent">+80%</div>
+       <div class="percent">+4 years</div>
      </div>
      <div class="progress">
-       <div class="progvalue " style="width: 80%;"></div>
+       <div class="progvalue " style="width: 65%;"></div>
      </div>
      </div>
-     <div class="skillscontainer">
+     <div class="skillscontainer hidelg">
       <div class="tag">
         <div class="tech">MySql / Postgress</div>
-        <div class="percent">+65%</div>
+        <div class="percent">+3 years</div>
       </div>
       <div class="progress">
-        <div class="progvalue " style="width: 65%;"></div>
+        <div class="progvalue " style="width: 50%;"></div>
       </div>
       </div>
 
@@ -193,9 +200,7 @@
         fill: rgba(255 255 255);background-color: rgb(20 184 166 );
         position: relative;z-index: 10;
         "><path d="M19 9h-4V3H9v6H5l7 8zM4 19h16v2H4z"></path></svg> -->
-       <a href="../assets/Wilson Chege 2.pdf" style="
-
-       "> Resume</a>
+       <a href="../assets/Wilson Chege 2.pdf" > Resume</a>
      </button>
 
     </div>
@@ -277,7 +282,7 @@
   </p> -->
 
     <div class="cardprojects">
-      <div (click)="viewproject(i)" *ngFor="let project of projects; let i=index" style="background-image:url({{project.bgimage}}) ;" class="project">
+      <div (click)="viewproject(i)" *ngFor="let project of projects; let i=index" style='background-image:url({{project.bgimage}})' class="project">
 
       </div>
       <!-- <div class="project">
@@ -395,7 +400,7 @@
 
     <div class="footercontacts copyright">
       <span>&copy;</span>
-      <div><strong>wilson douglas</strong> (2023)</div>
+      <div><strong>wilson douglas</strong> (2024)</div>
     </div>
 
 

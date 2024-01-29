@@ -240,7 +240,7 @@ lg:flex-row
 
   .mobileherowrapper {
     @apply flex flex-col justify-start items-center relative z-30 
-    lg:w-full lg:max-w-[600px] xl:max-w-[800px] xl:items-center lg:pl-20 xl:pl-[100px];
+    lg:w-full lg:max-w-[600px] xl:max-w-[700px] xl:items-center lg:pl-20 xl:pl-[50px];
 
     .welcomemobile{
       @apply text-5xl mb-5 xl:text-[100px]
@@ -293,12 +293,12 @@ lg:flex-row
 
   }
   .avatar{
-    @apply w-[250px] h-[250px] bg-teal-500 mb-5 bg-cover flex justify-center items-center
-     mx-auto  lg:w-[350px] lg:h-[350px] xl:w-[450px] xl:h-[450px];
+    @apply w-[250px] h-[250px] bg-[#0f0c27] mb-5 bg-cover flex justify-center items-center
+     mx-auto  lg:w-[350px] lg:h-[350px] xl:w-[600px] xl:h-[600px];
      background-image: url('../assets/me.JPG');
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     animation: borderradius 8s ease-in-out infinite 1s;
-    box-shadow: inset 0 0 0 9px rgb(226 232 240/60%)
+    box-shadow: inset 0 0 0 10px rgb(10 7 30/60%)
   }
 
 
@@ -367,7 +367,9 @@ lg:flex-row
   .resume{
     @apply text-[20px] font-semibold mt-[20px] text-white bg-teal-500
      min-w-[180px] px-2 py-3 outline-none min-h-[25px] rounded-md flex justify-center
-    items-center gap-3 mx-auto relative
+    items-center gap-3 mx-auto lg:hidden;
+    // lg:min-h-[50px] lg:min-w-[300px]
+    // xl:min-h-[50px] xl:mt-[200px] xl:text-[30px]
   }
   .skill{
   @apply text-[30px] font-semibold
@@ -392,6 +394,9 @@ lg:flex-row
   }
 
   }
+  }
+  .hidelg{
+    @apply lg:hidden
   }
 }
 
@@ -1274,7 +1279,7 @@ animation: servicesaboutusanimation .3s ease-in forwards;
 
 .maxwidthhome{
   @apply w-full max-w-[1200px]  h-screen flex  flex-row items-center justify-center lg:flex-row-reverse lg:mx-auto xl:max-w-[1400px]
-  xl:gap-[100px]
+
   ;
 }
 
@@ -1323,7 +1328,8 @@ animation: servicesaboutusanimation .3s ease-in forwards;
     justify-items: center;
 
     .maxwidth{
-    @apply grid grid-cols-2 grid-rows-[100px_200px_400px] gap-x-[150px] xl:gap-[100px];
+    // @apply grid grid-cols-2 grid-rows-[100px_200px_400px] gap-x-[150px] xl:gap-[100px];4
+    @apply flex flex-col justify-start items-center;
 
       max-width: 1300px;
 
@@ -1336,19 +1342,54 @@ span{
 }
     }
     .description{
-      @apply row-start-2 row-end-4 col-start-1 col-end-2    ;
+ @apply bg-[#0f0c27];
+      min-width: 1000px;
+      min-height: 400px;
+     // background: rgb(30 41 59);
+      align-items: center;
+      justify-content: center;
+      display: flex;
+  }
       .avatar{
         @apply max-w-[250px] max-h-[250px] min-h-[250px] min-w-[250px]
-        xl:max-w-[350px] xl:max-h-[350px] xl:min-h-[350px] xl:min-w-[350px]
+        lg:min-h-[325px] lg:min-w-[325px]
+        xl:max-w-[350px] xl:max-h-[350px] xl:min-h-[400px] xl:min-w-[400px]
       }
       p{
-        @apply text-lg h-fit
+        @apply text-[20px] h-fit max-w-[50%] text-left;
+        .resumelg{
+          @apply text-[20px] font-semibold mt-[20px] text-white bg-teal-500 hidden 
+           min-w-[250px] px-2 py-3 outline-none min-h-[25px] rounded-sm lg:flex justify-center
+          items-center gap-3 mx-auto ;
+          // lg:min-h-[50px] lg:min-w-[300px]
+          // xl:min-h-[50px] xl:mt-[200px] xl:text-[30px]
+        }
       }
     }
     .skillcontainer{
-      @apply row-start-2 row-end-4 col-start-2 col-end-3 mt-7
+      @apply min-w-[1000px] flex flex-row flex-wrap justify-center items-stretch gap-5  pt-[20px] ;
+
+      .skill{
+        @apply min-w-full block text-center lg:hidden
+      }
+     .skillslg{
+      @apply min-w-[300px] max-h-[100px] rounded-sm bg-[#14102e] flex justify-evenly items-center;
+
+      .icon{
+          @apply bg-teal-500  w-[100px] h-[100px]  max-w-[50px] max-h-[50px] rounded-md;
+        
+      }
+      .technology{ 
+        @apply text-lg font-semibold text-teal-600
+
+      }
+      .years{
+        @apply text-lg font-light text-white
+      }
+     }
 
     }
+ 
     .aboutuscontainer {
       max-width: 1200px;
       min-height: 400px;
@@ -1358,7 +1399,7 @@ span{
     }
 
   }
-}
+
 
 @media screen and (min-width: 1280px) {
 .portfolio{
