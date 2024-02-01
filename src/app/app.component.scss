@@ -307,14 +307,20 @@ lg:flex-row
 
 
 .aboutus {
-  @apply min-h-screen h-fit relative flex flex-col justify-start items-center bg-[#0f0c27] mt-0;
-  // background-image: url('../assets/unsplash/oskar-yildiz-cOkpTiJMGzA-unsplash.jpg');
+  @apply min-h-screen h-fit relative flex flex-col justify-start
+   items-center bg-[#0f0c27] mt-0 lg:justify-center;
+  
 
 
 
-  background-size: cover;
-  overflow: hidden;
-  position: relative;
+ 
+
+  .maxwidth{
+    @apply flex flex-col justify-start items-center lg:max-w-[1300px];
+
+  
+
+    }
 
   .lgscreenaboutus {
     display: none;
@@ -332,20 +338,20 @@ lg:flex-row
 
   .title{
     @apply text-white text-4xl font-semibold text-center
+  lg:flex lg:justify-end lg:flex-col ;
+span{
+  @apply mt-auto
+}
+    
+
+
+
   }
 
 .description{
   @apply max-w-[400px] w-full mb-5  rounded-md mt-5 text-white text-base text-center font-normal p-2
   ;
-  // md:max-w-[50%] md:flex md:flex-col md:justify-start md:items-center gap-8 md:p-8
 
-  // max-width: 50%;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: flex-start;
-  // align-items: center;
-  // gap: 2rem;
-  // padding: 8px;
   // color: white;
 
 
@@ -1177,22 +1183,11 @@ app-viewproject {
 
   .aboutus {
 
-    justify-items: center;
+  
 
-    .maxwidth{
-    // @apply grid grid-cols-2 grid-rows-[100px_200px_400px] gap-x-[150px] xl:gap-[100px];4
-    @apply flex flex-col justify-start items-center;
+ 
 
-      max-width: 1300px;
-
-    }
-
-    .title{
-@apply col-span-2 text-center flex justify-end flex-col ;
-span{
-  @apply mt-auto
-}
-    }
+    
     .description{
  @apply bg-[#0f0c27];
       min-width: 1000px;
