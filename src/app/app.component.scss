@@ -316,7 +316,7 @@ lg:flex-row
  
 
   .maxwidth{
-    @apply flex flex-col justify-start items-center lg:max-w-[1300px];
+    @apply flex flex-col justify-start items-center  lg:max-w-[1300px];
 
   
 
@@ -349,7 +349,7 @@ span{
   }
 
 .description{
-  @apply max-w-[400px] w-full mb-5  rounded-md mt-5 text-white text-base text-center font-normal p-2
+  @apply max-w-[400px] w-full mb-5 md:max-w-[550px]  rounded-md mt-5 text-white text-base text-center font-normal p-2
   bg-[#0f0c27] lg:min-w-[1000px] lg:min-h-[400px] lg:items-center lg:justify-center lg:flex
   ;
 
@@ -367,6 +367,17 @@ span{
    lg:min-h-[325px] lg:min-w-[325px]  xl:max-w-[350px] xl:max-h-[350px] xl:min-h-[400px] xl:min-w-[400px]
    ;
   background-image: url('../assets/me2.JPG')
+}
+
+p{
+  @apply text-[20px] h-fit lg:max-w-[50%] lg:text-left;
+  .resumelg{
+    @apply text-[20px] font-semibold mt-[20px] text-white bg-teal-500 hidden 
+     min-w-[250px] px-2 py-3 outline-none min-h-[25px] rounded-sm lg:flex justify-center
+    items-center gap-3 mx-auto ;
+    // lg:min-h-[50px] lg:min-w-[300px]
+    // xl:min-h-[50px] xl:mt-[200px] xl:text-[30px]
+  }
 }
 .skillcontainer{
   @apply max-w-[400px] w-full min-h-[500px] text-white text-base text-center font-normal p-2;
@@ -1194,7 +1205,7 @@ app-viewproject {
 
 
       p{
-        @apply text-[20px] h-fit max-w-[50%] text-left;
+        @apply text-[20px] h-fit lg:max-w-[50%] lg:text-left;
         .resumelg{
           @apply text-[20px] font-semibold mt-[20px] text-white bg-teal-500 hidden 
            min-w-[250px] px-2 py-3 outline-none min-h-[25px] rounded-sm lg:flex justify-center
