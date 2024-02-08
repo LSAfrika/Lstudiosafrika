@@ -413,12 +413,15 @@ p{
  
 
   .tag{
-    @apply w-full  flex justify-between ;
+    @apply w-full  flex justify-start gap-2 items-center;
+    .icon{
+      @apply w-[35px] h-[35px] rounded-full bg-cover bg-center overflow-hidden 
+    }
     .tech{
   @apply font-semibold text-lg
     }
     .percent{
-      @apply font-normal text-lg
+      @apply font-normal text-lg ml-auto
     }
   }
 
@@ -583,7 +586,9 @@ p{
 
 
     .project {
-      @apply w-[256px]  h-[256px]  py-2 overflow-hidden mb-2 bg-cover bg-emerald-500 cursor-pointer gap-3 relative flex flex-col items-center justify-center rounded-md shadow-md ml-auto mr-auto;
+      @apply w-[256px]  h-[256px]  py-2 overflow-hidden mb-2 bg-cover
+       bg-emerald-500 cursor-pointer gap-3 relative flex flex-col items-center
+        justify-center rounded-md shadow-md ml-auto mr-auto;
       box-shadow: 1px 3px 3px 2px rgba(0, 0, 0, 0.628);
 
 
@@ -944,9 +949,7 @@ app-viewproject {
     .cardprojects {
       @apply grid-cols-3;
 
-      .project {
-
-      }
+    
     }
   }
 
@@ -1234,13 +1237,18 @@ app-viewproject {
 .portfolio{
   // @apply min
 
-  .project{
-    @apply min-w-[300px] min-h-[300px]
-  }
-}
-.cardprojects{
-  @apply max-w-[1200px];
 
+  .cardprojects{
+    @apply max-w-[1200px]   min-h-[500px];
+    .project{
+     
+      min-width: 300px !important;
+      min-height: 300px !important;
+  
+    } 
+  
+  
+  }
 
 }
 }

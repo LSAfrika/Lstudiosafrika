@@ -3,7 +3,7 @@
   <nav>
     <div (click)="scrolltocontent('home')" class="logo">
       <img src="../assets/me.JPG" alt="">
-      <div>WD Chege</div>
+      <div>WD Chege </div>
 
     </div>
 
@@ -30,7 +30,7 @@
       <a (click)="togglemenu()" href="#about">About </a>
       <a (click)="togglemenu()" href="#services">services</a>
       <a (click)="togglemenu()" href="#portfolio">Portfolio</a>
-      <a (click)="togglemenu()" href="#contacts">Contact us</a>
+      <a (click)="togglemenu()" href="#contacts">Let's Talk</a>
     </div>
 
 
@@ -41,7 +41,7 @@
       <a [ngClass]="{lineunder: selection===3}" (click)="scrolltocontent('services')">services</a>
       <a [ngClass]="{lineunder: selection===4}" (click)="scrolltocontent('portfolio')">Portfolio</a>
       <a [ngClass]="{lineunder: selection===5}" (click)="scrolltocontent('contacts')"
-        style="background-color: white;color:#0f0c27;font-weight:500;border-radius: 5px;margin-left: auto;">contact us</a>
+        style="background-color: white;color:#0f0c27;font-weight:500;border-radius: 5px;margin-left: auto;">Let's Talk</a>
 
     </ul>
   </nav>
@@ -82,7 +82,7 @@
 
 
       <!-- <div class="caption"> You conceptualize it we realize it<br></div> -->
-      <button class="talktomebtn" (click)="scrolltocontent('contacts')"> Talk to me</button>
+      <button class="talktomebtn" (click)="scrolltocontent('contacts')"> Let's Talk</button>
     </div>
 
     <!-- <div class="svgs"> -->
@@ -109,9 +109,9 @@
       <h4 class="title"> <span>About</span> </h4>
       <div class="description">
     <div class="avatar"></div>
-    <p><strong>Wilson Douglas Chege</strong>  here a full stack web engineer specialized in the 
-      <strong>MEAN STACK   </strong> <br>
-      <span class="font-semibold text-base text-pink-600">(mongodb/mysql,express, angular, node)</span> <br>
+    <p><span class="text-emerald-500">Wilson Douglas Chege</span>  here, a full stack web engineer specialized in the 
+      <span lass="text-emerald-500">MEAN STACK   </span> <br>
+      <span class="font-semibold text-sm text-emerald-600">(mongodb/mysql,express, angular, node)</span> <br>
       
      Personally, I strive to bring about scalable, well maintained, robust and effecient web applications.   <br> 
      A personal mantra i've adopted is to treat each project as if it were mine and thus do it as I would do mine. <br>
@@ -144,7 +144,7 @@
     <div class="years">+6 years</div>
   </div>
   <div class="skillslg">
-    <div class="icon" style="background-image: url('../assets/ionic.svg');"  ></div>
+    <div class="icon" style="background-image: url('../assets/ionic1.svg');"  ></div>
     <div class="technology">Ionic(Angular)</div>
     <div  class="years">+6 years</div>
   </div> 
@@ -162,13 +162,20 @@
     <div class="years">+4 years</div>
   </div>
   <div class="skillslg">
-    <div class="icon" style="background-image: url('../assets/sql.jpg')" ></div>
-    <div class="technology">MySql</div>
+    <div class="icon" style="background-image: url('../assets/mysql.svg')" ></div>
+    <div class="technology">MySql/postgress</div>
+    <div class="years">+3 years</div>
+  </div>
+  <div class="skillslg">
+    <div class="icon" style="background-image: url('../assets/tailwind.svg')" ></div>
+    <div class="technology">Tailwind css</div>
     <div class="years">+3 years</div>
   </div>
  
   <div class="skillscontainer hidelg ">
   <div class="tag">
+    <div class="icon " style="background-image: url('../assets/angularicon.png');" 
+    ></div>
    <div class="tech">Angular</div>
    <div class="percent">+6 years</div>
   </div>
@@ -178,6 +185,8 @@
   </div>
   <div class="skillscontainer hidelg">
    <div class="tag">
+    <div class="icon " style="background-image: url('../assets/ionic1.svg');" ></div>
+
      <div class="tech">Ionic(Angular)</div>
      <div class="percent">+6 years</div>
    </div>
@@ -187,6 +196,8 @@
    </div>
   <div class="skillscontainer hidelg">
    <div class="tag">
+    <div class="icon " style="background-image: url('../assets/EXPRESS.png');" ></div>
+
      <div class="tech">Express.Js / Node.Js</div>
      <div class="percent">+5 years</div>
    </div>
@@ -198,6 +209,8 @@
      
    <div class="skillscontainer hidelg">
      <div class="tag">
+    <div class="icon " style="background-image: url('../assets/mongodb.svg');" ></div>
+
        <div class="tech">Mongo DB</div>
        <div class="percent">+4 years</div>
      </div>
@@ -207,6 +220,8 @@
      </div>
      <div class="skillscontainer hidelg">
       <div class="tag">
+    <div class="icon " style="background-image: url('../assets/mysql.svg');" ></div>
+
         <div class="tech">MySql / Postgress</div>
         <div class="percent">+3 years</div>
       </div>
@@ -214,6 +229,18 @@
         <div class="progvalue " style="width: 50%;"></div>
       </div>
       </div>
+
+      <div class="skillscontainer hidelg">
+        <div class="tag">
+    <div class="icon " style="background-image: url('../assets/tailwind.svg');" ></div>
+
+          <div class="tech">Tailwind css</div>
+          <div class="percent">+3 years</div>
+        </div>
+        <div class="progress">
+          <div class="progvalue " style="width: 50%;"></div>
+        </div>
+        </div>
 
 
      <button  class="resume">
@@ -303,19 +330,10 @@
   </p> -->
 
     <div class="cardprojects">
-      <div (click)="viewproject(i)" *ngFor="let project of projects; let i=index" style='background-image:url({{project.bgimage}})' class="project">
+      <div (click)="viewproject(i)" *ngFor="let project of projects; let i=index" [style]="{'background-image':'url('+project.bgimage+')'}" class="project">
 
       </div>
-      <!-- <div class="project">
-      <img src="../assets/todo.png" alt="chat">
-      <div class="projecttitle">ng todo </div>
-    </div>
-
-    <div class="project">
-      <img src="../assets/todo.png" alt="chat">
-      <div class="projecttitle">ng snapshare </div>
-    </div> -->
-
+   
     </div>
 
 
