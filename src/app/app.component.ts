@@ -123,14 +123,14 @@ export class AppComponent {
     },
     {
       title:'Backend development',
-      icon:'../assets/express-js-icon-20.png',
+      icon:'../assets/EXPRESS.png',
       desc:`
       We deploy our backend applications using the power of express on top of node js for easy to read well maintained and scalable code base `,
 
     },
     {
       title:'Mobile development',
-      icon:'../assets/Logo_Ionic.png',
+      icon:'../assets/ionic1.svg',
       desc:`
       Using the power of web technologies we bulid mobile apps using IONIC(angular) to build beutiful well thought out designs for quality ui/ux`,
 
