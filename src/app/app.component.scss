@@ -644,7 +644,9 @@ p{
 }
 
 .contactus {
-  @apply bg-[#0f0c27];
+  @apply bg-[#0f0c27] xl:flex xl:justify-center xl:items-center xl:flex-row xl:flex-wrap gap-[50px]
+  
+  ; //
   min-height: fit-content;
   padding-bottom: 40px;
 
@@ -658,8 +660,13 @@ p{
     }
   }
 
+  .technologies{
+    @apply hidden xl:flex min-w-[600px] min-h-[600px]  bg-purple-600 h-[inherit]
+  }
   .form-container {
-    @apply block max-w-md p-6 bg-white rounded-md shadow-lg w-2/3 min-h-[350px] sm:max-w-[350px];
+    @apply block w-full  p-6 bg-white rounded-md shadow-lg  min-h-[350px]  max-w-[350px] 
+    xl:min-w-[425px] xl:min-h-[600px]
+    ;
 
     .form-group {
       @apply mb-6 mt-4 bg-white;
@@ -744,13 +751,18 @@ p{
     }
   }
 
-  .footercontacts {
-    @apply w-2/3 flex justify-center items-center my-1 p-1 gap-2 text-white
+  .contactscontainer{
+    @apply min-w-[300px] w-fit xl:min-w-[1000px] flex-col xl:flex-row flex justify-center;
+
+    .footercontacts {
+      @apply max-w-fit flex justify-center items-center my-1 p-1 gap-2 text-white
+    }
+  
+    .copyright {
+      @apply mt-[100px] flex justify-center
+    }
   }
 
-  .copyright {
-    @apply mt-[100px] flex justify-center
-  }
 }
 
 
@@ -1143,10 +1155,6 @@ app-viewproject {
 
   .contactus {
 
-    .form-container {
-
-      @apply max-w-[300px]
-    }
 
     .footercontacts {
       @apply justify-center
