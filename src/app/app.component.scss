@@ -752,14 +752,14 @@ p{
   }
 
   .contactscontainer{
-    @apply min-w-[300px] w-fit xl:min-w-[1000px] flex-col xl:flex-row flex justify-center;
+    @apply min-w-[300px] w-fit xl:min-w-[1000px] flex-col xl:flex-row flex justify-center flex-wrap;
 
     .footercontacts {
       @apply max-w-fit flex justify-center items-center my-1 p-1 gap-2 text-white
     }
   
     .copyright {
-      @apply mt-[100px] flex justify-center
+      @apply mt-[100px] flex justify-center min-w-full xl:mt-[30px]
     }
   }
 
