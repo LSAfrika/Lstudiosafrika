@@ -1,5 +1,5 @@
 import { Projectmodel } from './interface/projectmodel';
-import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChildren,HostListener } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { initializeApp } from 'firebase/app';
 import { environment } from 'src/environments/environment';
@@ -19,9 +19,25 @@ export class AppComponent {
 
   app = initializeApp(environment.firebaseConfig);
   db = getFirestore(this.app);
-
+displayicons=false
 
   @ViewChildren('intersect', { read: ElementRef }) intersecting: QueryList<ElementRef>;
+
+  public getScreenWidth: number=window.innerWidth;
+  public getScreenHeight: number=window.innerHeight;
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowResize() {
+    this.getScreenWidth = window.innerWidth;
+    this.getScreenHeight = window.innerHeight;
+
+
+    if(window.scrollY>=3825){
+      this.displayicons=true
+    }
+  
+    
+  }
 
   observer: any;
 

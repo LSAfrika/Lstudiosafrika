@@ -345,7 +345,14 @@
       <!-- <div class="backline"></div> -->
       <h2>Get in touch</h2>
     </div>
-<div class="technologies"></div>
+<div class="technologies">
+
+  <img [ngClass]="{contactsinvisible:displayicons==false,contactsicon:displayicons==true}" class="      contactsicon  " src="../assets/80-online-support.svg" alt="">
+  <img [ngClass]="{contactsinvisible:displayicons==false,contactsicon:displayicons==true}" class="      contactsicon  " src="../assets/contact-us-20.svg" alt="">
+  <img [ngClass]="{contactsinvisible:displayicons==false,contactsicon:displayicons==true}" class="      contactsicon  " src="../assets/whatsapp-16.svg" alt="">
+  <img [ngClass]="{contactsinvisible:displayicons==false,contactsicon:displayicons==true}" class="      contactsicon  " src="../assets/contact-34.svg " alt="">
+
+</div>
 
     <div class=" form-container">
       <form class="form-group" [formGroup]="messageform">

@@ -661,7 +661,7 @@ p{
   }
 
   .technologies{
-    @apply hidden xl:flex min-w-[600px] min-h-[600px]  bg-purple-600 h-[inherit]
+    @apply hidden xl:flex max-w-[600px] max-h-[600px] w-full h-full  bg-purple-600/0 gap-5    items-center justify-evenly flex-wrap
   }
   .form-container {
     @apply block w-full  p-6 bg-white rounded-md shadow-lg  min-h-[350px]  max-w-[350px] 
@@ -1268,6 +1268,28 @@ app-viewproject {
   }
   100%{
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+
+  }
+}
+
+
+.contactsinvisible{
+  @apply opacity-0
+}
+.contactsicon{
+
+@apply max-w-[250px] max-h-[250px]
+
+  ;
+  animation: contactsanim 1.5s ease-in-out forwards ;
+}
+@keyframes contactsanim {
+  0%{
+  @apply opacity-0 scale-0
+  }
+ 
+  100%{
+ @apply opacity-100 scale-100
 
   }
 }
