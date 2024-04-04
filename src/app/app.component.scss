@@ -661,7 +661,7 @@ p{
   }
 
   .technologies{
-    @apply hidden xl:flex max-w-[600px] max-h-[600px] w-full h-full  bg-purple-600/0 gap-5    items-center justify-evenly flex-wrap
+    @apply hidden xl:flex max-w-[600px] rotate-[45deg] max-h-[600px] w-full h-full  bg-purple-600/0 gap-5    items-center justify-evenly flex-wrap
   }
   .form-container {
     @apply block w-full  p-6 bg-white rounded-md shadow-lg  min-h-[350px]  max-w-[350px] 
